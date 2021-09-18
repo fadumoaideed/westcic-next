@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import React from 'react'
+import DynamicComponentWithNoSSR from '../components/Carousel/ssr'
 
 export default function Home() {
    return (
@@ -7,6 +9,7 @@ export default function Home() {
             <title>Create Next App</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
-      </div>
+         <DynamicComponentWithNoSSR />
+    </div>
    )
 }

@@ -9,6 +9,8 @@ const breakpoints = createBreakpoints({
 })
 
 const colors = {
+   initialColorMode: 'light',
+   useSystemColorMode: true,
    brand: {
       50: '#d8ffff',
       100: '#acffff',
@@ -24,6 +26,14 @@ const colors = {
    fonts: {
       body: 'Inter',
       heading: 'Inter'
+   },
+   styles: {
+      global: {
+         body: {
+            bg: 'white',
+            color: 'gray.50'
+         }
+      }
    },
    breakpoints
 }

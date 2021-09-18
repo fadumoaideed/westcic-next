@@ -1,53 +1,41 @@
-import Image from 'next/image'
-import { useState } from 'react'
+import React from 'react'
 import {
    Flex,
    Box,
    Text,
    ButtonGroup,
-   ButtonGroupProps,
-   IconButton
+   IconButton,
+   Divider
 } from '@chakra-ui/react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import Link from 'next/Link'
-import React from 'react'
+import {
+   FaCentercode,
+   FaFacebook,
+   FaInstagram,
+   FaLinkedin,
+   FaTwitter
+} from 'react-icons/fa'
 
 function Footer() {
    return (
       <Box
-         as="nav"
-         justify="space-between"
+         as="footer"
+         justifyContent={'space-between'}
          position="fixed"
          left="0"
          bottom="0"
          width="100%"
-         bg={['brand.900', 'brand.900', 'white', 'white']}
-         color={['white', 'white', 'brand.900', 'brand.900']}
+         bg={['white', 'white', 'white', 'white']} //sizes sm md lg xl
+         color={['white', 'white', 'white', 'white']}
       >
-         <Flex
-            display="flex"
-            flexDirection="row"
-            margin="5"
-            align="right"
-            alignItems="flex-end"
-            justify="space-between"
-         >
-            <div style={{ width: 'auto' }}>
-               <Image
-                  src="/logo.png"
-                  alt="WEST CIC Logo"
-                  width={140}
-                  height={100}
-               />
-            </div>
-
-            <ButtonGroup variant="ghost" color="grey.500" {...ButtonGroupProps}>
+         <Flex alignItems={'center'} justifyContent={'space-around'}>
+            <ButtonGroup variant="solid" align="center">
                <IconButton
                   as="a"
                   m="2"
                   href="#"
                   aria-label="LinkedIn"
                   icon={<FaLinkedin fontSize="30px" />}
+                  color="brand.800"
                />
                <IconButton
                   as="a"
@@ -55,6 +43,7 @@ function Footer() {
                   href="#"
                   aria-label="Facebook"
                   icon={<FaFacebook fontSize="30px" />}
+                  color="brand.800"
                />
                <IconButton
                   as="a"
@@ -62,6 +51,7 @@ function Footer() {
                   href="#"
                   aria-label="Twitter"
                   icon={<FaTwitter fontSize="30px" />}
+                  color="brand.800"
                />
                <IconButton
                   as="a"
@@ -69,12 +59,16 @@ function Footer() {
                   href="#"
                   aria-label="Instagram"
                   icon={<FaInstagram fontSize="30px" />}
+                  color="brand.800"
                />
             </ButtonGroup>
          </Flex>
-         <Text fontSize="sm" align="center" m="3">
-            &copy; {new Date().getFullYear()} WEST (Women in Engineering,
-            Science and Technology) C.I.C. , All rights reserved.
+         <Divider />
+         <Text fontSize="sm" align="center" m="3" color="black">
+            WEST (Women in Engineering, Science and Technology) C.I.C.
+         </Text>
+         <Text align="center" m="3" fontSize="x-small" color="black">
+            All rights reserved. &copy; {new Date().getFullYear()}{' '}
          </Text>
       </Box>
    )
