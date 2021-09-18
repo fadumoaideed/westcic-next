@@ -6,10 +6,10 @@ export default function Home() {
    return (
       <div>
          <Head>
-            <title>Create Next App</title>
+            <title>WEST C.I.C.</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
          <DynamicComponentWithNoSSR />
-    </div>
+      </div>
    )
 }
