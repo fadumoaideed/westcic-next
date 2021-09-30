@@ -3,10 +3,10 @@ import KzuSlider from 'kzu-slider'
 
 function Carousel() {
    return (
-      <div>
+      <>
          <KzuSlider
             height={400}
-            parallax
+            // parallax
             auto
             duration={4000}
             contentPadding={{ left: 80, right: 80, top: 64, bottom: 64 }}
@@ -66,25 +66,34 @@ function Carousel() {
                   ]
                },
                {
-                  background: 'image3.jpeg',
-                  title: 'Another Title',
-                  subtitle: 'Another Subtitle but Black',
-                  content: 'Content aligned to right',
+                  background: 'image2.jpeg',
+                  title: 'Parallax Images',
+                  content:
+                     'This one has also padding settings for text content box',
                   buttons: [
                      {
-                        title: 'Another Button',
+                        title: 'Button 1',
                         onClick: () => {
-                           alert('Clicked Another Button')
-                        }
+                           alert('Clicked Button 1')
+                        },
+                        color: 'rgba(100,100,110,0.5)',
+                        textColor: 'white'
                      }
                   ],
-                  align: 'right',
-                  contentColor: '#010101',
-                  contentBg: 'rgba(255,255,255,0.4)'
+                  align: 'center',
+                  contentColor: '#fefefe',
+                  contentBg: 'rgba(250,100,250,0.6)',
+                  shades: [
+                     {
+                        from: 'rgba(0, 255, 255, 0.5)',
+                        to: 'rgba(255, 255, 255, 0.5)',
+                        angle: 45
+                     }
+                  ]
                }
             ]}
          />
-      </div>
+      </>
    )
 }
 

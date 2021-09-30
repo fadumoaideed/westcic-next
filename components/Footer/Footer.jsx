@@ -63,7 +63,7 @@ function Footer() {
                />
             </ButtonGroup>
          </Flex>
-         <Divider />
+         <Divider /> //TODO: fix this
          <Text fontSize="sm" align="center" m="3" color="black">
             WEST (Women in Engineering, Science and Technology) C.I.C.
          </Text>

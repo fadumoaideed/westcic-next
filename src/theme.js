@@ -8,9 +8,21 @@ const breakpoints = createBreakpoints({
    xl: '80em'
 })
 
-const colors = {
-   initialColorMode: 'light',
-   useSystemColorMode: true,
+// const components = {
+//    Button: {
+//      // setup light/dark mode component defaults
+//      baseStyle: props => ({
+//        dialog: {
+//          bg: mode('white', '#141214')(props),
+//        },
+//      }),
+//    },
+//  };
+
+const config = {
+   // initialColorMode: 'light',
+   //useSystemColorMode: false,
+   breakpoints,
    brand: {
       50: '#d8ffff',
       100: '#acffff',
@@ -23,21 +35,23 @@ const colors = {
       800: '#004d4e',
       900: '#001b1d'
    },
-   fonts: {
-      body: 'Inter',
-      heading: 'Inter'
-   },
+   // fonts: {
+   //    body: 'Inter',
+   //    heading: 'Inter'
+   // },
    styles: {
       global: {
-         body: {
+         html: {
             bg: 'white',
-            color: 'gray.50'
+            p: '0'
+         },
+         body: {
+            bg: 'white'
          }
       }
-   },
-   breakpoints
+   }
 }
 
-const theme = extendTheme({ colors })
+const theme = extendTheme(config)
 
 export default theme

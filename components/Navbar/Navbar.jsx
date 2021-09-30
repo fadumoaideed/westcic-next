@@ -18,10 +18,10 @@ export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
-      <Box as="nav">
+      <Box as="nav" p="0">
          <Flex
             className="nav"
-            bg={['white', 'white', 'white', 'white']}
+            bg={['teal.800', 'teal.800', 'teal.800', 'teal.800']}
             color={['brand.800', 'brand.800', 'brand.800', 'brand.800']}
             minH={'80px'}
             py={{ base: 2 }}
@@ -56,7 +56,7 @@ export default function WithSubnavigation() {
                   Logo
                </Text>
 
-               <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+               <Flex display={{ base: 'center', md: 'flex' }} ml={10}>
                   <DesktopNav />
                </Flex>
             </Flex>
@@ -71,7 +71,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
    return (
-      <Stack direction={'row'} spacing={10}>
+      <Stack direction={'row'} spacing={10} align="center">
          {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
                <Popover trigger={'hover'} placement={'bottom-start'}>
