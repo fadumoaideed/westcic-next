@@ -3,7 +3,7 @@ import KzuSlider from 'kzu-slider'
 
 function Carousel() {
    return (
-      <>
+      <div className="west-cic-slider">
          <KzuSlider
             height={400}
             // parallax
@@ -93,7 +93,7 @@ function Carousel() {
                }
             ]}
          />
-      </>
+      </div>
    )
 }
 

@@ -38,12 +38,17 @@ export default function WithSubnavigation() {
                   onClick={onToggle}
                   icon={
                      isOpen ? (
-                        <CloseIcon w={3} h={3} />
+                        <CloseIcon w={3} h={3} color="white" />
                      ) : (
-                        <HamburgerIcon w={5} h={5} />
+                        <HamburgerIcon
+                           w={5}
+                           h={5}
+                           color="white"
+                           outline="dark"
+                        />
                      )
                   }
-                  variant={'ghost'}
+                  variant={'solid'}
                   aria-label={'Toggle Navigation'}
                />
             </Flex>
@@ -51,7 +56,7 @@ export default function WithSubnavigation() {
                <Text
                   textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                   fontFamily={'heading'}
-                  color={[useColorModeValue('black', 'black')]}
+                  color={[useColorModeValue('white', 'white')]}
                >
                   Logo
                </Text>
@@ -81,7 +86,7 @@ const DesktopNav = () => {
                         href={navItem.href ?? '#'}
                         fontSize={'md'}
                         fontWeight={500}
-                        color={useColorModeValue('black', 'black')}
+                        color={useColorModeValue('white', 'white')}
                         _hover={{
                            textDecoration: 'none',
                            color: useColorModeValue('black', 'black'),

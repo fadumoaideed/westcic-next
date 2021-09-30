@@ -46,7 +46,9 @@ const config = {
             p: '0'
          },
          body: {
-            bg: 'white'
+            bg: 'white',
+            m: '0',
+            p: '0'
          }
       }
    }
