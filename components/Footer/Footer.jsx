@@ -7,13 +7,7 @@ import {
    IconButton,
    Divider
 } from '@chakra-ui/react'
-import {
-   FaCentercode,
-   FaFacebook,
-   FaInstagram,
-   FaLinkedin,
-   FaTwitter
-} from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
    return (
@@ -35,7 +29,7 @@ function Footer() {
                   href="#"
                   aria-label="LinkedIn"
                   icon={<FaLinkedin fontSize="30px" />}
-                  color="brand.800"
+                  color="brand.800" //TODO: change this
                />
                <IconButton
                   as="a"
@@ -63,7 +57,7 @@ function Footer() {
                />
             </ButtonGroup>
          </Flex>
-         <Divider /> //TODO: fix this
+         <Divider orientation="horizontal" /> //TODO: doesnt work
          <Text fontSize="sm" align="center" m="3" color="black">
             WEST (Women in Engineering, Science and Technology) C.I.C.
          </Text>

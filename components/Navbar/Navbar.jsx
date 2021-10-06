@@ -15,10 +15,10 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 export default function WithSubnavigation() {
-   const { isOpen, onToggle } = useDisclosure()
+   const { isOpen, onToggle } = useDisclosure() //TODO: fix navbar mobile sidebar toggle
 
    return (
-      <Box as="nav" p="0">
+      <Box as="nav">
          <Flex
             className="nav"
             bg={['teal.800', 'teal.800', 'teal.800', 'teal.800']}
@@ -38,13 +38,13 @@ export default function WithSubnavigation() {
                   onClick={onToggle}
                   icon={
                      isOpen ? (
-                        <CloseIcon w={3} h={3} color="white" />
+                        <CloseIcon w={3} h={3} />
                      ) : (
                         <HamburgerIcon
                            w={5}
                            h={5}
-                           color="white"
-                           outline="dark"
+                           // color="white"
+                           // outline="dark"
                         />
                      )
                   }
@@ -56,12 +56,12 @@ export default function WithSubnavigation() {
                <Text
                   textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                   fontFamily={'heading'}
-                  color={[useColorModeValue('white', 'white')]}
+                  color={'white'}
                >
                   Logo
                </Text>
 
-               <Flex display={{ base: 'center', md: 'flex' }} ml={10}>
+               <Flex display={{ base: 'none', md: 'flex' }} ml={15}>
                   <DesktopNav />
                </Flex>
             </Flex>
@@ -76,7 +76,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
    return (
-      <Stack direction={'row'} spacing={10} align="center">
+      <Stack direction={'row'} spacing={4} align="center">
          {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
                <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -86,11 +86,15 @@ const DesktopNav = () => {
                         href={navItem.href ?? '#'}
                         fontSize={'md'}
                         fontWeight={500}
-                        color={useColorModeValue('white', 'white')}
+                        color={[
+                           'brand.800',
+                           'brand.800',
+                           'brand.800',
+                           'brand.800'
+                        ]}
                         _hover={{
                            textDecoration: 'none',
-                           color: useColorModeValue('black', 'black'),
-                           opacity: '0.3'
+                           color: 'black'
                         }}
                      >
                         {navItem.label}
@@ -134,7 +138,7 @@ const MobileNavItem = ({ label, href }) => {
          >
             <Text
                fontWeight={600}
-               color={useColorModeValue('brand.600', 'brand.200')}
+               color={['brand.600', 'brand.600', 'brand.600', 'brand.600']}
             >
                {label}
             </Text>
@@ -150,7 +154,12 @@ const MobileNavItem = ({ label, href }) => {
                pl={4}
                borderLeft={1}
                borderStyle={'solid'}
-               borderColor={useColorModeValue('brand.200', 'brand.700')}
+               borderColor={[
+                  'brand.200',
+                  'brand.200',
+                  'brand.200',
+                  'brand.200'
+               ]}
                align={'start'}
             ></Stack>
          </Collapse>

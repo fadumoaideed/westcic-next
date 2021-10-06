@@ -5,13 +5,13 @@ import DynamicComponentWithNoSSR from '../components/Carousel/ssr'
 
 export default function Home() {
    return (
-      <Box>
+      <Box className="Home">
          <Head>
             <title>WEST C.I.C.</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
-         <Box mr="150px" ml="150px">
-            <DynamicComponentWithNoSSR />
+         <Box mr={['0', '0', '0', '150px']} ml={['0', '0', '0', '150px']}>
+            {/* <DynamicComponentWithNoSSR /> */}
          </Box>
       </Box>
    )
