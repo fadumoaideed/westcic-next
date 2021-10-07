@@ -8,20 +8,24 @@ import {
    Link,
    Popover,
    PopoverTrigger,
-   useColorModeValue,
    useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 export default function WithSubnavigation() {
-   const { isOpen, onToggle } = useDisclosure() //TODO: fix navbar mobile sidebar toggle
+   const { isOpen, onToggle } = useDisclosure()
 
    return (
       <Box as="nav">
          <Flex
             className="nav"
-            bg={['teal.800', 'teal.800', 'teal.800', 'teal.800']}
+            bg={[
+               'whiteAlpha.200',
+               'whiteAlpha.200',
+               'whiteAlpha.200',
+               'whiteAlpha.200'
+            ]}
             color={['brand.800', 'brand.800', 'brand.800', 'brand.800']}
             minH={'80px'}
             py={{ base: 2 }}
@@ -32,7 +36,8 @@ export default function WithSubnavigation() {
             <Flex
                flex={{ base: 1, md: 'auto' }}
                ml={{ base: -2 }}
-               display={{ base: 'flex', md: 'none' }}
+               display={{ base: 'start', md: 'none' }}
+               className="icon-navbar"
             >
                <IconButton
                   onClick={onToggle}
@@ -52,7 +57,11 @@ export default function WithSubnavigation() {
                   aria-label={'Toggle Navigation'}
                />
             </Flex>
-            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <Flex
+               flex={{ base: 1 }}
+               justify={{ base: 'start', md: 'start' }}
+               className="logo-navbar"
+            >
                <Text
                   textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                   fontFamily={'heading'}
@@ -86,12 +95,7 @@ const DesktopNav = () => {
                         href={navItem.href ?? '#'}
                         fontSize={'md'}
                         fontWeight={500}
-                        color={[
-                           'brand.800',
-                           'brand.800',
-                           'brand.800',
-                           'brand.800'
-                        ]}
+                        color={['white', 'white', 'white', 'white']}
                         _hover={{
                            textDecoration: 'none',
                            color: 'black'

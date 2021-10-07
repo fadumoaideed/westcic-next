@@ -5,7 +5,7 @@ function Carousel() {
    return (
       <div className="west-cic-slider">
          <KzuSlider
-            height={500}
+            height={500} //TODO: Add images in slider
             // parallax
             auto
             duration={4000}
