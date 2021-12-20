@@ -11,7 +11,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
          <Box mr={['0', '0', '0', '150px']} ml={['0', '0', '0', '150px']}>
-            <DynamicComponentWithNoSSR />
+            {/* <DynamicComponentWithNoSSR /> */}
          </Box>
       </Box>
    )

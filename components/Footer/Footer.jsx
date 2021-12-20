@@ -18,7 +18,7 @@ function Footer() {
          left="0"
          bottom="0"
          width="100%"
-         bg={['white', 'white', 'white', 'white']} //sizes sm md lg xl
+         bg={['teal.700', 'teal.700', 'teal.700', 'teal.700']} //sizes sm md lg xl
          color={['white', 'white', 'white', 'white']}
       >
          <Flex alignItems={'center'} justifyContent={'space-around'}>
@@ -57,7 +57,12 @@ function Footer() {
                />
             </ButtonGroup>
          </Flex>
-         <Divider orientation="horizontal" /> //TODO: doesnt work
+         <Divider
+            orientation="horizontal"
+            w="50vw"
+            display="flex"
+            alignItems="center"
+         />
          <Text fontSize="sm" align="center" m="3" color="black">
             WEST (Women in Engineering, Science and Technology) C.I.C.
          </Text>

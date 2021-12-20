@@ -20,17 +20,13 @@ export default function WithSubnavigation() {
       <Box as="nav">
          <Flex
             className="nav"
-            bg={[
-               'whiteAlpha.200',
-               'whiteAlpha.200',
-               'whiteAlpha.200',
-               'whiteAlpha.200'
-            ]}
+            bg={['white', 'white', 'white', 'white']}
             color={['brand.800', 'brand.800', 'brand.800', 'brand.800']}
             minH={'80px'}
             py={{ base: 2 }}
             px={{ base: 4 }}
             borderStyle={'none'}
+            boxShadow="sm"
             align={'center'}
          >
             <Flex
@@ -40,20 +36,28 @@ export default function WithSubnavigation() {
                className="icon-navbar"
             >
                <IconButton
+                  //bg="teal.600"
+                  colorScheme="teal"
                   onClick={onToggle}
                   icon={
                      isOpen ? (
-                        <CloseIcon w={3} h={3} />
+                        <CloseIcon
+                           w={4}
+                           h={4}
+                           color="teal.600"
+                           outline="ghost"
+                        />
                      ) : (
                         <HamburgerIcon
                            w={5}
                            h={5}
-                           // color="white"
-                           // outline="dark"
+                           color="teal.600"
+                           outline="ghost"
+                           colorScheme="teal"
                         />
                      )
                   }
-                  variant={'solid'}
+                  variant={'ghost'}
                   aria-label={'Toggle Navigation'}
                />
             </Flex>
@@ -65,12 +69,20 @@ export default function WithSubnavigation() {
                <Text
                   textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                   fontFamily={'heading'}
-                  color={'white'}
+                  color={'black'}
                >
                   Logo
                </Text>
 
-               <Flex display={{ base: 'none', md: 'flex' }} ml={15}>
+               <Flex
+                  className="navbar-links"
+                  display={{
+                     base: 'none', // from 0em onwards
+                     md: 'inline-flex'
+                  }}
+                  justify={'flex-end'}
+                  ml={15}
+               >
                   <DesktopNav />
                </Flex>
             </Flex>
@@ -95,9 +107,12 @@ const DesktopNav = () => {
                         href={navItem.href ?? '#'}
                         fontSize={'md'}
                         fontWeight={500}
-                        color={['white', 'white', 'white', 'white']}
+                        color={['teal.800', 'teal.800', 'teal.800', 'teal.800']}
                         _hover={{
-                           textDecoration: 'none',
+                           textDecoration: 'underline',
+                           textDecorationColor: 'teal',
+                           textDecorationThickness: '3px',
+                           textUnderlineOffset: '8px',
                            color: 'black'
                         }}
                      >
