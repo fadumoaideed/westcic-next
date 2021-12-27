@@ -49,9 +49,10 @@ import {
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')} 
-        position={"fixed"}   
+        position={"absolute"}   
         width={"100%"} 
-        bottom={0}       
+        bottom={"0"}
+        className="footer"       
         >
         <Container
           as={Stack}
@@ -62,7 +63,7 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Logo />
-          <Text>© {new Date().getFullYear()} WEST Women in Engineering, Science and Technology. All rights reserved</Text>
+          <Text align={"center"}>© {new Date().getFullYear()} WEST (Women in Engineering, Science and Technology) C.I.C. All rights reserved.</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />

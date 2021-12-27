@@ -22,11 +22,13 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import {Logo} from "../Logo/logo"
+
+
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
-      <Box>
+      <Box className="navigation">
          <Flex
             bg={useColorModeValue('white', 'gray.800')}
             color={useColorModeValue('gray.600', 'white')}
@@ -57,7 +59,9 @@ export default function WithSubnavigation() {
                />
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-               <Logo />
+               <Link href="/">              
+                   <Logo />
+               </Link>
 
                {/* <Flex display={{ base: 'none', md: 'inline-flex' }} ml={10}>
                   <DesktopNav />
@@ -69,7 +73,7 @@ export default function WithSubnavigation() {
                justify={'flex-end'}
                direction={'row'}
                spacing={5}
-               className="hi"
+               className="navbar-links"
                pe={20}
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}  >         <DesktopNav /></Stack>
@@ -145,13 +149,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
          display={'block'}
          p={2}
          rounded={'md'}
-         _hover={{ bg: useColorModeValue('teal.300', 'gray.900') }}
+         _hover={{ bg: useColorModeValue('teal.50', 'gray.900') }}
       >
          <Stack direction={'row'} align={'center'}>
             <Box>
                <Text
                   transition={'all .3s ease'}
-                  _groupHover={{ color: 'teal.800' }}
+                  _groupHover={{ color: 'teal.900' }}
                   fontWeight={500}
                   fontSize={"lg"}
                >
@@ -205,7 +209,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             }}
          >
             <Text
-               fontWeight={600}
+               fontWeight={400}
                color={useColorModeValue('gray.600', 'gray.200')}
             >
                {label}
@@ -256,32 +260,33 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
    {
       label: 'Home',
-      href: '#'
+      href: '/'
    },,{
       label: 'Projects',
       children: [
          {
-            label: 'Explore Design Work',
-            subLabel: 'Trending Design to inspire you',
-            href: '#'
+            label: 'Project 1',
+            subLabel: 'lorem ipsum',
+            href: ''
          },
          {
-            label: 'New & Noteworthy',
-            subLabel: 'Up-and-coming Designers',
+            label: 'Project 2',
+            subLabel: 'lorem ipsum',
             href: '#'
          }
-      ]
+      ],
+      href: 'projects'
    },
    {
       label: 'Services',
-      href: '#'
+      href: 'services'
    },
    {
       label: 'About',
-      href: '#'
+      href: 'about'
    },
    {
       label: 'Contact',
-      href: '#'
+      href: 'contact'
    }
 ]
