@@ -20,7 +20,7 @@ const breakpoints = createBreakpoints({
 //  };
 
 const config = {
-   // initialColorMode: 'light',
+   initialColorMode: 'light',
    //useSystemColorMode: false,
    breakpoints,
    brand: {
@@ -54,6 +54,6 @@ const config = {
    }
 }
 
-const theme = extendTheme(config)
+const theme = extendTheme({ config })
 
 export default theme
