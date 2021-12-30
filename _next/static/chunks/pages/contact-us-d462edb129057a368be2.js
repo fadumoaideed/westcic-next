@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[10],{"4DfC":function(n,t,c){"use strict";c.r(t);var i=c("nKUr"),o=c("v7Hm");c("q1tI");t.default=function(){return Object(i.jsx)(o.a,{bg:"white",children:"contact us"})}},LiAJ:function(n,t,c){(window.__NEXT_P=window.__NEXT_P||[]).push(["/contact-us",function(){return c("4DfC")}])}},[["LiAJ",0,1,2]]]);
