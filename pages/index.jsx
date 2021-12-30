@@ -11,7 +11,7 @@ import {
    Text
 } from '@chakra-ui/react'
 import Carousel from '../components/Carousel/Carousel'
-prefix = '/westcic-next'
+let prefix = '/westcic-next'
 export default function Home() {
    return (
       <Fragment>
