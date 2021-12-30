@@ -11,12 +11,13 @@ import {
    Text
 } from '@chakra-ui/react'
 import Carousel from '../components/Carousel/Carousel'
+prefix = '/westcic-next'
 export default function Home() {
    return (
       <Fragment>
          <Head>
             <title>WEST C.I.C.</title>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="shortcut icon" href={prefix + '/favicon.ico'} />
          </Head>
 
          <Box className="home-container">
