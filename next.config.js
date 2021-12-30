@@ -1,4 +1,4 @@
 module.exports = {
-   basePath: '/westcic-next',
-   assetPrefix: '/westcic-next'
+   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
 }
