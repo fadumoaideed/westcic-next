@@ -59,7 +59,7 @@ export default function WithSubnavigation() {
                />
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-               <Link href="/index">              
+               <Link href="/">              
                    <Logo />
                </Link>
 
@@ -260,7 +260,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
    {
       label: 'Home',
-      href: 'index'
+      href: '/'
    },,{
       label: 'Projects',
       children: [
