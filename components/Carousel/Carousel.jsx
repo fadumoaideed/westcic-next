@@ -9,27 +9,31 @@ function Carousel2() {
                rewind: true,
                autoplay: true,
                pauseOnHover: false,
-               interval: 6000
-               // fixedHeight: '550px'
+               interval: 6000,
+               breakpoints: {
+                  640: {
+                     height: '250px'
+                  }
+               }
             }}
             type="loop"
             hasAutoplayProgress={true}
          >
             <SplideSlide>
                <img
-                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_scale/v1640045431/woman-engineer_f3o3he.jpg"
+                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_fit/v1640045431/woman-engineer_f3o3he.jpg"
                   alt="Image 1"
                />
             </SplideSlide>
             <SplideSlide>
                <img
-                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_scale/v1640045439/lab_sww3q6.jpg"
+                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_fit/v1640045439/lab_sww3q6.jpg"
                   alt="Image 2"
                />
             </SplideSlide>
             <SplideSlide>
                <img
-                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_scale/v1640045427/plant-bulb_u9nge3.jpg"
+                  src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_fit/v1640045427/plant-bulb_u9nge3.jpg"
                   alt="Image 2"
                />
             </SplideSlide>

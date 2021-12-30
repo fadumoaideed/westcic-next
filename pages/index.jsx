@@ -23,62 +23,47 @@ export default function Home() {
          <Box className="home-container">
             <Carousel />
 
-            <SimpleGrid
-               columns={[1, 2, 2]}
-               // gap={25}
-               // ps="20"
-               // pe="20"
-               // pt="4"
-               pb="4"
-            >
+            <SimpleGrid columns={[1, 2, 2]} pb="4">
                <Box bg="grey" height="400px" align="center" className="box">
-                  <Stack spacing={3} p="5">
-                     <Heading
-                        fontSize={['xl', '2xl', '5xl', '6xl']}
-                        align="center"
-                     >
-                        Sustainable Innovation
-                     </Heading>
-                     <Text
-                        fontSize={['2sm', '2md', '5md', '6md']}
-                        variant="outline"
-                        align="justify"
-                        fontWeight="thin"
-                        p="5"
-                     >
-                        Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
-                     </Text>
-                  </Stack>
+                  <Stack
+                     spacing={3}
+                     p="5"
+                     display="flex"
+                     align="center"
+                  ></Stack>
                </Box>
                <Box bg="tomato" height="400px" align="center">
-                  <Stack spacing={3} display="flex" align="center" p="5">
-                     <Heading
-                        fontSize={['xl', '2xl', '5xl', '6xl']}
-                        align="center"
-                     >
-                        Sustainable Innovation
-                     </Heading>
-                     <Text
-                        fontSize={['2sm', '2md', '5md', '6md']}
-                        variant="outline"
-                        align="justify"
-                        fontWeight="thin"
-                        p="5"
-                     >
-                        Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
-                     </Text>
-                  </Stack>
+                  <Stack
+                     spacing={3}
+                     display="flex"
+                     align="center"
+                     p="5"
+                  ></Stack>
                </Box>
             </SimpleGrid>
          </Box>
       </Fragment>
    )
+}
+
+{
+   /* <Heading
+fontSize={['xl', '2xl', '5xl', '6xl']}
+align="center"
+>
+Sustainable Innovation
+</Heading>
+<Text
+fontSize={['2sm', '2md', '5md', '6md']}
+variant="outline"
+align="justify"
+fontWeight="thin"
+p="5"
+>
+Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex
+ea commodo consequat.
+</Text> */
 }
