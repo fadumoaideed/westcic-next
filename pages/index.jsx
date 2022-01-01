@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+import { keyframes } from '@emotion/react'
+import styled from '@emotion/styled'
+import { slideInRight } from 'react-animations'
 import {
    Box,
    Grid,
@@ -12,6 +15,9 @@ import {
 } from '@chakra-ui/react'
 import Carousel from '../components/Carousel/Carousel'
 let prefix = '/westcic-next'
+const SlideInRight = styled.div`
+   animation: 2s ${keyframes`${slideInRight}`};
+`
 export default function Home() {
    return (
       <Fragment>
@@ -24,15 +30,18 @@ export default function Home() {
             <Carousel />
 
             <SimpleGrid columns={[1, 2, 2]} pb="4">
-               <Box bg="grey" height="400px" align="center" className="box">
-                  <Stack
-                     spacing={3}
-                     p="5"
-                     display="flex"
-                     align="center"
-                  ></Stack>
-               </Box>
-               <Box bg="tomato" height="400px" align="center">
+               <SlideInRight>
+                  <Box bg="grey" height="400px" align="center" className="box">
+                     <Stack
+                        spacing={3}
+                        p="5"
+                        display="flex"
+                        align="center"
+                     ></Stack>
+                  </Box>
+               </SlideInRight>
+
+               <Box bg="teal.500" height="400px" align="center">
                   <Stack
                      spacing={3}
                      display="flex"
