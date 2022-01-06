@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
    return (
       <ChakraProvider theme={theme} resetCSS={false}>
          <CSSReset />
-         <Navbar />
+         {/* <Navbar /> */}
          {/* <Footer /> */}
          <Component {...pageProps} />
       </ChakraProvider>

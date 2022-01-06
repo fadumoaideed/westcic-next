@@ -22,23 +22,31 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import {Logo} from "../Logo/logo"
+import { TextLayer } from 'cloudinary-core'
 
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
-      <Box className="navigation">
+      <Box className="navigation"             
+      bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1641419941/Screenshot_2022-01-05_at_21.57.48_ku6iss.png')"           
+      bgRepeat="no-repeat" 
+      minH={'800px'}
+      >
          <Flex
-            bg={useColorModeValue('white', 'gray.800')}
-            color={useColorModeValue('gray.600', 'white')}
+
+            color={useColorModeValue('white', 'white')}
             minH={'60px'}
             py={{ base: 2 }}
             px={{ base: 4 }}
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-            align={'center'}
+            // borderBottom={1}
+            // borderStyle={'solid'}
+            // borderColor={'teal.900'}
+            // borderBottomWidth={'0.1px'}
+            align={'start'}
+            pt={'10'}
+            
          >
             <Flex
                flex={{ base: 1, md: 'auto' }}
@@ -62,10 +70,6 @@ export default function WithSubnavigation() {
                <Link href="/">              
                    <Logo />
                </Link>
-
-               {/* <Flex display={{ base: 'none', md: 'inline-flex' }} ml={10}>
-                  <DesktopNav />
-               </Flex> */}
             </Flex>
 
             <Stack
@@ -80,18 +84,19 @@ export default function WithSubnavigation() {
    
             </Stack>
          </Flex>
-
-         <Collapse in={isOpen} animateOpacity>
-            <MobileNav />
-         </Collapse>
+         <Box bg="transparent"                
+               // justify={'flex-start'}
+               w={"100vw"}
+               direction={'row'}> <Collapse in={isOpen} animateOpacity >
+               <MobileNav />
+            </Collapse></Box>
+           
+         
       </Box>
    )
 }
 
 const DesktopNav = () => {
-   const linkColor = useColorModeValue('gray.600', 'gray.200')
-   const linkHoverColor = useColorModeValue('gray.800', 'white')
-   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
    return (
       <Stack direction={'row'} spacing={55}>
@@ -104,14 +109,14 @@ const DesktopNav = () => {
                         href={navItem.href ?? '#'}
                         fontSize={'sm'}
                         fontWeight={500}
-                        color={linkColor}
+                        color={'white'}
                         _hover={{
                            textDecoration: 'underline',
                            textDecorationColor:"teal",
                            textDecorationStyle: "solid",
                            textDecorationThickness:"3px",
                            textUnderlineOffset: "8px",
-                           color: linkHoverColor
+                           color: 'white'
                         }}
                      >
                         {navItem.label}
@@ -122,7 +127,7 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={popoverContentBgColor}
+                        bg={'teal.600'}
                         p={4}
                         rounded={'xl'}
                         minW={'sm'}
@@ -141,7 +146,7 @@ const DesktopNav = () => {
    )
 }
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }: NavItem) => { // Dropdown list for subpages
    return (
       <Link
          href={href}
@@ -149,10 +154,10 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
          display={'block'}
          p={2}
          rounded={'md'}
-         _hover={{ bg: useColorModeValue('teal.50', 'gray.900') }}
+         _hover={{ bg: "teal.50" }}
       >
-         <Stack direction={'row'} align={'center'}>
-            <Box>
+         <Stack direction={'row'} align={'center'} >
+            <Box >
                <Text
                   transition={'all .3s ease'}
                   _groupHover={{ color: 'teal.900' }}
@@ -182,9 +187,10 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
    return (
       <Stack
-         bg={useColorModeValue('white', 'gray.800')}
+         bg={'transparent'}
          p={4}
          display={{ md: 'none' }}
+
       >
          {NAV_ITEMS.map((navItem) => (
             <MobileNavItem key={navItem.label} {...navItem} />
@@ -197,7 +203,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
-      <Stack spacing={4} onClick={children && onToggle}>
+      <Stack spacing={4} onClick={children && onToggle} >
          <Flex
             py={2}
             as={Link}
@@ -210,7 +216,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
          >
             <Text
                fontWeight={400}
-               color={useColorModeValue('gray.600', 'gray.200')}
+               color={'white'}
             >
                {label}
             </Text>
@@ -221,6 +227,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                   transform={isOpen ? 'rotate(180deg)' : ''}
                   w={6}
                   h={6}
+                  color='white'
                />
             )}
          </Flex>
@@ -235,8 +242,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                pl={4}
                borderLeft={1}
                // borderStyle={'solid'} //line hover underneath 
-               borderColor={useColorModeValue('gray.200', 'gray.700')}
+               borderColor={'purple'}
                align={'start'}
+               color={'white'}
+
             >
                {children &&
                   children.map((child) => (
