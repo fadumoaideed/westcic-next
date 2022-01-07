@@ -14,8 +14,7 @@ export default function Home(props) {
 
          <Box className="home-container">
             <NavBar />
-
-            <Button variant={'outline'} size={'sm'}>
+            <Button variant={'solid'} size={'sm'}>
                Learn More!
             </Button>
          </Box>

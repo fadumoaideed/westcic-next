@@ -1,4 +1,4 @@
-const Button = {
+export const ButtonStyles = {
    // The styles all button have in common
    baseStyle: {
       fontWeight: 'bold',
@@ -9,21 +9,22 @@ const Button = {
    sizes: {
       sm: {
          fontSize: 'sm',
-         px: 4, // <-- px is short for paddingLeft and paddingRight
-         py: 3 // <-- py is short for paddingTop and paddingBottom
+         px: 5, // <-- px is short for paddingLeft and paddingRight
+         py: 4 // <-- py is short for paddingTop and paddingBottom
       },
       md: {
          fontSize: 'md',
-         px: 6, // <-- these values are tokens from the design system
-         py: 4 // <-- these values are tokens from the design system
+         px: 7, // <-- these values are tokens from the design system
+         py: 5 // <-- these values are tokens from the design system
       }
    },
    // Two variants: outline and solid
    variants: {
       outline: {
-         border: '3px solid',
+         border: '4px solid',
          borderColor: 'black',
-         color: 'blue',
+         bg: 'transparent',
+         color: 'black',
          transition: 'all 200ms ease',
          _hover: {
             boxShadow: 'sm',
@@ -31,8 +32,8 @@ const Button = {
          }
       },
       solid: {
-         bg: 'white',
-         color: 'teal.700',
+         bg: 'brand.700',
+         color: 'white',
          transition: 'all 200ms ease',
          _hover: {
             boxShadow: 'md',

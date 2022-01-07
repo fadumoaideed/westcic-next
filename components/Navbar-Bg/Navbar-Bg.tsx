@@ -22,7 +22,6 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import {Logo} from "../Logo/logo"
-import { TextLayer } from 'cloudinary-core'
 
 
 export default function WithSubnavigation() {
@@ -30,7 +29,9 @@ export default function WithSubnavigation() {
 
    return (
       <Box className="navigation"             
-      bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1641419941/Screenshot_2022-01-05_at_21.57.48_ku6iss.png')"           
+      bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1641419941/Screenshot_2022-01-05_at_21.57.48_ku6iss.png')"   
+      backgroundSize={['cover','cover','cover',"100%"]}    
+      backgroundPosition={['left top','left top','left top','left top']}    
       bgRepeat="no-repeat" 
       minH={'800px'}
       >
@@ -66,7 +67,7 @@ export default function WithSubnavigation() {
                   aria-label={'Toggle Navigation'}
                />
             </Flex>
-            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} pl='50px'>
                <Link href="/">              
                    <Logo />
                </Link>
