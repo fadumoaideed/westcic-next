@@ -3,16 +3,7 @@ import Head from 'next/head'
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { slideInLeft, slideInRight } from 'react-animations'
-import {
-   Box,
-   Grid,
-   Flex,
-   GridItem,
-   SimpleGrid,
-   Stack,
-   Heading,
-   Text
-} from '@chakra-ui/react'
+import { Box, SimpleGrid, Heading, Text, Spacer } from '@chakra-ui/react'
 import Carousel from '../components/Carousel/Carousel'
 
 let prefix = '/westcic-next'
@@ -34,17 +25,16 @@ export default function Home() {
          <Box className="home-container">
             <Carousel />
 
-            <SimpleGrid columns={[1, 1, 2]}>
+            <SimpleGrid columns={[1, 1, 2]} mx={['0', '0', '100px', '100px']}>
                <SlideInLeft>
                   <Box
                      bg="teal.500"
                      height="400px"
-                     // pt="50px"
-                     width={['100%', '100%', '50vw', '50vw']}
+                     width={['100%', '100%', '50vw - 110px', '50vw - 110px']}
                      className="box"
                   >
                      <Heading
-                        fontSize={['2xl', '2xl', '5xl', '6xl']}
+                        fontSize={['5xl', '5xl', '5xl', '6xl']}
                         align="center"
                      >
                         Sustainable Innovation
@@ -55,7 +45,7 @@ export default function Home() {
                         align="justify"
                         fontWeight="thin"
                         pt="30px"
-                        px={['30px', '60px', '85px', '200px']}
+                        px={['30px', '30px', '70px', '80px']}
                      >
                         Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
@@ -65,6 +55,43 @@ export default function Home() {
                      </Text>
                   </Box>
                </SlideInLeft>
+               <Box bg="grey">
+                  <Text>Something interactive here</Text>
+               </Box>
+            </SimpleGrid>
+            <SimpleGrid columns={[1, 1, 2]} mx={['0', '0', '100px', '100px']}>
+               <Box bg="grey">
+                  <Text>Something interactive here</Text>
+               </Box>
+               <SlideInRight>
+                  <Box
+                     bg="teal.500"
+                     height="400px"
+                     width={['100%', '100%', '50vw - 100px', '50vw - 100px']}
+                     className="box"
+                  >
+                     <Heading
+                        fontSize={['5xl', '5xl', '5xl', '6xl']}
+                        align="center"
+                     >
+                        Human Centered Design
+                     </Heading>
+                     <Text
+                        fontSize={['xsm', '2md', '5md', '6md']}
+                        variant="outline"
+                        align="justify"
+                        fontWeight="thin"
+                        pt="30px"
+                        px={['30px', '30px', '70px', '80px']}
+                     >
+                        Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                     </Text>
+                  </Box>
+               </SlideInRight>
             </SimpleGrid>
          </Box>
       </Fragment>
