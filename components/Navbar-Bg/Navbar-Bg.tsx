@@ -11,7 +11,6 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   useColorModeValue,
    useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
@@ -29,15 +28,16 @@ export default function WithSubnavigation() {
 
    return (
       <Box className="navigation"             
-      bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1641419941/Screenshot_2022-01-05_at_21.57.48_ku6iss.png')"   
+      // bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1641419941/Screenshot_2022-01-05_at_21.57.48_ku6iss.png')"   
       backgroundSize={['cover','cover','cover',"100%"]}    
       backgroundPosition={['left top','left top','left top','left top']}    
       bgRepeat="no-repeat" 
+      bgColor={'green'}
       minH={'800px'}
       >
          <Flex
 
-            color={useColorModeValue('white', 'white')}
+            color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
             px={{ base: 4 }}

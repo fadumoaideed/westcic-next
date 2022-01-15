@@ -1,4 +1,5 @@
 export const ButtonStyles = {
+   //FIXME:component styles doesnt work
    // The styles all button have in common
    baseStyle: {
       fontWeight: 'bold',
@@ -23,7 +24,7 @@ export const ButtonStyles = {
       outline: {
          border: '4px solid',
          borderColor: 'black',
-         bg: 'transparent',
+         bg: 'pink',
          color: 'black',
          transition: 'all 200ms ease',
          _hover: {
@@ -32,8 +33,8 @@ export const ButtonStyles = {
          }
       },
       solid: {
-         bg: 'brand.700',
-         color: 'white',
+         bg: 'pink',
+         color: 'blue',
          transition: 'all 200ms ease',
          _hover: {
             boxShadow: 'md',
