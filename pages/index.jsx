@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import {
    Box,
@@ -9,9 +10,10 @@ import {
    Grid,
    Heading,
    Text,
-   Link
+   SimpleGrid
 } from '@chakra-ui/react'
 import TextLoop from 'react-text-loop'
+import { translate3d } from 'react-animations/lib/utils'
 let prefix = '/westcic-next'
 
 export default function Home(props) {
@@ -26,20 +28,17 @@ export default function Home(props) {
             <NavBar />
             <Button
                position={'absolute'}
-               top="50px"
+               top="500px"
                fontSize={'20px'}
                zIndex={'1'}
-               display={'flex'}
-               direction={'row'}
-               justify={{ base: 'center', md: 'center' }}
-               align={{ base: 'center', md: 'center' }}
                color="white"
                variant="outline"
                borderRadius={'30'}
                transition="all 200ms ease"
-               m={['100px', '200px', '500px', '500px']}
+               mx={['50px', '100px', '150px', '150px']}
                _hover={{
-                  boxShadow: 'sm',
+                  boxShadow: 'lg',
+                  bg: 'rgba(0, 0, 0, 0.2)',
                   transform: 'scale(1.05)'
                }}
                width="180px"
@@ -47,54 +46,84 @@ export default function Home(props) {
             >
                Learn more!
             </Button>
-            <Heading
-               color="white"
-               as="h1"
-               size="4xl"
+            {/* //FIXME: */}
+            {/* <Image
+               src="/../public/Untitled(1).png"
+               alt="transpar"
+               layout="fill"
+               transition={'all .2s ease-in-out'}
+               transform={'scale(1.02'}
+               
+            /> */}
+            <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
+               <Heading color="white" as="h1" size="4xl" mx="50px">
+                  <TextLoop children={['Engineer', 'Innovate', 'Design']} />
+                  <span>&nbsp;</span>a
+               </Heading>
+               <Heading color="white" as="h1" size="4xl" mx="50px">
+                  sustainable world
+               </Heading>
+               <Text
+                  fontFamily={'Arial'}
+                  color="white"
+                  as="h1"
+                  mt="10px"
+                  mx="55px"
+                  fontSize={'20px'}
+               >
+                  Human centered design at the center of all things
+               </Text>
+            </Box>
+            <Box
+               id="section1"
+               bg="white"
+               height={'500px'}
                m="50px"
-               position={'absolute'}
-               top="250px"
-               zIndex={'1'}
-               display={'flex'}
-               direction={'row'}
-               justify={{ base: 'center', md: 'space-between' }}
-               align={{ base: 'center', md: 'center' }}
+               justifyContent={'center'}
             >
-               <TextLoop
-                  children={['Engineering', 'Innovating', 'Designing']}
-               />
-               <span>&nbsp;</span>a
-            </Heading>
-            <Heading
-               color="white"
-               as="h1"
-               size="4xl"
-               m="50px"
-               position={'absolute'}
-               top="320px"
-               zIndex={'1'}
-               display={'flex'}
-               direction={'row'}
-               justify={{ base: 'center', md: 'space-between' }}
-               align={{ base: 'center', md: 'center' }}
+               <Heading size={'3xl'}>Lorem ipsum</Heading>
+               <Text fontSize={'2xl'} pt="20px">
+                  Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+               </Text>
+            </Box>
+            {/* <SimpleGrid
+               columns={[1, 1, 2]}
+               // mx={['0', '0', '100px', '100px']}
             >
-               sustainable world
-            </Heading>
-            <Text
-               color="white"
-               as="h1"
-               fontSize={'20px'}
-               ml="50px"
-               position={'absolute'}
-               top="450px"
-               zIndex={'1'}
-               display={'flex'}
-               direction={'row'}
-               justify={{ base: 'center', md: 'space-between' }}
-               align={{ base: 'center', md: 'center' }}
-            >
-               Human design at the center of all things
-            </Text>
+               <Box
+                  bg="teal.500"
+                  height="400px"
+                  width={['100%', '100%', '50vw - 110px', '50vw - 110px']}
+                  className="box"
+               >
+                  <Heading
+                     fontSize={['5xl', '5xl', '5xl', '6xl']}
+                     align="center"
+                  >
+                     Sustainable Innovation
+                  </Heading>
+                  <Text
+                     fontSize={['18px', '19px', '20px', '20px']}
+                     variant="outline"
+                     align="justify"
+                     fontWeight="thin"
+                     pt="30px"
+                     px={['30px', '30px', '70px', '80px']}
+                  >
+                     Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
+                     elit, sed do eiusmod tempor incididunt ut labore et dolore
+                     magna aliqua. Ut enim ad minim veniam, quis nostrud
+                     exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                     consequat.
+                  </Text>
+               </Box>
+               <Box bg="grey">
+                  <Text>Something interactive here</Text>
+               </Box>
+            </SimpleGrid> */}
          </Box>
       </Fragment>
    )
