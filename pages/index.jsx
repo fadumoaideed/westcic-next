@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import {
    Box,
@@ -65,6 +66,7 @@ export default function Home() {
                   Human centered design at the center of all things
                </Text>
             </Box>
+
             <SimpleGrid columns={[1, 1, 2]}>
                <Container
                   id="section1"
