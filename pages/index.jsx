@@ -46,15 +46,8 @@ export default function Home(props) {
             >
                Learn more!
             </Button>
-            {/* //FIXME: */}
-            {/* <Image
-               src="/../public/Untitled(1).png"
-               alt="transpar"
-               layout="fill"
-               transition={'all .2s ease-in-out'}
-               transform={'scale(1.02'}
-               
-            /> */}
+            {/* //FIXME: Static particle that moves on hover */}
+
             <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
                <Heading color="white" as="h1" size="4xl" mx="50px">
                   <TextLoop children={['Engineer', 'Innovate', 'Design']} />
@@ -74,56 +67,25 @@ export default function Home(props) {
                   Human centered design at the center of all things
                </Text>
             </Box>
-            <Box
-               id="section1"
-               bg="white"
-               height={'500px'}
-               m="50px"
-               justifyContent={'center'}
-            >
-               <Heading size={'3xl'}>Lorem ipsum</Heading>
-               <Text fontSize={'2xl'} pt="20px">
-                  Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-               </Text>
-            </Box>
-            {/* <SimpleGrid
-               columns={[1, 1, 2]}
-               // mx={['0', '0', '100px', '100px']}
-            >
-               <Box
-                  bg="teal.500"
-                  height="400px"
-                  width={['100%', '100%', '50vw - 110px', '50vw - 110px']}
-                  className="box"
+            <SimpleGrid columns={[1, 1, 2]}>
+               <Container
+                  id="section1"
+                  bg="white"
+                  height={'500px'}
+                  m="50px"
+                  justifyContent={'center'}
                >
-                  <Heading
-                     fontSize={['5xl', '5xl', '5xl', '6xl']}
-                     align="center"
-                  >
-                     Sustainable Innovation
-                  </Heading>
-                  <Text
-                     fontSize={['18px', '19px', '20px', '20px']}
-                     variant="outline"
-                     align="justify"
-                     fontWeight="thin"
-                     pt="30px"
-                     px={['30px', '30px', '70px', '80px']}
-                  >
+                  <Heading size={'3xl'}>Lorem ipsum</Heading>
+                  <Text fontSize={'2xl'} pt="20px">
                      Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
                      elit, sed do eiusmod tempor incididunt ut labore et dolore
                      magna aliqua. Ut enim ad minim veniam, quis nostrud
                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
                      consequat.
                   </Text>
-               </Box>
-               <Box bg="grey">
-                  <Text>Something interactive here</Text>
-               </Box>
-            </SimpleGrid> */}
+               </Container>
+               <Box bg="teal.700" height="400px"></Box>
+            </SimpleGrid>
          </Box>
       </Fragment>
    )
