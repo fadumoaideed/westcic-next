@@ -16,6 +16,7 @@ function Carousel2() {
                   },
                   800: {
                      height: '300px'
+
                   }
                }
             }}
@@ -37,6 +38,7 @@ function Carousel2() {
             <SplideSlide>
                <img
                   src="https://res.cloudinary.com/westcic/image/upload/w_1440,h_550,c_fill/v1640045427/plant-bulb_u9nge3.jpg"
+
                   alt="Image 2"
                />
             </SplideSlide>

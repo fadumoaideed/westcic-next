@@ -14,7 +14,7 @@ import {
 import TextLoop from 'react-text-loop'
 let prefix = '/westcic-next'
 
-export default function Home(props) {
+export default function Home() {
    return (
       <Fragment>
          <Head>
@@ -44,8 +44,8 @@ export default function Home(props) {
             >
                Learn more!
             </Button>
-            {/* //FIXME: Static particle that moves on hover */}
 
+            {/* //FIXME: Static particle that moves on hover */}
             <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
                <Heading color="white" as="h1" size="4xl" mx="50px">
                   <TextLoop children={['Engineer', 'Innovate', 'Design']} />
