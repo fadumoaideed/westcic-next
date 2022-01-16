@@ -16,7 +16,7 @@ import TextLoop from 'react-text-loop'
 import { translate3d } from 'react-animations/lib/utils'
 let prefix = '/westcic-next'
 
-export default function Home(props) {
+export default function Home() {
    return (
       <Fragment>
          <Head>
@@ -89,41 +89,7 @@ export default function Home(props) {
                   ullamco laboris nisi ut aliquip ex ea commodo consequat.
                </Text>
             </Box>
-            {/* <SimpleGrid
-               columns={[1, 1, 2]}
-               // mx={['0', '0', '100px', '100px']}
-            >
-               <Box
-                  bg="teal.500"
-                  height="400px"
-                  width={['100%', '100%', '50vw - 110px', '50vw - 110px']}
-                  className="box"
-               >
-                  <Heading
-                     fontSize={['5xl', '5xl', '5xl', '6xl']}
-                     align="center"
-                  >
-                     Sustainable Innovation
-                  </Heading>
-                  <Text
-                     fontSize={['18px', '19px', '20px', '20px']}
-                     variant="outline"
-                     align="justify"
-                     fontWeight="thin"
-                     pt="30px"
-                     px={['30px', '30px', '70px', '80px']}
-                  >
-                     Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
-                     elit, sed do eiusmod tempor incididunt ut labore et dolore
-                     magna aliqua. Ut enim ad minim veniam, quis nostrud
-                     exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                     consequat.
-                  </Text>
-               </Box>
-               <Box bg="grey">
-                  <Text>Something interactive here</Text>
-               </Box>
-            </SimpleGrid> */}
+
          </Box>
       </Fragment>
    )

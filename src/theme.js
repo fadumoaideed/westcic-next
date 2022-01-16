@@ -65,6 +65,7 @@ const config = {
    //fontSizes,
    //fontWeights,
 
+
    styles: {
       global: {
          html: {
