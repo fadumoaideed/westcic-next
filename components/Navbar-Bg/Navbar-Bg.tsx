@@ -11,7 +11,6 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   useColorModeValue,
    useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
@@ -21,24 +20,31 @@ import {
    ChevronDownIcon,
    ChevronRightIcon
 } from '@chakra-ui/icons'
-import {Logo} from "../Logo/logo"
-
+import { Logo } from '../Logo/logo'
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
-      <Box className="navigation">
+      <Box
+         className="navigation"
+         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
+         backgroundSize={['cover', 'cover', 'cover', '100%']}
+         backgroundPosition={['left top', 'left top', 'left top', 'left top']}
+         bgRepeat="no-repeat"
+         minH={'800px'}
+      >
          <Flex
-            bg={useColorModeValue('white', 'gray.800')}
-            color={useColorModeValue('gray.600', 'white')}
+            color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
             px={{ base: 4 }}
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-            align={'center'}
+            // borderBottom={1}
+            // borderStyle={'solid'}
+            // borderColor={'teal.900'}
+            // borderBottomWidth={'0.1px'}
+            align={'start'}
+            pt={'10'}
          >
             <Flex
                flex={{ base: 1, md: 'auto' }}
@@ -58,14 +64,14 @@ export default function WithSubnavigation() {
                   aria-label={'Toggle Navigation'}
                />
             </Flex>
-            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-               <Link href="/">              
-                   <Logo />
+            <Flex
+               flex={{ base: 1 }}
+               justify={{ base: 'center', md: 'start' }}
+               pl="50px"
+            >
+               <Link href="/">
+                  <Logo />
                </Link>
-
-               {/* <Flex display={{ base: 'none', md: 'inline-flex' }} ml={10}>
-                  <DesktopNav />
-               </Flex> */}
             </Flex>
 
             <Stack
@@ -76,23 +82,41 @@ export default function WithSubnavigation() {
                className="navbar-links"
                pe={20}
             >
-               <Stack display={{ base: 'none', md: 'inline-flex' }}  >         <DesktopNav /></Stack>
-   
+               <Stack display={{ base: 'none', md: 'inline-flex' }}>
+                  {' '}
+                  <DesktopNav />
+               </Stack>
             </Stack>
          </Flex>
-
-         <Collapse in={isOpen} animateOpacity>
-            <MobileNav />
-         </Collapse>
+         <Box
+            bg="transparent"
+            // justify={'flex-start'}
+            w={'100vw'}
+            direction={'row'}
+         >
+            {' '}
+            <Collapse in={isOpen} animateOpacity>
+               <MobileNav />
+            </Collapse>
+         </Box>
+         <Link href='#section1'>
+         <Icon
+            position={'absolute'}
+            top="700px"
+            w={'100vw'}
+            h={50}
+            color={'white'}
+            as={ChevronDownIcon}
+            _hover={{
+               transition: 'all 0.6s ease-out',
+               transform: 'rotate(180deg)'
+            }}
+         /></Link>
       </Box>
    )
 }
 
 const DesktopNav = () => {
-   const linkColor = useColorModeValue('gray.600', 'gray.200')
-   const linkHoverColor = useColorModeValue('gray.800', 'white')
-   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
-
    return (
       <Stack direction={'row'} spacing={55}>
          {NAV_ITEMS.map((navItem) => (
@@ -102,16 +126,15 @@ const DesktopNav = () => {
                      <Link
                         p={2}
                         href={navItem.href ?? '#'}
-                        fontSize={'sm'}
+                        fontSize={'16px'}
                         fontWeight={500}
-                        color={linkColor}
+                        color={'white'}
                         _hover={{
                            textDecoration: 'underline',
-                           textDecorationColor:"teal",
-                           textDecorationStyle: "solid",
-                           textDecorationThickness:"3px",
-                           textUnderlineOffset: "8px",
-                           color: linkHoverColor
+                           textDecorationColor: 'white',
+                           textDecorationStyle: 'solid',
+                           textDecorationThickness: '3px',
+                           textUnderlineOffset: '8px'
                         }}
                      >
                         {navItem.label}
@@ -122,12 +145,12 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={popoverContentBgColor}
+                        bg={'teal.600'}
                         p={4}
                         rounded={'xl'}
                         minW={'sm'}
                      >
-                        <Stack >
+                        <Stack>
                            {navItem.children.map((child) => (
                               <DesktopSubNav key={child.label} {...child} />
                            ))}
@@ -142,6 +165,7 @@ const DesktopNav = () => {
 }
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+   // Dropdown list for subpages
    return (
       <Link
          href={href}
@@ -149,7 +173,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
          display={'block'}
          p={2}
          rounded={'md'}
-         _hover={{ bg: useColorModeValue('teal.50', 'gray.900') }}
+         _hover={{ bg: 'transparent' }}
       >
          <Stack direction={'row'} align={'center'}>
             <Box>
@@ -157,7 +181,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                   transition={'all .3s ease'}
                   _groupHover={{ color: 'teal.900' }}
                   fontWeight={500}
-                  fontSize={"lg"}
+                  fontSize={'lg'}
                >
                   {label}
                </Text>
@@ -181,11 +205,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 
 const MobileNav = () => {
    return (
-      <Stack
-         bg={useColorModeValue('white', 'gray.800')}
-         p={4}
-         display={{ md: 'none' }}
-      >
+      <Stack bg={'transparent'} p={4} display={{ md: 'none' }}>
          {NAV_ITEMS.map((navItem) => (
             <MobileNavItem key={navItem.label} {...navItem} />
          ))}
@@ -208,10 +228,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                textDecoration: 'none'
             }}
          >
-            <Text
-               fontWeight={400}
-               color={useColorModeValue('gray.600', 'gray.200')}
-            >
+            <Text fontWeight={400} color={'white'}>
                {label}
             </Text>
             {children && (
@@ -221,6 +238,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                   transform={isOpen ? 'rotate(180deg)' : ''}
                   w={6}
                   h={6}
+                  color="white"
                />
             )}
          </Flex>
@@ -234,9 +252,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                mt={2}
                pl={4}
                borderLeft={1}
-               // borderStyle={'solid'} //line hover underneath 
-               borderColor={useColorModeValue('gray.200', 'gray.700')}
+               // borderStyle={'solid'} //line hover underneath
+               borderColor={'purple'}
                align={'start'}
+               color={'white'}
             >
                {children &&
                   children.map((child) => (
@@ -251,17 +270,14 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 }
 
 interface NavItem {
-   label: string;
-   subLabel?: string;
-   children?: Array<NavItem>;
-   href?: string;
+   label: string
+   subLabel?: string
+   children?: Array<NavItem>
+   href?: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
    {
-      label: 'Home',
-      href: '/'
-   },,{
       label: 'Projects',
       children: [
          {
@@ -274,7 +290,7 @@ const NAV_ITEMS: Array<NavItem> = [
             subLabel: 'lorem ipsum',
             href: '#'
          }
-      ],
+      ]
       // href: 'projects'
    },
    {

@@ -1,19 +1,21 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import { slideInLeft, slideInRight } from 'react-animations'
-import { Box, SimpleGrid, Heading, Text, Spacer } from '@chakra-ui/react'
-import Carousel from '../components/Carousel/Carousel'
-
+import Image from 'next/image'
+import NavBar from '../components/Navbar-Bg/Navbar-Bg'
+import {
+   Box,
+   Flex,
+   Button,
+   Container,
+   Grid,
+   Heading,
+   Text,
+   SimpleGrid
+} from '@chakra-ui/react'
+import TextLoop from 'react-text-loop'
+import { translate3d } from 'react-animations/lib/utils'
 let prefix = '/westcic-next'
 
-const SlideInLeft = styled.div`
-   animation: 2s ${keyframes`${slideInLeft}`};
-`
-const SlideInRight = styled.div`
-   animation: 2s ${keyframes`${slideInRight}`};
-`
 export default function Home() {
    return (
       <Fragment>
@@ -44,6 +46,7 @@ export default function Home() {
             >
                Learn more!
             </Button>
+
             {/* //FIXME: Static particle that moves on hover */}
             <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
                <Heading color="white" as="h1" size="4xl" mx="50px">
@@ -64,6 +67,7 @@ export default function Home() {
                   Human centered design at the center of all things
                </Text>
             </Box>
+
             <SimpleGrid columns={[1, 1, 2]}>
                <Container
                   id="section1"
