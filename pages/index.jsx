@@ -23,75 +23,65 @@ export default function Home() {
          </Head>
 
          <Box className="home-container">
-            <Carousel />
-
-            <SimpleGrid columns={[1, 1, 2]} mx={['0', '0', '100px', '100px']}>
-               <SlideInLeft>
-                  <Box
-                     bg="teal.500"
-                     height="400px"
-                     width={['100%', '100%', '50vw - 110px', '50vw - 110px']}
-                     className="box"
-                  >
-                     <Heading
-                        fontSize={['5xl', '5xl', '5xl', '6xl']}
-                        align="center"
-                     >
-                        Sustainable Innovation
-                     </Heading>
-                     <Text
-                        fontSize={['xsm', '2md', '5md', '6md']}
-                        variant="outline"
-                        align="justify"
-                        fontWeight="thin"
-                        pt="30px"
-                        px={['30px', '30px', '70px', '80px']}
-                     >
-                        Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
-                     </Text>
-                  </Box>
-               </SlideInLeft>
-               <Box bg="grey">
-                  <Text>Something interactive here</Text>
-               </Box>
-            </SimpleGrid>
-            <SimpleGrid columns={[1, 1, 2]} mx={['0', '0', '100px', '100px']}>
-               <Box bg="grey">
-                  <Text>Something interactive here</Text>
-               </Box>
-               <SlideInRight>
-                  <Box
-                     bg="teal.500"
-                     height="400px"
-                     width={['100%', '100%', '50vw - 100px', '50vw - 100px']}
-                     className="box"
-                  >
-                     <Heading
-                        fontSize={['5xl', '5xl', '5xl', '6xl']}
-                        align="center"
-                     >
-                        Human Centered Design
-                     </Heading>
-                     <Text
-                        fontSize={['xsm', '2md', '5md', '6md']}
-                        variant="outline"
-                        align="justify"
-                        fontWeight="thin"
-                        pt="30px"
-                        px={['30px', '30px', '70px', '80px']}
-                     >
-                        Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
-                     </Text>
-                  </Box>
-               </SlideInRight>
+            <NavBar />
+            <Button
+               position={'absolute'}
+               top="500px"
+               fontSize={'20px'}
+               zIndex={'1'}
+               color="white"
+               variant="outline"
+               borderRadius={'30'}
+               transition="all 200ms ease"
+               mx={['50px', '100px', '150px', '150px']}
+               _hover={{
+                  boxShadow: 'lg',
+                  bg: 'rgba(0, 0, 0, 0.2)',
+                  transform: 'scale(1.05)'
+               }}
+               width="180px"
+               height="50px"
+            >
+               Learn more!
+            </Button>
+            {/* //FIXME: Static particle that moves on hover */}
+            <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
+               <Heading color="white" as="h1" size="4xl" mx="50px">
+                  <TextLoop children={['Engineer', 'Innovate', 'Design']} />
+                  <span>&nbsp;</span>a
+               </Heading>
+               <Heading color="white" as="h1" size="4xl" mx="50px">
+                  sustainable world
+               </Heading>
+               <Text
+                  fontFamily={'Arial'}
+                  color="white"
+                  as="h1"
+                  mt="10px"
+                  mx="55px"
+                  fontSize={'20px'}
+               >
+                  Human centered design at the center of all things
+               </Text>
+            </Box>
+            <SimpleGrid columns={[1, 1, 2]}>
+               <Container
+                  id="section1"
+                  bg="white"
+                  height={'500px'}
+                  m="50px"
+                  justifyContent={'center'}
+               >
+                  <Heading size={'3xl'}>Lorem ipsum</Heading>
+                  <Text fontSize={'2xl'} pt="20px">
+                     Lorem Lorem ipsum dolor sit amet, consectetur adipiscing
+                     elit, sed do eiusmod tempor incididunt ut labore et dolore
+                     magna aliqua. Ut enim ad minim veniam, quis nostrud
+                     exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                     consequat.
+                  </Text>
+               </Container>
+               <Box bg="teal.700" height="400px"></Box>
             </SimpleGrid>
          </Box>
       </Fragment>
