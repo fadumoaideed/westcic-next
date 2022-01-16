@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import {
    Box,
@@ -13,7 +12,6 @@ import {
    SimpleGrid
 } from '@chakra-ui/react'
 import TextLoop from 'react-text-loop'
-import { translate3d } from 'react-animations/lib/utils'
 let prefix = '/westcic-next'
 
 export default function Home(props) {
