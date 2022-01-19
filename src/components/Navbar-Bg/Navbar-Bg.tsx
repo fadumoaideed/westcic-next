@@ -27,18 +27,19 @@ export default function WithSubnavigation() {
 
    return (
       <Box
-         className="navigation"
+         w="100vw" //FIXME: get rid of white bar on right
+         className="navbar"
          bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
-         minH={'800px'}
+         minH={['800px', '800px', '800px', '800px', '900px']}
       >
          <Flex
             color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
-            px={{ base: 4 }}
+            px={{ base: 2 }}
             // borderBottom={1}
             // borderStyle={'solid'}
             // borderColor={'teal.900'}
@@ -48,7 +49,7 @@ export default function WithSubnavigation() {
          >
             <Flex
                flex={{ base: 1, md: 'auto' }}
-               ml={{ base: -1 }}
+               ml={{ base: 10 }}
                display={{ base: 'flex', md: 'none' }}
             >
                <IconButton
@@ -61,7 +62,9 @@ export default function WithSubnavigation() {
                      )
                   }
                   variant={'ghost'}
+                  color={'white'}
                   aria-label={'Toggle Navigation'}
+                  _hover={{ bg: 'none', transform: 'scale(1.05)' }}
                />
             </Flex>
             <Flex
@@ -83,35 +86,37 @@ export default function WithSubnavigation() {
                pe={20}
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
-                  {' '}
                   <DesktopNav />
                </Stack>
             </Stack>
          </Flex>
          <Box
-            bg="transparent"
+            bg="#114546"
             // justify={'flex-start'}
             w={'100vw'}
             direction={'row'}
+            position={'absolute'}
+            top="88px"
+            zIndex={2}
          >
-            {' '}
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />
             </Collapse>
          </Box>
-         <Link href='#section1'>
-         <Icon
-            position={'absolute'}
-            top="700px"
-            w={'100vw'}
-            h={50}
-            color={'white'}
-            as={ChevronDownIcon}
-            _hover={{
-               transition: 'all 0.6s ease-out',
-               transform: 'rotate(180deg)'
-            }}
-         /></Link>
+         <Link href="#section1">
+            <Icon
+               position={'absolute'}
+               top={['700px', '800px', '800px', '800px']}
+               w={'100vw'}
+               h={50}
+               color={'white'}
+               as={ChevronDownIcon}
+               _hover={{
+                  transition: 'all 0.6s ease-out',
+                  transform: 'rotate(180deg)'
+               }}
+            />
+         </Link>
       </Box>
    )
 }
@@ -124,7 +129,7 @@ const DesktopNav = () => {
                <Popover trigger={'hover'} placement={'bottom-start'}>
                   <PopoverTrigger>
                      <Link
-                        p={2}
+                        p={5}
                         href={navItem.href ?? '#'}
                         fontSize={'16px'}
                         fontWeight={500}
@@ -145,9 +150,9 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={'teal.600'}
+                        bg={'white'}
                         p={4}
-                        rounded={'xl'}
+                        rounded={'sm'}
                         minW={'sm'}
                      >
                         <Stack>
@@ -179,7 +184,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Box>
                <Text
                   transition={'all .3s ease'}
-                  _groupHover={{ color: 'teal.900' }}
+                  _groupHover={{ color: 'black', textDecoration: 'underline' }} //FIXME:navbar project
                   fontWeight={500}
                   fontSize={'lg'}
                >
@@ -196,7 +201,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                align={'center'}
                flex={1}
             >
-               <Icon color={'teal.800'} w={5} h={5} as={ChevronRightIcon} />
+               <Icon color={'white'} w={5} h={5} as={ChevronRightIcon} />
             </Flex>
          </Stack>
       </Link>
@@ -252,10 +257,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                mt={2}
                pl={4}
                borderLeft={1}
-               // borderStyle={'solid'} //line hover underneath
-               borderColor={'purple'}
                align={'start'}
-               color={'white'}
+               color={'white'} //sub project
             >
                {children &&
                   children.map((child) => (

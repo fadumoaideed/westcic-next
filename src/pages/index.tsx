@@ -16,13 +16,8 @@ let prefix = '/westcic-next'
 
 export default function Home() {
    return (
-      <Fragment>
-         <Head>
-            <title>WEST C.I.C.</title>
-            <link rel="shortcut icon" href={prefix + '/favicon.ico'} />
-         </Head>
-
-         <Box className="home-container">
+         
+         <Box className="home-container" w='100vw'>
             <NavBar />
             <Button
                position={'absolute'}
@@ -45,8 +40,8 @@ export default function Home() {
                Learn more!
             </Button>
 
-            {/* //FIXME: Static particle that moves on hover */}
-            <Box className="hell" position={'absolute'} top="200" zIndex={'1'}>
+            {/* //TODO: Static particle that moves on hover */}
+            <Box className="text-loop" position={'absolute'} top="200" zIndex={'1'}>
                <Heading color="white" as="h1" size="4xl" mx="50px">
                   <TextLoop children={['Engineer', 'Innovate', 'Design']} />
                   <span>&nbsp;</span>a
@@ -65,7 +60,7 @@ export default function Home() {
                   Human centered design at the center of all things
                </Text>
             </Box>
-            <SimpleGrid columns={[1, 1, 2]}>
+            <SimpleGrid columns={[1, 1, 2]} w='100vw'>
                <Container
                   id="section1"
                   bg="white"
@@ -85,6 +80,5 @@ export default function Home() {
                <Box bg="teal.700" height="400px"></Box>
             </SimpleGrid>
          </Box>
-      </Fragment>
    )
 }

@@ -30,7 +30,21 @@ function Services() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  color: 'white'
+                  color: 'white',
+                  backgroundColor: 'blue'
+               }}
+            >
+               <p>Scroll up</p>
+            </ParallaxLayer>
+            <ParallaxLayer
+               offset={1}
+               speed={0.5}
+               style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  color: 'white',
+                  backgroundColor: 'pink'
                }}
             >
                <p>Scroll up</p>

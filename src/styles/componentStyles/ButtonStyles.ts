@@ -1,22 +1,39 @@
-export const ButtonStyles = {
+import { DeepPartial, Theme } from '@chakra-ui/react'
+
+const Button: DeepPartial<Theme['components']['Button']> = {
    //FIXME:component styles doesnt work
    // The styles all button have in common
    baseStyle: {
-      fontWeight: 'bold',
-      textTransform: 'uppercase',
-      borderRadius: 'base' // <-- border radius is same for all variants and sizes
+      lineHeight: 'none',
+      borderRadius: '0',
+      fontWeight: 'string',
+      _focus: {
+         boxShadow: 'string'
+      },
+      _disabled: {
+         opacity: 1,
+         cursor: 'string',
+         boxShadow: 'string'
+      },
+      _hover: {
+         _disabled: {
+            bg: 'string'
+         }
+      }
    },
    // Two sizes: sm and md
    sizes: {
       sm: {
-         fontSize: 'sm',
-         px: 5, // <-- px is short for paddingLeft and paddingRight
-         py: 4 // <-- py is short for paddingTop and paddingBottom
+         h: 1,
+         minW: 1,
+         fontSize: '',
+         px: 1
       },
       md: {
-         fontSize: 'md',
-         px: 7, // <-- these values are tokens from the design system
-         py: 5 // <-- these values are tokens from the design system
+         h: 1,
+         minW: 1,
+         fontSize: '',
+         px: 1
       }
    },
    // Two variants: outline and solid
@@ -46,10 +63,8 @@ export const ButtonStyles = {
    defaultProps: {
       size: 'sm',
       variant: 'solid',
-      transition: 'all 200ms ease',
-      _hover: {
-         boxShadow: 'sm',
-         transform: 'scale(1.02)'
-      }
+      colorScheme: 'green'
    }
 }
+
+export {}
