@@ -21,8 +21,7 @@ import {
    ChevronDownIcon,
    ChevronRightIcon
 } from '@chakra-ui/icons'
-import {Logo} from "../Logo/logo"
-
+import { Logo } from '../Logo/logo'
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
@@ -59,8 +58,8 @@ export default function WithSubnavigation() {
                />
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-               <Link href="/">              
-                   <Logo />
+               <Link href="/">
+                  <Logo />
                </Link>
 
                {/* <Flex display={{ base: 'none', md: 'inline-flex' }} ml={10}>
@@ -76,8 +75,10 @@ export default function WithSubnavigation() {
                className="navbar-links"
                pe={20}
             >
-               <Stack display={{ base: 'none', md: 'inline-flex' }}  >         <DesktopNav /></Stack>
-   
+               <Stack display={{ base: 'none', md: 'inline-flex' }}>
+                  {' '}
+                  <DesktopNav />
+               </Stack>
             </Stack>
          </Flex>
 
@@ -107,10 +108,10 @@ const DesktopNav = () => {
                         color={linkColor}
                         _hover={{
                            textDecoration: 'underline',
-                           textDecorationColor:"teal",
-                           textDecorationStyle: "solid",
-                           textDecorationThickness:"3px",
-                           textUnderlineOffset: "8px",
+                           textDecorationColor: 'teal',
+                           textDecorationStyle: 'solid',
+                           textDecorationThickness: '3px',
+                           textUnderlineOffset: '8px',
                            color: linkHoverColor
                         }}
                      >
@@ -127,7 +128,7 @@ const DesktopNav = () => {
                         rounded={'xl'}
                         minW={'sm'}
                      >
-                        <Stack >
+                        <Stack>
                            {navItem.children.map((child) => (
                               <DesktopSubNav key={child.label} {...child} />
                            ))}
@@ -157,7 +158,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                   transition={'all .3s ease'}
                   _groupHover={{ color: 'teal.900' }}
                   fontWeight={500}
-                  fontSize={"lg"}
+                  fontSize={'lg'}
                >
                   {label}
                </Text>
@@ -234,7 +235,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                mt={2}
                pl={4}
                borderLeft={1}
-               // borderStyle={'solid'} //line hover underneath 
+               // borderStyle={'solid'} //line hover underneath
                borderColor={useColorModeValue('gray.200', 'gray.700')}
                align={'start'}
             >
@@ -251,17 +252,18 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 }
 
 interface NavItem {
-   label: string;
-   subLabel?: string;
-   children?: Array<NavItem>;
-   href?: string;
+   label: string
+   subLabel?: string
+   children?: Array<NavItem>
+   href?: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
    {
       label: 'Home',
       href: '/'
-   },,{
+   },
+   {
       label: 'Projects',
       children: [
          {
@@ -274,7 +276,7 @@ const NAV_ITEMS: Array<NavItem> = [
             subLabel: 'lorem ipsum',
             href: '#'
          }
-      ],
+      ]
       // href: 'projects'
    },
    {

@@ -18,6 +18,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "src",
+    "noUnusedParameters": true,            /* Report errors on unused parameters. */
     "incremental": true
   },
   "include": [

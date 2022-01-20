@@ -2,6 +2,7 @@ import {
    Box,
    Flex,
    Text,
+   Heading,
    IconButton,
    Button,
    Stack,
@@ -21,13 +22,13 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
+import TextLoop from 'react-text-loop'
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
       <Box
-         w="100vw" //FIXME: get rid of white bar on right
          className="navbar"
          bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
@@ -92,7 +93,6 @@ export default function WithSubnavigation() {
          </Flex>
          <Box
             bg="#114546"
-            // justify={'flex-start'}
             w={'100vw'}
             direction={'row'}
             position={'absolute'}
@@ -106,7 +106,7 @@ export default function WithSubnavigation() {
          <Link href="#section1">
             <Icon
                position={'absolute'}
-               top={['700px', '800px', '800px', '800px']}
+               top={['700px', '700px', '700px', '700px', '700px']}
                w={'100vw'}
                h={50}
                color={'white'}
@@ -117,6 +117,57 @@ export default function WithSubnavigation() {
                }}
             />
          </Link>
+         <Stack mx="50px">
+            <Box
+               className="text-loop"
+               position={'relative'}
+               mx={'20px'}
+               top={'100px'}
+            >
+               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
+                  <TextLoop children={['Engineer', 'Innovate', 'Design']} />
+                  <span>&nbsp;</span>a
+               </Heading>
+               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
+                  sustainable world
+               </Heading>
+               <Text
+                  fontFamily={'Arial'}
+                  color="white"
+                  as="h1"
+                  mt="10px"
+                  mx="5px"
+                  fontSize={['xl', '2xl', '3xl']}
+               >
+                  Human centered design at the center of all things
+               </Text>
+            </Box>
+            <Stack
+               className="learn-more"
+               direction={'row'}
+               mx={['50px', '200px']}
+               position={'relative'}
+               top={'150px'}
+               pl="200px"
+            >
+               <Button
+                  fontSize={'xl'}
+                  color="white"
+                  variant="outline"
+                  borderRadius={'30'}
+                  transition="all 200ms ease"
+                  _hover={{
+                     boxShadow: 'lg',
+                     bg: 'rgba(0, 0, 0, 0.2)',
+                     transform: 'scale(1.05)'
+                  }}
+                  width="180px"
+                  height="50px"
+               >
+                  Learn more!
+               </Button>
+            </Stack>
+         </Stack>
       </Box>
    )
 }
