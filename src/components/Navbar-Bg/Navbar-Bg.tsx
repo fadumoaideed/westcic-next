@@ -12,6 +12,7 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
+   Center,
    useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
@@ -35,6 +36,8 @@ export default function WithSubnavigation() {
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
          minH={['800px', '800px', '800px', '800px', '900px']}
+         minW={['100%']}
+
       >
          <Flex
             color={'white'}
@@ -103,21 +106,9 @@ export default function WithSubnavigation() {
                <MobileNav />
             </Collapse>
          </Box>
-         <Link href="#section1">
-            <Icon
-               position={'absolute'}
-               top={['700px', '700px', '700px', '700px', '700px']}
-               w={'100vw'}
-               h={50}
-               color={'white'}
-               as={ChevronDownIcon}
-               _hover={{
-                  transition: 'all 0.6s ease-out',
-                  transform: 'rotate(180deg)'
-               }}
-            />
-         </Link>
-         <Stack mx="50px">
+         
+
+         <Stack className="text-loop-button" mx={['30px', '50px']}>
             <Box
                className="text-loop"
                position={'relative'}
@@ -137,20 +128,23 @@ export default function WithSubnavigation() {
                   as="h1"
                   mt="10px"
                   mx="5px"
-                  fontSize={['xl', '2xl', '3xl']}
+                  fontSize={['lg', '2xl', '3xl']}
                >
                   Human centered design at the center of all things
                </Text>
             </Box>
-            <Stack
+            <Flex
                className="learn-more"
                direction={'row'}
-               mx={['50px', '200px']}
+               align={'center'}
+               mx={['20px', '100px']}
                position={'relative'}
+               // width='50%'
                top={'150px'}
-               pl="200px"
+               // pl={["50px","150px"]}
             >
                <Button
+                  mx={['50px', '150px']}
                   fontSize={'xl'}
                   color="white"
                   variant="outline"
@@ -166,8 +160,25 @@ export default function WithSubnavigation() {
                >
                   Learn more!
                </Button>
-            </Stack>
+            </Flex>
          </Stack>
+         <Center className="chevron" >
+            <Link href="#section1">
+               <Icon
+                  position={'relative'}
+                  top='350px'
+                  // top={['700px', '700px', '700px', '700px', '750px']}
+                  w={50}
+                  h={50}
+                  color={'white'}
+                  as={ChevronDownIcon}
+                  _hover={{
+                     transition: 'all 0.6s ease-out',
+                     transform: 'rotate(180deg)'
+                  }}
+               />
+            </Link>
+         </Center>
       </Box>
    )
 }
@@ -182,8 +193,8 @@ const DesktopNav = () => {
                      <Link
                         p={5}
                         href={navItem.href ?? '#'}
-                        fontSize={'16px'}
-                        fontWeight={500}
+                        fontSize={'lg'}
+                        fontWeight={'medium'}
                         color={'white'}
                         _hover={{
                            textDecoration: 'underline',
