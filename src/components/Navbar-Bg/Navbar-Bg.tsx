@@ -13,7 +13,6 @@ import {
    PopoverTrigger,
    PopoverContent,
    Center,
-   useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
 import {
@@ -165,9 +164,8 @@ export default function WithSubnavigation() {
          <Center className="chevron" >
             <Link href="#section1">
                <Icon
-                  position={'relative'}
-                  top='350px'
-                  // top={['700px', '700px', '700px', '700px', '750px']}
+                  position={'absolute'}
+                  top={['700px', '700px', '700px', '700px', '800px']}
                   w={50}
                   h={50}
                   color={'white'}
