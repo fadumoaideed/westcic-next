@@ -19,7 +19,7 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "noUnusedParameters": true,            /* Report errors on unused parameters. */
-    "incremental": true
+    "incremental": false
   },
   "include": [
     "next-env.d.ts",
