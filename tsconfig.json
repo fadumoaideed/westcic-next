@@ -8,20 +8,25 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "jsx": "preserve",
-    "isolatedModules": true
+    "baseUrl": "src",
+    "noUnusedParameters": true,            /* Report errors on unused parameters. */
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src",
+    "commitlint.config.js"
   ],
   "exclude": [
     "node_modules"

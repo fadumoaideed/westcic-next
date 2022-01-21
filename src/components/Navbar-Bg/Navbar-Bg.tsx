@@ -2,6 +2,7 @@ import {
    Box,
    Flex,
    Text,
+   Heading,
    IconButton,
    Button,
    Stack,
@@ -11,6 +12,7 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
+   Center,
    useBreakpointValue,
    useDisclosure
 } from '@chakra-ui/react'
@@ -21,24 +23,27 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
+import TextLoop from 'react-text-loop'
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
 
    return (
       <Box
-         className="navigation"
+         className="navbar"
          bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
-         minH={'800px'}
+         minH={['800px', '800px', '800px', '800px', '900px']}
+         minW={['100%']}
+
       >
          <Flex
             color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
-            px={{ base: 4 }}
+            px={{ base: 2 }}
             // borderBottom={1}
             // borderStyle={'solid'}
             // borderColor={'teal.900'}
@@ -48,7 +53,7 @@ export default function WithSubnavigation() {
          >
             <Flex
                flex={{ base: 1, md: 'auto' }}
-               ml={{ base: -1 }}
+               ml={{ base: 10 }}
                display={{ base: 'flex', md: 'none' }}
             >
                <IconButton
@@ -61,7 +66,9 @@ export default function WithSubnavigation() {
                      )
                   }
                   variant={'ghost'}
+                  color={'white'}
                   aria-label={'Toggle Navigation'}
+                  _hover={{ bg: 'none', transform: 'scale(1.05)' }}
                />
             </Flex>
             <Flex
@@ -83,35 +90,95 @@ export default function WithSubnavigation() {
                pe={20}
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
-                  {' '}
                   <DesktopNav />
                </Stack>
             </Stack>
          </Flex>
          <Box
-            bg="transparent"
-            // justify={'flex-start'}
+            bg="#114546"
             w={'100vw'}
             direction={'row'}
+            position={'absolute'}
+            top="88px"
+            zIndex={2}
          >
-            {' '}
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />
             </Collapse>
          </Box>
-         <Link href='#section1'>
-         <Icon
-            position={'absolute'}
-            top="700px"
-            w={'100vw'}
-            h={50}
-            color={'white'}
-            as={ChevronDownIcon}
-            _hover={{
-               transition: 'all 0.6s ease-out',
-               transform: 'rotate(180deg)'
-            }}
-         /></Link>
+         
+
+         <Stack className="text-loop-button" mx={['30px', '50px']}>
+            <Box
+               className="text-loop"
+               position={'relative'}
+               mx={'20px'}
+               top={'100px'}
+            >
+               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
+                  <TextLoop children={['Engineer', 'Innovate', 'Design']} />
+                  <span>&nbsp;</span>a
+               </Heading>
+               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
+                  sustainable world
+               </Heading>
+               <Text
+                  fontFamily={'Arial'}
+                  color="white"
+                  as="h1"
+                  mt="10px"
+                  mx="5px"
+                  fontSize={['lg', '2xl', '3xl']}
+               >
+                  Human centered design at the center of all things
+               </Text>
+            </Box>
+            <Flex
+               className="learn-more"
+               direction={'row'}
+               align={'center'}
+               mx={['20px', '100px']}
+               position={'relative'}
+               // width='50%'
+               top={'150px'}
+               // pl={["50px","150px"]}
+            >
+               <Button
+                  mx={['50px', '150px']}
+                  fontSize={'xl'}
+                  color="white"
+                  variant="outline"
+                  borderRadius={'30'}
+                  transition="all 200ms ease"
+                  _hover={{
+                     boxShadow: 'lg',
+                     bg: 'rgba(0, 0, 0, 0.2)',
+                     transform: 'scale(1.05)'
+                  }}
+                  width="180px"
+                  height="50px"
+               >
+                  Learn more!
+               </Button>
+            </Flex>
+         </Stack>
+         <Center className="chevron" >
+            <Link href="#section1">
+               <Icon
+                  position={'relative'}
+                  top='350px'
+                  // top={['700px', '700px', '700px', '700px', '750px']}
+                  w={50}
+                  h={50}
+                  color={'white'}
+                  as={ChevronDownIcon}
+                  _hover={{
+                     transition: 'all 0.6s ease-out',
+                     transform: 'rotate(180deg)'
+                  }}
+               />
+            </Link>
+         </Center>
       </Box>
    )
 }
@@ -124,10 +191,10 @@ const DesktopNav = () => {
                <Popover trigger={'hover'} placement={'bottom-start'}>
                   <PopoverTrigger>
                      <Link
-                        p={2}
+                        p={5}
                         href={navItem.href ?? '#'}
-                        fontSize={'16px'}
-                        fontWeight={500}
+                        fontSize={'lg'}
+                        fontWeight={'medium'}
                         color={'white'}
                         _hover={{
                            textDecoration: 'underline',
@@ -145,9 +212,9 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={'teal.600'}
+                        bg={'white'}
                         p={4}
-                        rounded={'xl'}
+                        rounded={'sm'}
                         minW={'sm'}
                      >
                         <Stack>
@@ -179,7 +246,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Box>
                <Text
                   transition={'all .3s ease'}
-                  _groupHover={{ color: 'teal.900' }}
+                  _groupHover={{ color: 'black', textDecoration: 'underline' }} //FIXME:navbar project
                   fontWeight={500}
                   fontSize={'lg'}
                >
@@ -196,7 +263,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                align={'center'}
                flex={1}
             >
-               <Icon color={'teal.800'} w={5} h={5} as={ChevronRightIcon} />
+               <Icon color={'white'} w={5} h={5} as={ChevronRightIcon} />
             </Flex>
          </Stack>
       </Link>
@@ -252,10 +319,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                mt={2}
                pl={4}
                borderLeft={1}
-               // borderStyle={'solid'} //line hover underneath
-               borderColor={'purple'}
                align={'start'}
-               color={'white'}
+               color={'white'} //sub project
             >
                {children &&
                   children.map((child) => (
