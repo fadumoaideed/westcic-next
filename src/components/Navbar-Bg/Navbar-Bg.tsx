@@ -36,7 +36,6 @@ export default function WithSubnavigation() {
          bgRepeat="no-repeat"
          minH={['800px', '800px', '800px', '800px', '900px']}
          minW={['100%']}
-
       >
          <Flex
             color={'white'}
@@ -94,7 +93,7 @@ export default function WithSubnavigation() {
             </Stack>
          </Flex>
          <Box
-            bg="#114546"
+            bg="teal.900"
             w={'100vw'}
             direction={'row'}
             position={'absolute'}
@@ -105,7 +104,6 @@ export default function WithSubnavigation() {
                <MobileNav />
             </Collapse>
          </Box>
-         
 
          <Stack className="text-loop-button" mx={['30px', '50px']}>
             <Box
@@ -126,7 +124,7 @@ export default function WithSubnavigation() {
                   color="white"
                   as="h1"
                   mt="10px"
-                  mx="5px"
+                  mx="2px"
                   fontSize={['lg', '2xl', '3xl']}
                >
                   Human centered design at the center of all things
@@ -136,14 +134,14 @@ export default function WithSubnavigation() {
                className="learn-more"
                direction={'row'}
                align={'center'}
-               mx={['20px', '100px']}
+               // mx={['20px', '100px']}
                position={'relative'}
                // width='50%'
                top={'150px'}
                // pl={["50px","150px"]}
             >
                <Button
-                  mx={['50px', '150px']}
+                  mx={'50px'}
                   fontSize={'xl'}
                   color="white"
                   variant="outline"
@@ -161,11 +159,16 @@ export default function WithSubnavigation() {
                </Button>
             </Flex>
          </Stack>
-         <Center className="chevron" >
+         <Flex
+            className="chevron"
+            w={'100%'}
+            display={'flex'}
+            justifyContent="space-around"
+            position={'absolute'}
+            top={['700px', '700px', '700px', '700px', '800px']}
+         >
             <Link href="#section1">
                <Icon
-                  position={'absolute'}
-                  top={['700px', '700px', '700px', '700px', '800px']}
                   w={50}
                   h={50}
                   color={'white'}
@@ -176,7 +179,7 @@ export default function WithSubnavigation() {
                   }}
                />
             </Link>
-         </Center>
+         </Flex>
       </Box>
    )
 }
@@ -210,7 +213,7 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={'white'}
+                        bg={'teal.900'}
                         p={4}
                         rounded={'sm'}
                         minW={'sm'}
@@ -244,7 +247,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Box>
                <Text
                   transition={'all .3s ease'}
-                  _groupHover={{ color: 'black', textDecoration: 'underline' }} //FIXME:navbar project
+                  _groupHover={{ textDecoration: 'underline' }} //FIXME: style subnav
                   fontWeight={500}
                   fontSize={'lg'}
                >
