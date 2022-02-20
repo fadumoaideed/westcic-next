@@ -11,17 +11,28 @@ const Button: DeepPartial<ComponentStyleConfig> = {
          padding: '0px 40px',
          borderRadius: '30px',
          width: '180px',
-         height: '50px'
+         height: '50px',
+         transition: 'all 200ms ease',
+         _hover: {
+            boxShadow: 'lg',
+            bg: 'teal.600',
+            transform: 'scale(1.05)'
+         }
       },
       default: {
-         bg: 'yellow',
+         bg: 'teal.600',
          color: 'white',
          fontSize: 'xl',
          fontWeight: '600',
          padding: '0px 40px',
          borderRadius: '30',
          width: '180px',
-         height: '50px'
+         height: '50px',
+         _hover: {
+            boxShadow: 'lg',
+            bg: 'teal.700',
+            transform: 'scale(1.05)'
+         }
       }
    },
    defaultProps: {

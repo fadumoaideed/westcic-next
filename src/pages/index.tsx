@@ -11,9 +11,6 @@ import {
    SimpleGrid,
    useStyleConfig
 } from '@chakra-ui/react'
-import Services from '../components/Services/Services'
-import fonts from 'styles/fonts'
-import fontWeights from 'styles/fontWeights'
 
 const prefix = '/westcic-next'
 
@@ -41,25 +38,7 @@ export default function Home() {
                </Flex>
             </SimpleGrid>
          </Container>
-         <Button
-            _css={button}
-            transition="all 200ms ease"
-            fontWeight={fontWeights.bold}
-            _hover={{
-               boxShadow: 'lg',
-               bg: 'teal.700',
-               transform: 'scale(1.05)'
-            }}
-         >
-            Hello
-         </Button>
-         <Box
-            height={'300px'}
-            bg="dangerColorScheme.500"
-            fontWeight={'fontWeights.900'}
-         >
-            hello rwgfef
-         </Box>
+         <Button _css={button}>Hello</Button>
       </Box>
    )
 }
