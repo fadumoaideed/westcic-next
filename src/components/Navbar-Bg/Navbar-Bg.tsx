@@ -195,7 +195,7 @@ const DesktopNav = () => {
                         p={5}
                         href={navItem.href ?? '#'}
                         fontSize={'lg'}
-                        fontWeight={'medium'}
+                        fontWeight={'bold'}
                         color={'white'}
                         _hover={{
                            textDecoration: 'underline',

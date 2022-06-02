@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import { slideInLeft, slideInRight } from 'react-animations'
 import {
    Box,
    Grid,
@@ -13,16 +12,16 @@ import {
    Heading,
    Text
 } from '@chakra-ui/react'
-import Carousel from '../components/Carousel/Carousel'
+// import Carousel from '../components/Carousel/Carousel'
 import Navbar from '../components/Navbar/Navbar'
 let prefix = '/westcic-next'
 
-const SlideInLeft = styled.div`
-   animation: 2s ${keyframes`${slideInLeft}`};
-`
-const SlideInRight = styled.div`
-   animation: 2s ${keyframes`${slideInRight}`};
-`
+// const SlideInLeft = styled.div`
+//    animation: 2s ${keyframes`${slideInLeft}`};
+// `
+// const SlideInRight = styled.div`
+//    animation: 2s ${keyframes`${slideInRight}`};
+// `
 export default function Home() {
    return (
       <Fragment>
@@ -34,10 +33,10 @@ export default function Home() {
          <Box className="home-container">
             <Navbar />
 
-            <Carousel />
+            {/* <Carousel /> */}
 
             <SimpleGrid columns={[1, 1, 2]}>
-               <SlideInLeft>
+               {/* <SlideInLeft>
                   <Box
                      bg="teal.500"
                      height="400px"
@@ -69,7 +68,7 @@ export default function Home() {
                         ea commodo consequat.
                      </Text>
                   </Box>
-               </SlideInLeft>
+               </SlideInLeft> */}
             </SimpleGrid>
          </Box>
       </Fragment>
