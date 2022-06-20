@@ -14,7 +14,7 @@ export const Logo = () => {
       // </svg>
       <Box height={'auto'} width={'150px'}>
          <img
-            src="https://res.cloudinary.com/westcic/image/upload/v1655677569/logov4-min_z6hkhy.png"
+            src="https://res.cloudinary.com/westcic/image/upload/v1655748910/LOGOV6-min_hkevty.png"
             alt="test"
          />
       </Box>
