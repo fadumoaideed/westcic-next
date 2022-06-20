@@ -4,7 +4,7 @@ export default function Resources() {
    return (
       <>
          <Heading fontSize={'5xl'} align="center" pt="40px">
-            Find Out More
+            Explore resources
          </Heading>
          <SimpleGrid
             columns={1}

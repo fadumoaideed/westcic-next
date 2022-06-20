@@ -9,9 +9,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
    return (
       <ChakraProvider theme={customTheme} resetCSS={false}>
          <CSSReset />
-         {/* <Footer /> */}
          <ParallaxProvider>
             <Component {...pageProps} />
+            {/* <Footer /> */}
          </ParallaxProvider>
       </ChakraProvider>
    )

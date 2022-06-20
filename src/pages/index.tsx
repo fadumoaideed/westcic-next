@@ -3,15 +3,23 @@ import Head from 'next/head'
 import Resources from 'components/Resources/Resources'
 import Section1 from 'components/Section1/Section1'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+
 import {
    Box,
    Container,
    Flex,
    Image,
    SimpleGrid,
+   Stack,
+   Text,
+   Heading,
    useStyleConfig
 } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
+import { ParallaxBanner } from 'react-scroll-parallax'
+import Award from 'components/Award/Award'
+import Rivet from 'components/RIVET/Rivet'
 
 const prefix = '/westcic-next'
 
@@ -22,25 +30,8 @@ export default function Home() {
       <Box className="home-container">
          <NavBar />
          <Feature />
-
-         <Container id="section1" maxW={'1600px'} py={12}>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={'20'} px="30px">
-               <Section1 />
-               <Flex overflow="hidden">
-                  <Image
-                     alt={'feature image'}
-                     src={
-                        'https://res.cloudinary.com/westcic/image/upload/v1651922580/section1v1.1_o6zdqo.png'
-                     }
-                     objectFit={'cover'}
-                     _hover={{
-                        transform: 'scale(1.1)',
-                        transition: '0.5s ease-out'
-                     }}
-                  />
-               </Flex>
-            </SimpleGrid>
-         </Container>
+         {/* <Rivet /> */}
+         <Award />
          <Resources />
 
          {/* <Button _css={button}>Hello</Button> */}
