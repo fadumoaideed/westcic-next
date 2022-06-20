@@ -76,7 +76,6 @@ export default function WithSubnavigation() {
                pe={20}
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
-                  {' '}
                   <DesktopNav />
                </Stack>
             </Stack>
