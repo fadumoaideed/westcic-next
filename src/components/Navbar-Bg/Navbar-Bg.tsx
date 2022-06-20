@@ -13,6 +13,7 @@ import {
    PopoverTrigger,
    PopoverContent,
    Center,
+   SimpleGrid,
    useDisclosure
 } from '@chakra-ui/react'
 import {
@@ -73,6 +74,7 @@ export default function WithSubnavigation() {
                flex={{ base: 1 }}
                justify={{ base: 'center', md: 'start' }}
                pl="50px"
+               top="-10px"
             >
                <Link href="/">
                   <Logo />
@@ -85,7 +87,7 @@ export default function WithSubnavigation() {
                direction={'row'}
                spacing={5}
                className="navbar-links"
-               pe={20}
+               pr={20}
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
                   <DesktopNav />
@@ -112,22 +114,52 @@ export default function WithSubnavigation() {
                mx={'20px'}
                top={'100px'}
             >
-               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
+               {/* <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
                   <TextLoop children={['Engineer', 'Innovate', 'Design']} />
                   <span>&nbsp;</span>a
                </Heading>
                <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
                   sustainable world
+               </Heading> */}
+               <Heading
+                  color="white"
+                  as="h1"
+                  fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
+                  width={['300px', ' 400px', '500px', '800px', '1100px']}
+               >
+                  Sustainable innovation
                </Heading>
+
+               <Heading
+                  color="white"
+                  as="h1"
+                  fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
+                  width={['300px', ' 400px', '500px', '800px', '1100px']}
+               >
+                  inclusive of<span>&nbsp;</span>
+                  <TextLoop
+                     children={[
+                        'gender',
+                        'ethnicity',
+                        'age',
+                        'disability',
+                        'sexuality',
+                        'religion',
+                        'income'
+                     ]}
+                  />
+               </Heading>
+
                <Text
                   fontFamily={'Arial'}
                   color="white"
                   as="h1"
                   mt="10px"
                   mx="2px"
-                  fontSize={['lg', '2xl', '3xl']}
+                  fontSize={['lg', '1.4rem', '1.5rem', '3xl']}
+                  width={['300px', '550px', '550px', '800px']}
                >
-                  Human centered design at the center of all things
+                  Engineering with a human-centred design approach
                </Text>
             </Box>
             <Flex
@@ -140,7 +172,7 @@ export default function WithSubnavigation() {
                top={'150px'}
                // pl={["50px","150px"]}
             >
-               <Button
+               {/* <Button
                   mx={'50px'}
                   fontSize={'xl'}
                   color="white"
@@ -156,7 +188,7 @@ export default function WithSubnavigation() {
                   height="50px"
                >
                   Learn more!
-               </Button>
+               </Button> */}
             </Flex>
          </Stack>
          <Flex
@@ -195,7 +227,7 @@ const DesktopNav = () => {
                         p={5}
                         href={navItem.href ?? '#'}
                         fontSize={'lg'}
-                        fontWeight={'medium'}
+                        fontWeight={'bold'}
                         color={'white'}
                         _hover={{
                            textDecoration: 'underline',
