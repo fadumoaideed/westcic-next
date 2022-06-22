@@ -1,39 +1,90 @@
 import { useState, useEffect } from 'react'
-import { Box, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, keyframes, SimpleGrid, Text } from '@chakra-ui/react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import fontWeights from 'styles/fontWeights'
 import { Parallax } from 'react-scroll-parallax'
-import SVGFeature from 'components/SVGFeature/SVGFeature'
+import { SVGFeature, SVGFeatureMobile } from 'components/SVGFeature/SVGFeature'
 //TODO: Mobile vs desktop view
 export const Feature = () => {
-   // const [mobile, setMobile] = useState<boolean>(false)
+   const [mobile, setMobile] = useState<boolean>(false)
 
-   // useEffect(() => {
-   //    const updateMobile = () => {
-   //       setMobile(window.innerWidth < 850 ? true : false)
-   //    }
+   useEffect(() => {
+      const updateMobile = () => {
+         setMobile(window.innerWidth < 850 ? true : false)
+      }
 
-   //    updateMobile()
-   //    window.addEventListener('resize', updateMobile)
-   //    return () => {
-   //       window.removeEventListener('resize', updateMobile)
-   //    }
-   // }, [])
-   // return typeof mobile !== 'undefined' ? (
-   //    mobile ? (
-   //       <Box>
-   //          <SimpleGrid>
-   //             <Box bg="green" height={['300px', '500px']}></Box>
-   //             <Box bg="blue" height={['300px', '500px']}></Box>
-   //          </SimpleGrid>
-   //       </Box>
-   //    ) : (
-   return <DesktopView />
-   //    )
-   // ) : null
+      updateMobile()
+      window.addEventListener('resize', updateMobile)
+      return () => {
+         window.removeEventListener('resize', updateMobile)
+      }
+   }, [])
+   return typeof mobile !== 'undefined' ? (
+      mobile ? (
+         <MobileView />
+      ) : (
+         <DesktopView />
+      )
+   ) : null
 }
 
 export default Feature
+
+const MobileView = () => {
+   const flow = keyframes`
+  0% {
+   background-position: 0 50%;
+  }
+  50% {
+   background-position: 100% 50%;
+  }
+  100% {
+   background-position: 0 50%;
+  }
+`
+   return (
+      <Box>
+         <SimpleGrid columns={1}>
+            {/* <Parallax speed={8} translateY={[0, 30]}> */}
+            <Box height={'170px'} pt="20px">
+               <AnimationOnScroll animateIn="animate__fadeInLeft">
+                  <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
+                     Innovations can carry bias that are not inclusive
+                     {/* <Text
+                        as={'span'}
+                        fontWeight={'bold'}
+                        animation={`${flow} 30s ease-in-out infinite `}
+                        background={
+                           'linear-gradient(-60deg, #904E95 #904E95 #e73c73 #ee7752)'
+                        }
+                        backgroundClip="text"
+                     >
+                        inclusive
+                     </Text> */}
+                     , leading to unintended negative consequences. Businesses
+                     miss untapped markets and individuals become excluded.
+                  </Text>
+               </AnimationOnScroll>
+            </Box>
+            {/* </Parallax> */}
+            <Box height="400px">
+               <SVGFeatureMobile />
+            </Box>
+            {/* <Parallax speed={8} translateY={[0, 20]}> */}
+            <Box position={'relative'} height={'200px'}>
+               <AnimationOnScroll animateIn="animate__fadeInLeft">
+                  <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
+                     Using human centered design as a tool for innovation means
+                     providing solutions to problems rooted in the actual needs
+                     of individuals and communities.
+                  </Text>
+               </AnimationOnScroll>
+            </Box>
+            {/* </Parallax> */}
+         </SimpleGrid>
+      </Box>
+   )
+}
 
 const DesktopView = () => {
    return (

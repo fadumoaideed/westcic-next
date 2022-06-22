@@ -26,7 +26,7 @@ export default function SplitScreen() {
                <Heading
                   lineHeight={1.1}
                   fontWeight={600}
-                  fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
+                  fontSize={['3xl', '4xl', '5xl', '6xl']}
                >
                   <Text
                      as={'span'}
