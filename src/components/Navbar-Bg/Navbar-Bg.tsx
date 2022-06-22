@@ -136,7 +136,7 @@ export default function WithSubnavigation() {
                   fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
                   width={['300px', ' 400px', '500px', '800px', '1100px']}
                >
-                  inclusive of<span>&nbsp;</span>
+                  inclusive of all<span>&nbsp;</span>
                   {/* <TextLoop
                      children={[
                         'gender',
