@@ -4,7 +4,7 @@ import Resources from 'components/Resources/Resources'
 import Section1 from 'components/Section1/Section1'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-
+import SplitScreen from 'components/SplitScreen/SplitScreen'
 import {
    Box,
    Container,
@@ -31,7 +31,7 @@ export default function Home() {
          <NavBar />
          <Feature />
          {/* <Rivet /> */}
-         <Award />
+         <SplitScreen />
          <Resources />
 
          {/* <Button _css={button}>Hello</Button> */}

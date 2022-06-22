@@ -13,16 +13,16 @@ function SVGFeature() {
             <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
                <defs>
                   <linearGradient id="svg1" gradientTransform="rotate(109)">
-                     <stop offset="0%" stop-color="rgba(255,110,254,0.75)" />
-                     <stop offset="93%" stop-color="rgba(138,73,212,0.75)" />
+                     <stop offset="0%" stopColor="rgba(255,110,254,0.75)" />
+                     <stop offset="93%" stopColor="rgba(138,73,212,0.75)" />
                   </linearGradient>
                   <linearGradient id="svg2" gradientTransform="rotate(109)">
-                     <stop offset="0%" stop-color="rgba(140,255,254,0.75)" />
-                     <stop offset="93%" stop-color="rgba(10,73,255,0.75)" />
+                     <stop offset="0%" stopColor="rgba(140,255,254,0.75)" />
+                     <stop offset="93%" stopColor="rgba(10,73,255,0.75)" />
                   </linearGradient>
                   <linearGradient id="svg3" gradientTransform="rotate(109)">
-                     <stop offset="0%" stop-color="rgba(140,100,254,0.75)" />
-                     <stop offset="93%" stop-color="rgba(255,73,255,0.75)" />
+                     <stop offset="0%" stopColor="rgba(140,100,254,0.75)" />
+                     <stop offset="93%" stopColor="rgba(255,73,255,0.75)" />
                   </linearGradient>
                </defs>
                {/* <style>
