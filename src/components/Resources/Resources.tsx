@@ -84,7 +84,7 @@ export default function Resources() {
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/v1651929597/gender-bias-terminology-1_y5d5nr.png'
+                           'https://res.cloudinary.com/westcic/image/upload/v1655896973/20190917_132722_ofqtnd.jpg'
                         }
                         objectFit={'cover'}
                         backgroundPosition={['center']}
