@@ -52,7 +52,7 @@ export const SVGFeature = () => {
 export const SVGFeatureMobile = () => {
    return (
       <Box position={'relative'}>
-         <Box className="circle1" position={'relative'} top="0px" zIndex={1}>
+         <Box className="circle1" position={'relative'} top="70px" zIndex={1}>
             <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                <defs>
                   <linearGradient id="svg1" gradientTransform="rotate(109)">
@@ -82,7 +82,7 @@ export const SVGFeatureMobile = () => {
                   fontSize={'0.07rem'}
                >
                   VIABLE
-               </text> */}{' '}
+               </text> */}
                <circle cx="9.5" cy="3" r="3" fill="url('#svg2')" />
                <circle cx="8" cy="6" r="3" fill="url('#svg1')" />
                <circle cx="11" cy="6" r="3" fill="url('#svg3')" />

@@ -23,7 +23,7 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
-// import TextLoop from 'react-text-loop'
+import { TextLoop } from 'react-text-loop-next'
 
 export default function WithSubnavigation() {
    const { isOpen, onToggle } = useDisclosure()
@@ -114,13 +114,6 @@ export default function WithSubnavigation() {
                mx={'20px'}
                top={'100px'}
             >
-               {/* <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
-                  <TextLoop children={['Engineer', 'Innovate', 'Design']} />
-                  <span>&nbsp;</span>a
-               </Heading>
-               <Heading color="white" as="h1" fontSize={['5xl', '7xl', '8xl']}>
-                  sustainable world
-               </Heading> */}
                <Heading
                   color="white"
                   as="h1"
@@ -136,8 +129,8 @@ export default function WithSubnavigation() {
                   fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
                   width={['300px', ' 400px', '500px', '800px', '1100px']}
                >
-                  inclusive of all<span>&nbsp;</span>
-                  {/* <TextLoop
+                  inclusive of<span>&nbsp;</span>
+                  <TextLoop
                      children={[
                         'gender',
                         'ethnicity',
@@ -147,7 +140,7 @@ export default function WithSubnavigation() {
                         'religion',
                         'income'
                      ]}
-                  /> */}
+                  />
                </Heading>
 
                <Text

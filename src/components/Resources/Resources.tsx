@@ -32,22 +32,23 @@ export default function Resources() {
                   zIndex: -1
                }}
             >
-               Explore More{' '}
+               Explore More
             </Text>
          </Heading>
          <SimpleGrid
             columns={[1, 1, 2, 3]}
             spacing={10}
-            py="10px"
+            pt="10px"
+            pb="30px"
             px={['50px', '50px', '50px', '50px', '100px']}
          >
-            <Box height="auto" overflow="hidden">
+            <Box overflow="hidden">
                <Link href="#">
                   <Flex overflow="hidden">
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/v1651936496/tedx-talk_c6ttph.png'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1651936496/tedx-talk_c6ttph.png'
                         }
                         objectFit={'cover'}
                         _hover={{
@@ -59,13 +60,13 @@ export default function Resources() {
                   </Flex>
                </Link>
             </Box>
-            <Box height="auto" overflow="hidden">
+            <Box overflow="hidden">
                <Link href="#">
                   <Flex overflow="hidden">
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/v1651929597/gender-bias-terminology-1_y5d5nr.png'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1651929597/gender-bias-terminology-1_y5d5nr.png'
                         }
                         objectFit={'cover'}
                         backgroundPosition={['center']}
@@ -78,20 +79,21 @@ export default function Resources() {
                   </Flex>
                </Link>
             </Box>
-            <Box height="auto" overflow="hidden">
-               <Link href="#">
+            <Box overflow="hidden">
+               <Link href="https://www.instagram.com/accounts/login/?next=/west_astonuni/">
                   <Flex overflow="hidden">
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/v1655896973/20190917_132722_ofqtnd.jpg'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1655896973/20190917_132722_ofqtnd.jpg'
                         }
                         objectFit={'cover'}
                         backgroundPosition={['center']}
                         _hover={{
                            transform: 'scale(1.1)',
                            transition: '0.5s ease-out',
-                           bg: 'rgba(0,0,0, 0.9)'
+                           backgroundColor: 'rgba(105,105,105, 0.9)',
+                           zIndex: '1'
                         }}
                      />
                   </Flex>

@@ -57,7 +57,7 @@ export default function SplitScreen() {
                   <span>&nbsp;</span>
                   <Link href="https://pyrogenesys.com/" isExternal>
                      PyroGenesys.
-                  </Link>{' '}
+                  </Link>
                   <span>&nbsp;</span>
                   <Link href="/projects">
                      Learn more about this project <ExternalLinkIcon mx="2px" />

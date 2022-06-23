@@ -4,7 +4,6 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import fontWeights from 'styles/fontWeights'
 import { Parallax } from 'react-scroll-parallax'
 import { SVGFeature, SVGFeatureMobile } from 'components/SVGFeature/SVGFeature'
-//TODO: Mobile vs desktop view
 export const Feature = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
@@ -67,9 +66,7 @@ const MobileView = () => {
                </AnimationOnScroll>
             </Box>
             {/* </Parallax> */}
-            <Box height="400px">
-               <SVGFeatureMobile />
-            </Box>
+            <Box height="300px">{/* <SVGFeatureMobile /> */}</Box>
             {/* <Parallax speed={8} translateY={[0, 20]}> */}
             <Box position={'relative'} height={'200px'}>
                <AnimationOnScroll animateIn="animate__fadeInLeft">
