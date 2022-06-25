@@ -4,7 +4,7 @@ import Resources from 'components/Resources/Resources'
 import Section1 from 'components/Section1/Section1'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-import SplitScreen from 'components/SplitScreen/SplitScreen'
+import Award from 'components/SplitScreen/SplitScreen'
 import {
    Box,
    Container,
@@ -18,7 +18,6 @@ import {
 } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
 import { ParallaxBanner } from 'react-scroll-parallax'
-import Award from 'components/Award/Award'
 import Rivet from 'components/RIVET/Rivet'
 import Link from 'next/link'
 
@@ -32,8 +31,8 @@ export default function Home() {
          <Box className="home-container">
             <NavBar />
             <Feature />
-            {/* <Rivet /> */}
-            <SplitScreen />
+            <Rivet />
+            <Award />
             <Resources />
 
             {/* <Button _css={button}>Hello</Button> */}

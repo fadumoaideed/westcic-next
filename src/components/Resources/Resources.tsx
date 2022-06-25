@@ -43,12 +43,12 @@ export default function Resources() {
             px={['50px', '50px', '50px', '50px', '70px']}
          >
             <Box>
-               <Link href="#">
+               <Link href="https://www.youtube.com/watch?v=It6CiMyS2Tc">
                   <Flex>
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1651936496/tedx-talk_c6ttph.png'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_350/v1651936496/tedx-talk_c6ttph.png'
                         }
                         objectFit={'cover'}
                         _hover={{
@@ -66,7 +66,7 @@ export default function Resources() {
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1651929597/gender-bias-terminology-1_y5d5nr.png'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_350/v1651929597/gender-bias-terminology-1_y5d5nr.png'
                         }
                         objectFit={'cover'}
                         backgroundPosition={['center']}
@@ -77,19 +77,19 @@ export default function Resources() {
                         }}
                      />
                   </Flex>
-               </Box>
+               </Box>{' '}
             </Link>
 
             <Box>
-               <Link href="https://www.instagram.com/accounts/login/?next=/west_astonuni/">
+               <Link href="https://www.astonsu.com/society/west/">
                   <Flex overflow="hidden">
                      <Image
                         alt={'feature image'}
                         src={
-                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_315/v1655896973/20190917_132722_ofqtnd.jpg'
+                           'https://res.cloudinary.com/westcic/image/upload/c_scale,h_350/v1656194831/WEST_Aston_society_gubbsv.jpg'
                         }
-                        objectFit={'cover'}
                         backgroundPosition={['center']}
+                        objectFit={'cover'}
                         _hover={{
                            transform: 'scale(1.1)',
                            transition: '0.5s ease-out',

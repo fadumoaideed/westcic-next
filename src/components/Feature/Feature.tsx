@@ -102,9 +102,19 @@ const DesktopView = () => {
                         ml="50px"
                         pl="5px"
                      >
-                        Innovations can carry bias that are not inclusive,
-                        leading to unintended negative consequences. Businesses
-                        miss untapped markets and individuals become excluded.
+                        Innovations can carry bias that are not
+                        <span>&nbsp;</span>
+                        <Text
+                           bgClip="text"
+                           bgGradient="linear(to-r, green.400,purple.500)"
+                           fontWeight="extrabold"
+                           as={'span'}
+                        >
+                           inclusive
+                        </Text>
+                        , leading to unintended negative consequences.
+                        Businesses miss untapped markets and individuals become
+                        excluded.
                      </Text>
                   </AnimationOnScroll>
                </Box>
