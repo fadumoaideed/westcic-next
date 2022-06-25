@@ -68,21 +68,14 @@ export const SVGFeatureMobile = () => {
                      <stop offset="93%" stopColor="rgba(255,73,255,0.75)" />
                   </linearGradient>
                </defs>
-               {/* <style>
-                  .slick_next_arrow { fill:red;}
-                    
-                  
-                  #hover:target ~ .slick_next_arrow {
-                     fill:green;
-                  }
-               </style> */}
-               {/* <text
-                  y="20"
+               /*{' '}
+               <text
+                  y="0"
                   font-family="Arial, Helvetica, sans-serif"
-                  fontSize={'0.07rem'}
+                  fontSize={'0.05rem'}
                >
                   VIABLE
-               </text> */}
+               </text>
                <circle cx="9.5" cy="3" r="3" fill="url('#svg2')" />
                <circle cx="8" cy="6" r="3" fill="url('#svg1')" />
                <circle cx="11" cy="6" r="3" fill="url('#svg3')" />

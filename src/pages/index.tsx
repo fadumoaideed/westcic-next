@@ -20,6 +20,7 @@ import Feature from 'components/Feature/Feature'
 import { ParallaxBanner } from 'react-scroll-parallax'
 import Award from 'components/Award/Award'
 import Rivet from 'components/RIVET/Rivet'
+import Link from 'next/link'
 
 const prefix = '/westcic-next'
 
@@ -27,14 +28,16 @@ export default function Home() {
    const button = useStyleConfig('Button', { variant: 'small' })
 
    return (
-      <Box className="home-container">
-         <NavBar />
-         <Feature />
-         {/* <Rivet /> */}
-         <SplitScreen />
-         <Resources />
+      <>
+         <Box className="home-container">
+            <NavBar />
+            <Feature />
+            {/* <Rivet /> */}
+            <SplitScreen />
+            <Resources />
 
-         {/* <Button _css={button}>Hello</Button> */}
-      </Box>
+            {/* <Button _css={button}>Hello</Button> */}
+         </Box>
+      </>
    )
 }

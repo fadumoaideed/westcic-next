@@ -21,12 +21,13 @@ export default function SplitScreen() {
             spacing={{ base: 8, md: 10 }}
             py={{ base: 15, md: 28 }}
             direction={{ base: 'column', md: 'row' }}
+            mx="45px"
          >
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
                <Heading
                   lineHeight={1.1}
                   fontWeight={600}
-                  fontSize={['3xl', '4xl', '5xl', '6xl']}
+                  fontSize={['4xl', '4xl', '5xl', '6xl']}
                >
                   <Text
                      as={'span'}
@@ -51,9 +52,9 @@ export default function SplitScreen() {
                </Heading>
                <Text color={'gray.500'} fontSize="xl">
                   WEST C.I.C. were shortlisted as finalists for the Engineering
-                  Innovation Chamption in the business sector for gender
-                  equality and social inclusion strategy in improving clean
-                  energy in Nigeria. Our work will help our project partners
+                  Innovation Chamption in the business sector for improving
+                  gender equality and social inclusion in Nigeria in
+                  collaboration with project partners
                   <span>&nbsp;</span>
                   <Link href="https://pyrogenesys.com/" isExternal>
                      PyroGenesys.

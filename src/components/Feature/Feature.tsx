@@ -44,9 +44,8 @@ const MobileView = () => {
    return (
       <Box>
          <SimpleGrid columns={1}>
-            {/* <Parallax speed={8} translateY={[0, 30]}> */}
             <Box height={'170px'} pt="20px">
-               <AnimationOnScroll animateIn="animate__fadeInLeft">
+               <AnimationOnScroll animateOnce animateIn="animate__fadeInLeft">
                   <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
                      Innovations can carry bias that are not inclusive
                      {/* <Text
@@ -65,11 +64,9 @@ const MobileView = () => {
                   </Text>
                </AnimationOnScroll>
             </Box>
-            {/* </Parallax> */}
             <Box height="300px">{/* <SVGFeatureMobile /> */}</Box>
-            {/* <Parallax speed={8} translateY={[0, 20]}> */}
             <Box position={'relative'} height={'200px'}>
-               <AnimationOnScroll animateIn="animate__fadeInLeft">
+               <AnimationOnScroll animateOnce animateIn="animate__fadeInLeft">
                   <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
                      Using human centered design as a tool for innovation means
                      providing solutions to problems rooted in the actual needs
@@ -77,7 +74,6 @@ const MobileView = () => {
                   </Text>
                </AnimationOnScroll>
             </Box>
-            {/* </Parallax> */}
          </SimpleGrid>
       </Box>
    )
@@ -99,7 +95,7 @@ const DesktopView = () => {
          >
             <Parallax translateY={[-20, 30]}>
                <Box height={'300px'}>
-                  <AnimationOnScroll animateIn="animate__fadeIn">
+                  <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
                      <Text
                         fontSize={['lg', 'xl']}
                         color={'gray.500'}
@@ -120,10 +116,9 @@ const DesktopView = () => {
 
             <Parallax speed={8} translateY={[30, -40]}>
                <Box position={'relative'} height={'300px'}>
-                  <AnimationOnScroll animateIn="animate__fadeIn">
+                  <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
                      <Text
                         color={'gray.500'}
-                        // align="justify"
                         position={'absolute'}
                         top={'100px'}
                         right={'0px'}

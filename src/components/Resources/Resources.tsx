@@ -40,11 +40,11 @@ export default function Resources() {
             spacing={10}
             pt="10px"
             pb="30px"
-            px={['50px', '50px', '50px', '50px', '100px']}
+            px={['50px', '50px', '50px', '50px', '70px']}
          >
-            <Box overflow="hidden">
+            <Box>
                <Link href="#">
-                  <Flex overflow="hidden">
+                  <Flex>
                      <Image
                         alt={'feature image'}
                         src={
@@ -60,8 +60,8 @@ export default function Resources() {
                   </Flex>
                </Link>
             </Box>
-            <Box overflow="hidden">
-               <Link href="#">
+            <Link href="https://res.cloudinary.com/westcic/raw/upload/v1656191742/Dictionary_of_Gender_Bias_Terminology_1_pa0evf.pptx">
+               <Box>
                   <Flex overflow="hidden">
                      <Image
                         alt={'feature image'}
@@ -77,9 +77,10 @@ export default function Resources() {
                         }}
                      />
                   </Flex>
-               </Link>
-            </Box>
-            <Box overflow="hidden">
+               </Box>
+            </Link>
+
+            <Box>
                <Link href="https://www.instagram.com/accounts/login/?next=/west_astonuni/">
                   <Flex overflow="hidden">
                      <Image
@@ -92,8 +93,7 @@ export default function Resources() {
                         _hover={{
                            transform: 'scale(1.1)',
                            transition: '0.5s ease-out',
-                           backgroundColor: 'rgba(105,105,105, 0.9)',
-                           zIndex: '1'
+                           backgroundColor: 'rgba(105,105,105, 0.9)'
                         }}
                      />
                   </Flex>
