@@ -117,8 +117,8 @@ export default function WithSubnavigation() {
                <Heading
                   color="white"
                   as="h1"
-                  fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
-                  width={['300px', ' 400px', '500px', '800px', '1100px']}
+                  fontSize={['2.8rem', '4rem', '4.5rem', '7xl', '8xl']}
+                  width={['300px', '400px', '500px', '800px', '1100px']}
                >
                   Sustainable innovation
                </Heading>
@@ -126,8 +126,8 @@ export default function WithSubnavigation() {
                <Heading
                   color="white"
                   as="h1"
-                  fontSize={['5xl', '4rem', '4.5rem', '7xl', '8xl']}
-                  width={['300px', ' 400px', '500px', '800px', '1100px']}
+                  fontSize={['2.8rem', '4rem', '4.5rem', '7xl', '8xl']}
+                  width={['300px', '400px', '500px', '800px', '1100px']}
                >
                   inclusive of<span>&nbsp;</span>
                   <TextLoop
