@@ -74,7 +74,7 @@ export default function SplitScreen() {
             >
                <Box
                   position={'relative'}
-                  rounded={'lg'}
+                  // rounded={'lg'}
                   boxShadow={'2xl'}
                   height={'full'}
                   overflow={'hidden'}

@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/layout'
+import React from 'react'
 
-export function Rivet() {
-   return <Box id="rivet" maxW={'1600px'} py={12}></Box>
+function Rivet() {
+   return <div>Rivet</div>
 }
 
 export default Rivet

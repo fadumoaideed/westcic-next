@@ -31,7 +31,7 @@ export default function WithSubnavigation() {
    return (
       <Box
          className="navbar"
-         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
+         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
@@ -87,7 +87,8 @@ export default function WithSubnavigation() {
                direction={'row'}
                spacing={5}
                className="navbar-links"
-               pr={20}
+               mr={10}
+               ml="5px"
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
                   <DesktopNav />

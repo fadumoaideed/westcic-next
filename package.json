@@ -7,8 +7,10 @@
       "build": "next build",
       "start": "next start",
       "export": "next export",
-      "prettier": "prettier --config .prettierrc 'src/**/*.{js,ts,tsx}' --write",
-      "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+      "format:code": "npx prettier --write \"./**/*.{js,jsx,json,ts}\"",
+      "lint": "npm run lint:code",
+      "lint:code": "eslint . --ext .ts --max-warnings=0",
+      "test": "jest --coverage"
    },
    "dependencies": {
       "@chakra-ui/icons": "^1.0.11",

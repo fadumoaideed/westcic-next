@@ -2,19 +2,12 @@ import {
    Box,
    chakra,
    Container,
-   Link,
    Stack,
    Text,
    useColorModeValue,
    VisuallyHidden
 } from '@chakra-ui/react'
-import {
-   FaInstagram,
-   FaTwitter,
-   FaYoutube,
-   FaLinkedin,
-   FaLink
-} from 'react-icons/fa'
+import { FaInstagram, FaEnvelope, FaLinkedinIn } from 'react-icons/fa'
 import { ReactNode } from 'react'
 import { Logo } from '../Logo/logo'
 
@@ -29,10 +22,11 @@ const SocialButton = ({
 }) => {
    return (
       <chakra.button
-         bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+         bg={'transparent'}
+         color={'white'}
          rounded={'full'}
-         w={8}
-         h={8}
+         w={10}
+         h={10}
          cursor={'pointer'}
          as={'a'}
          href={href}
@@ -41,7 +35,8 @@ const SocialButton = ({
          justifyContent={'center'}
          transition={'background 0.3s ease'}
          _hover={{
-            bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+            bg: '#D5DDDF',
+            color: 'black'
          }}
       >
          <VisuallyHidden>{label}</VisuallyHidden>
@@ -53,9 +48,8 @@ const SocialButton = ({
 export default function SmallWithLogoLeft() {
    return (
       <Box
-         bg={useColorModeValue('gray.50', 'gray.900')}
+         bg={'#227671'}
          color={useColorModeValue('gray.700', 'gray.200')}
-         position={'absolute'}
          width={'100%'}
          bottom={'0'}
          className="footer"
@@ -70,22 +64,18 @@ export default function SmallWithLogoLeft() {
             align={{ base: 'center', md: 'center' }}
          >
             <Logo />
-            <Text align={'center'}>
-               © {new Date().getFullYear()} WEST (Women in Engineering, Science
-               and Technology) C.I.C. All rights reserved.
+            <Text align={'center'} color="white">
+               WEST C.I.C. All rights reserved. {new Date().getFullYear()} Ⓒ
             </Text>
             <Stack direction={'row'} spacing={6}>
-               <SocialButton label={'Twitter'} href={'#'}>
-                  <FaTwitter />
-               </SocialButton>
-               <SocialButton label={'YouTube'} href={'#'}>
-                  <FaYoutube />
+               <SocialButton label={'Email'} href={'mailto:info@westcic.com'}>
+                  <FaEnvelope size={25} />
                </SocialButton>
                <SocialButton label={'Instagram'} href={'#'}>
-                  <FaInstagram />
+                  <FaInstagram size={25} />
                </SocialButton>
                <SocialButton label={'LinkedIn'} href={'#'}>
-                  <FaLinkedin />
+                  <FaLinkedinIn size={25} />
                </SocialButton>
             </Stack>
          </Container>
