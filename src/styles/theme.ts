@@ -11,12 +11,7 @@ const customTheme = extendTheme({
    fontSizes,
    fontWeights,
    colors,
-   components: { Button },
-   styles: {
-      global: {
-         // html: {}
-      }
-   }
+   components: { Button }
 })
 
 export default customTheme
