@@ -1,6 +1,4 @@
-import { Box, Container } from '@chakra-ui/react'
-import { useState } from 'react'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { Box } from '@chakra-ui/react'
 
 export const SVGFeature = () => {
    return (

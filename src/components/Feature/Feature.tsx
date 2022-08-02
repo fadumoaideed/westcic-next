@@ -8,7 +8,7 @@ import {
    SimpleGrid,
    Text
 } from '@chakra-ui/react'
-// import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Parallax } from 'react-scroll-parallax'
 
 export const Feature = () => {
@@ -75,7 +75,7 @@ const DesktopView = () => {
                            }
                            bgClip={'text'}
                            zIndex={3}
-                           fontWeight={'900'}
+                           fontWeight={500}
                            background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
                            animation={`${shine} 1s linear infinite`}
                         >
@@ -106,7 +106,7 @@ const DesktopView = () => {
                   // bgClip={'text'}
                   zIndex={3}
                   fontSize={[20, 20, 25, 30]}
-                  fontWeight={'900'}
+                  fontWeight={500}
                   // background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
                   // webkitbackgroundclip="text"
                   // webkittextfillcolor="transparent"
@@ -125,7 +125,7 @@ const DesktopView = () => {
                      position={'absolute'}
                      top={'100px'}
                      fontSize={['lg', 'xl']}
-                     fontWeight={'200'}
+                     fontWeight={500}
                      ml={'25px'}
                      mr={'25px'}
                   >
@@ -168,7 +168,7 @@ to {
                   fontSize={['lg', 'xl']}
                   color={'gray.500'}
                   ml="50px"
-                  pl="5px"
+                  mr="50px"
                >
                   Innovations can carry bias that are not
                   <span>&nbsp;</span>
@@ -180,7 +180,7 @@ to {
                      }
                      bgClip={'text'}
                      zIndex={3}
-                     fontWeight={'900'}
+                     fontWeight={500}
                      background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
                      animation={`${shine} 1s linear infinite`}
                   >
@@ -208,7 +208,7 @@ to {
                   // bgClip={'text'}
                   zIndex={3}
                   fontSize={30}
-                  fontWeight={'900'}
+                  fontWeight={500}
                   // background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
                   // webkitbackgroundclip="text"
                   // webkittextfillcolor="transparent"
