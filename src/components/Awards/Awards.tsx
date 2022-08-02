@@ -21,6 +21,7 @@ export default function Awards() {
             py={{ base: 15, md: 28 }}
             direction={{ base: 'column', md: 'row' }}
             mx="45px"
+            mb="30px"
          >
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
                <Heading

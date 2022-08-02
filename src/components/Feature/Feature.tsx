@@ -157,6 +157,7 @@ to {
                   color={'gray.500'}
                   ml="50px"
                   mr="50px"
+                  mb="20px"
                >
                   Innovations can carry bias that are not
                   <span>&nbsp;</span>

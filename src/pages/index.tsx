@@ -1,7 +1,7 @@
 // import Head from 'next/head'
 import Resources from 'components/Resources/Resources'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
-import Award from 'components/SplitScreen/SplitScreen'
+import Award from 'components/Awards/Awards'
 import { Box, Flex } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
 // import Rivet from 'components/RIVET/Rivet'

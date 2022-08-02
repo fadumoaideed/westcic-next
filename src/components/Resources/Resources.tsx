@@ -16,7 +16,7 @@ export default function Resources() {
             fontWeight={600}
             fontSize={['5xl', '6xl']}
             align="center"
-            pb="40px"
+            pb="25px"
          >
             <Text
                as={'span'}
