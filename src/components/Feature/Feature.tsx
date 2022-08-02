@@ -8,7 +8,6 @@ import {
    SimpleGrid,
    Text
 } from '@chakra-ui/react'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Parallax } from 'react-scroll-parallax'
 
 export const Feature = () => {
@@ -142,17 +141,6 @@ const DesktopView = () => {
 }
 
 const MobileView = () => {
-   const flow = keyframes`
-  0% {
-   background-position: 0 50%;
-  }
-  50% {
-   background-position: 100% 50%;
-  }
-  100% {
-   background-position: 0 50%;
-  }
-`
    const shine = keyframes`
 to {
    background-position: 200% center;

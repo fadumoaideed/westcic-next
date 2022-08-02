@@ -1,10 +1,10 @@
+/* eslint-disable react/no-children-prop */
 import {
    Box,
    Flex,
    Text,
    Heading,
    IconButton,
-   Button,
    Stack,
    Collapse,
    Icon,
@@ -12,8 +12,6 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   Center,
-   SimpleGrid,
    useDisclosure
 } from '@chakra-ui/react'
 import {
