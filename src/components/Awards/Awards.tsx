@@ -27,7 +27,7 @@ export default function Awards() {
                <Heading
                   lineHeight={1.1}
                   fontWeight={600}
-                  fontSize={['4xl', '4xl', '5xl', '6xl']}
+                  fontSize={['5xl', '6xl']}
                >
                   <Text
                      as={'span'}
