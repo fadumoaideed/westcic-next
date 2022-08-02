@@ -71,7 +71,7 @@ export default function WithSubnavigation() {
             <Flex
                flex={{ base: 1 }}
                justify={{ base: 'center', md: 'start' }}
-               pl="50px"
+               pl="50px" //FIXME: remove space less than 350px
                top="-10px"
             >
                <Link href="/">
@@ -95,10 +95,10 @@ export default function WithSubnavigation() {
          </Flex>
          <Box
             bg="teal.900"
-            w={'100vw'}
+            w={'100%'}
             direction={'row'}
             position={'absolute'}
-            top="88px"
+            top="120px"
             zIndex={2}
          >
             <Collapse in={isOpen} animateOpacity>
