@@ -34,6 +34,7 @@ export const Feature = () => {
 }
 
 export default Feature
+
 const DesktopView = () => {
    const shine = keyframes`
    to {

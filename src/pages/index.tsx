@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
 import Footer from 'components/Footer/Footer'
 import Impact from 'components/Impact/Impact'
-import Rivet from 'components/Rivet/Rivet'
+import Rivet from '../components/Rivet/Rivet'
 
 // const prefix = '/westcic-next'
 
