@@ -18,16 +18,16 @@ export default function Awards() {
          <Stack
             align={'center'}
             spacing={{ base: 8, md: 10 }}
-            py={{ base: 15, md: 28 }}
             direction={{ base: 'column', md: 'row' }}
             mx="45px"
             mb="30px"
          >
-            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Stack flex={1} spacing={{ base: 1, md: 10 }}>
                <Heading
                   lineHeight={1.1}
                   fontWeight={600}
                   fontSize={['5xl', '6xl']}
+                  pb="20px"
                >
                   <Text
                      as={'span'}
@@ -74,7 +74,6 @@ export default function Awards() {
             >
                <Box
                   position={'relative'}
-                  // rounded={'lg'}
                   boxShadow={'2xl'}
                   height={'full'}
                   overflow={'hidden'}

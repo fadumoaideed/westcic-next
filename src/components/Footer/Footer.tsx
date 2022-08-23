@@ -68,7 +68,7 @@ export default function SmallWithLogoLeft() {
                WEST C.I.C. All rights reserved. {new Date().getFullYear()} Ⓒ
             </Text>
             <Stack direction={'row'} spacing={6}>
-               <SocialButton label={'Email'} href={'mailto:info@westcic.com'}>
+               <SocialButton label={'Email'} href={'#'}>
                   <FaEnvelope size={25} />
                </SocialButton>
                <SocialButton label={'Instagram'} href={'#'}>

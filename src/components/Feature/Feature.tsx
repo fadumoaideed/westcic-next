@@ -45,6 +45,7 @@ const DesktopView = () => {
          height={['800px', '750', '600px', '500px']}
          position={'relative'}
          overflow="hidden"
+         mx={['0px', '0px', '0px', '100px']}
       >
          <SimpleGrid
             columns={[1, 1, 3, 3]}
@@ -56,7 +57,6 @@ const DesktopView = () => {
          >
             <Parallax translateY={[-20, 30]}>
                <Box>
-                  {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
                   <Flex>
                      <Text
                         fontSize={['lg', 'xl']}
@@ -85,10 +85,8 @@ const DesktopView = () => {
                         excluded.
                      </Text>
                   </Flex>
-                  {/* </AnimationOnScroll> */}
                </Box>
             </Parallax>
-            {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
             <Center position={'relative'} height={'300px'}>
                <Image
                   position={'absolute'}
@@ -114,11 +112,9 @@ const DesktopView = () => {
                   SUSTAINABLE
                </Text>
             </Center>
-            {/* </AnimationOnScroll> */}
 
             <Parallax translateY={[30, -40]}>
                <Box position={'relative'}>
-                  {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
                   <Text
                      color={'gray.500'}
                      position={'absolute'}
@@ -150,7 +146,6 @@ to {
    return (
       <Box>
          <SimpleGrid columns={1}>
-            {/* <AnimationOnScroll animateIn="animate__fadeInLeft"> */}
             <Box pt="40px">
                <Text
                   fontSize={['lg', 'xl']}
@@ -179,9 +174,7 @@ to {
                   untapped markets and individuals become excluded.
                </Text>
             </Box>
-            {/* </AnimationOnScroll> */}
 
-            {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
             <Center height={'300px'} mx={['50px', '60px', '70px']}>
                <Image
                   position={'absolute'}
@@ -206,8 +199,6 @@ to {
                   Sustainable
                </Text>{' '}
             </Center>
-            {/* </AnimationOnScroll> */}
-            {/* <AnimationOnScroll animateIn="animate__fadeInLeft"> */}
             <Box mt={'20px'} mb={'50px'}>
                <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
                   Using human centered design as a tool for innovation means
@@ -215,7 +206,6 @@ to {
                   individuals and communities.
                </Text>
             </Box>
-            {/* </AnimationOnScroll> */}
          </SimpleGrid>
       </Box>
    )

@@ -12,7 +12,8 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   useDisclosure
+   useDisclosure,
+   Center
 } from '@chakra-ui/react'
 import {
    HamburgerIcon,
@@ -183,27 +184,30 @@ export default function WithSubnavigation() {
                </Button> */}
             </Flex>
          </Stack>
-         <Flex
-            className="chevron"
-            w={'100%'}
-            display={'flex'}
-            justifyContent="space-around"
-            position={'absolute'}
-            top={['700px', '700px', '700px', '700px', '800px']}
-         >
-            <Link href="#section1">
-               <Icon
-                  w={50}
-                  h={50}
-                  color={'white'}
-                  as={ChevronDownIcon}
-                  _hover={{
-                     transition: 'all 0.6s ease-out',
-                     transform: 'rotate(180deg)'
-                  }}
-               />
-            </Link>
-         </Flex>
+         <Center>
+            {/* //FIXME: change so that it is relative from bottom of navbar and moves with it
+               className="chevron" */}
+            <Flex
+               w={'100%'}
+               display={'flex'}
+               justifyContent="space-around"
+               position={'absolute'}
+               top={['700px', '700px', '700px', '700px', '800px']}
+            >
+               <Link href="#section1">
+                  <Icon
+                     w={50}
+                     h={50}
+                     color={'white'}
+                     as={ChevronDownIcon}
+                     _hover={{
+                        transition: 'all 0.6s ease-out',
+                        transform: 'rotate(180deg)'
+                     }}
+                  />
+               </Link>
+            </Flex>
+         </Center>
       </Box>
    )
 }
