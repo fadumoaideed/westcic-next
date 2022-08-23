@@ -42,7 +42,7 @@ export const Rivet = () => {
 }
 export default Rivet
 
-function DesktopViewRivet() {
+const DesktopViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
@@ -145,7 +145,7 @@ function DesktopViewRivet() {
    )
 }
 
-function MobileViewRivet() {
+const MobileViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
