@@ -16,24 +16,24 @@ function Impact() {
          justifyItems={'center'}
       >
          <Box>
-            <Image alt="private" src="" />
-            <Heading color={'gray.700'}>Private and secure</Heading>
+            <Image alt="alt" src="" />
+            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Broaden understanding of your target audience
             </Text>
          </Box>
 
          <Box>
-            <Image alt="cloud" src="" />
-            <Heading color={'gray.700'}>Zero setup overhead</Heading>
+            <Image alt="alt" src="" />
+            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Improve the human experience of your innovation.
             </Text>
          </Box>
 
          <Box>
-            <Image alt="vendor" src="" />
-            <Heading color={'gray.700'}>No vendor lock-in</Heading>
+            <Image alt="alt" src="" />
+            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Align your values with ethos-conscious client and collaborators.
             </Text>

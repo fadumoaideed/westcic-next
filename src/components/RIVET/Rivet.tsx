@@ -1,7 +1,3 @@
-// Why work with WEST to improve your innovation:
-// 	- Broaden understanding of your target audience.
-// 	- Improve the human experience of your innovation.
-// Align your values with ethos-conscious client and collaborators.
 import { useEffect, useState } from 'react'
 import {
    Container,
@@ -17,7 +13,11 @@ import {
    Link
 } from '@chakra-ui/react'
 import { IoMdSquare } from 'react-icons/io'
-
+// Why work with WEST to improve your innovation:
+// 	- Broaden understanding of your target audience.
+// 	- Improve the human experience of your innovation.
+// Align your values with ethos-conscious client and collaborators.
+// TODO: explore if this should be a video
 export const Rivet = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
@@ -111,10 +111,12 @@ const DesktopViewRivet = () => {
                </Heading>
                <Text color={'gray.500'} fontSize="xl" pb="5px">
                   Sustainable introduction of bioenergy technology into off-grid
-                  communities in rural communities using human centered design.
-                  WEST worked on a UKRI-funded project in an international
-                  consortium led by <span>&nbsp;</span>
-                  <Link href="https://www.pyrogenesys.com">Pyrogensys Ltd</Link>
+                  rural communities using human centered design. WEST worked on
+                  a UKRI-funded project in an international consortium led by
+                  <span>&nbsp;</span>
+                  <Link isExternal href="https://www.pyrogenesys.com">
+                     Pyrogensys Ltd
+                  </Link>
                   <span>&nbsp;</span>
                   to generate a woman-focussed study.
                </Text>
@@ -183,14 +185,17 @@ const MobileViewRivet = () => {
                      Champion Finalists
                   </Text>
                </Heading>
+               {/* //TODO: we should mention how much the grant was of the projects */}
                <Text color={'gray.500'} fontSize="xl" pb="5px">
                   Sustainable introduction of bioenergy technology into off-grid
-                  communities in rural communities using human centered design.
-                  WEST worked on a UKRI-funded project in an international
-                  consortium led by <span>&nbsp;</span>
-                  <Link href="https://www.pyrogenesys.com">Pyrogensys Ltd</Link>
+                  rural communities using human centered design. WEST worked on
+                  a UKRI-funded project in an international consortium led by
                   <span>&nbsp;</span>
-                  to generate a woman-focussed study.
+                  <Link isExternal href="https://www.pyrogenesys.com">
+                     Pyrogensys Ltd
+                  </Link>
+                  <span>&nbsp;</span>
+                  to generate a woman-focussed study. Read our report here
                   <List
                      spacing={3}
                      color={'gray.500'}

@@ -1,12 +1,12 @@
 // import Head from 'next/head'
-import Resources from 'components/Resources/Resources'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
-import Award from 'components/Awards/Awards'
 import { Box } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
-import Footer from 'components/Footer/Footer'
 import Impact from 'components/Impact/Impact'
-import Rivet from 'components/Rivet/Rivet'
+import Rivet from '../components/Rivet/Rivet'
+import Award from 'components/Awards/Awards'
+import Resources from 'components/Resources/Resources'
+import Footer from 'components/Footer/Footer'
 
 // const prefix = '/westcic-next'
 
