@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { Parallax } from 'react-scroll-parallax'
 
-export const Feature = () => {
+const Feature = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
    useEffect(() => {
