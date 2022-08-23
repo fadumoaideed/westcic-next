@@ -2,7 +2,7 @@
 // 	- Broaden understanding of your target audience.
 // 	- Improve the human experience of your innovation.
 // Align your values with ethos-conscious client and collaborators.
-
+import { useEffect, useState } from 'react'
 import {
    Container,
    Stack,
@@ -16,8 +16,8 @@ import {
    ListIcon,
    Link
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
 import { IoMdSquare } from 'react-icons/io'
+
 export const Rivet = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
@@ -34,15 +34,15 @@ export const Rivet = () => {
    }, [])
    return typeof mobile !== 'undefined' ? (
       mobile ? (
-         <MobileView />
+         <MobileViewRivet />
       ) : (
-         <DesktopView />
+         <DesktopViewRivet />
       )
    ) : null
 }
 export default Rivet
 
-function DesktopView() {
+function DesktopViewRivet() {
    return (
       <Container maxW={'8xl'}>
          <Stack
@@ -110,15 +110,21 @@ function DesktopView() {
                   </Text>
                </Heading>
                <Text color={'gray.500'} fontSize="xl" pb="5px">
-                  Sustaianable introduction of bioenergy technology into
-                  off-grid communities in rural communities using human centered
-                  design. WEST worked on a UKRI-funded project in an
-                  international consortium led by <span>&nbsp;</span>
+                  Sustainable introduction of bioenergy technology into off-grid
+                  communities in rural communities using human centered design.
+                  WEST worked on a UKRI-funded project in an international
+                  consortium led by <span>&nbsp;</span>
                   <Link href="https://www.pyrogenesys.com">Pyrogensys Ltd</Link>
                   <span>&nbsp;</span>
                   to generate a woman-focussed study.
                </Text>
-               <List spacing={3} color={'gray.500'} fontSize="xl" pl={'40px'}>
+               <List
+                  spacing={3}
+                  color={'gray.500'}
+                  fontSize="xl"
+                  pl={'40px'}
+                  pt={'5px'}
+               >
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Understand and respect the eco-system of the community
@@ -139,7 +145,7 @@ function DesktopView() {
    )
 }
 
-function MobileView() {
+function MobileViewRivet() {
    return (
       <Container maxW={'8xl'}>
          <Stack
@@ -178,10 +184,10 @@ function MobileView() {
                   </Text>
                </Heading>
                <Text color={'gray.500'} fontSize="xl" pb="5px">
-                  Sustaianable introduction of bioenergy technology into
-                  off-grid communities in rural communities using human centered
-                  design. WEST worked on a UKRI-funded project in an
-                  international consortium led by <span>&nbsp;</span>
+                  Sustainable introduction of bioenergy technology into off-grid
+                  communities in rural communities using human centered design.
+                  WEST worked on a UKRI-funded project in an international
+                  consortium led by <span>&nbsp;</span>
                   <Link href="https://www.pyrogenesys.com">Pyrogensys Ltd</Link>
                   <span>&nbsp;</span>
                   to generate a woman-focussed study.
@@ -190,6 +196,7 @@ function MobileView() {
                      color={'gray.500'}
                      fontSize="xl"
                      pl={'40px'}
+                     pt={'5px'}
                   >
                      <ListItem>
                         <ListIcon as={IoMdSquare} color="teal.500" />

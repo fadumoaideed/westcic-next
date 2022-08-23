@@ -3,16 +3,7 @@
 //    */
 // //learn more about HCD
 
-import {
-   Container,
-   Stack,
-   Flex,
-   Box,
-   Heading,
-   Text,
-   SimpleGrid,
-   Image
-} from '@chakra-ui/react'
+import { Box, Heading, Text, SimpleGrid, Image } from '@chakra-ui/react'
 
 function Impact() {
    return (
