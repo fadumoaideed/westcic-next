@@ -3,7 +3,7 @@ import NavBar from '../components/Navbar-Bg/Navbar-Bg'
 import { Box } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
 import Impact from 'components/Impact/Impact'
-import { MobileViewRivet } from 'components/Rivet/Rivet'
+import { Rivet } from 'components/Rivet/Rivet'
 import Award from 'components/Awards/Awards'
 import Resources from 'components/Resources/Resources'
 import Footer from 'components/Footer/Footer'
@@ -18,7 +18,8 @@ export default function Home() {
          <NavBar />
          <Feature />
          <Impact />
-         <MobileViewRivet /> <Award />
+         <Rivet />
+         <Award />
          <Resources />
          <Footer />
          {/* <Button _css={button}>Hello</Button> */}

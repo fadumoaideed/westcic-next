@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
    Container,
    Stack,
@@ -17,8 +18,30 @@ import { IoMdSquare } from 'react-icons/io'
 // 	- Improve the human experience of your innovation.
 // Align your values with ethos-conscious client and collaborators.
 // TODO: explore if this should be a video
+export const Rivet = () => {
+   const [mobile, setMobile] = useState<boolean>(false)
 
-export const DesktopViewRivet = () => {
+   useEffect(() => {
+      const updateMobile = () => {
+         setMobile(window.innerWidth < 850 ? true : false)
+      }
+
+      updateMobile()
+      window.addEventListener('resize', updateMobile)
+      return () => {
+         window.removeEventListener('resize', updateMobile)
+      }
+   }, [])
+   return typeof mobile !== 'undefined' ? (
+      mobile ? (
+         <MobileViewRivet />
+      ) : (
+         <DesktopViewRivet />
+      )
+   ) : null
+}
+
+const DesktopViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
@@ -123,7 +146,7 @@ export const DesktopViewRivet = () => {
    )
 }
 
-export const MobileViewRivet = () => {
+const MobileViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
