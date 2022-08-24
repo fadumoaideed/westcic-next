@@ -6,7 +6,7 @@ import Impact from 'components/Impact/Impact'
 import Award from 'components/Awards/Awards'
 import Resources from 'components/Resources/Resources'
 import Footer from 'components/Footer/Footer'
-import Project from 'components/Rivet/Rivet'
+import Project from 'components/Rivet1/Rivet'
 
 // const prefix = '/westcic-next'
 
