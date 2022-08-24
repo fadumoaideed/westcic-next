@@ -18,7 +18,7 @@ import { IoMdSquare } from 'react-icons/io'
 // 	- Improve the human experience of your innovation.
 // Align your values with ethos-conscious client and collaborators.
 // TODO: explore if this should be a video
-export const Rivet = () => {
+const Project = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
    useEffect(() => {
@@ -40,6 +40,7 @@ export const Rivet = () => {
       )
    ) : null
 }
+export default Project
 
 const DesktopViewRivet = () => {
    return (
