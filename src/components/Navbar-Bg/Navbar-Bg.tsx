@@ -184,9 +184,8 @@ export default function WithSubnavigation() {
                </Button> */}
             </Flex>
          </Stack>
-         <Center>
-            {/* //FIXME: change so that it is relative from bottom of navbar and moves with it
-               className="chevron" */}
+         {/* <Center>
+      
             <Flex
                w={'100%'}
                display={'flex'}
@@ -207,7 +206,7 @@ export default function WithSubnavigation() {
                   />
                </Link>
             </Flex>
-         </Center>
+         </Center> */}
       </Box>
    )
 }
