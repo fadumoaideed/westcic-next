@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import {
    Container,
    Stack,
@@ -19,31 +18,7 @@ import { IoMdSquare } from 'react-icons/io'
 // Align your values with ethos-conscious client and collaborators.
 // TODO: explore if this should be a video
 
-const Rivet = () => {
-   const [mobile, setMobile] = useState<boolean>(false)
-
-   useEffect(() => {
-      const updateMobile = () => {
-         setMobile(window.innerWidth < 850 ? true : false)
-      }
-
-      updateMobile()
-      window.addEventListener('resize', updateMobile)
-      return () => {
-         window.removeEventListener('resize', updateMobile)
-      }
-   }, [])
-   return typeof mobile !== 'undefined' ? (
-      mobile ? (
-         <MobileViewRivet />
-      ) : (
-         <DesktopViewRivet />
-      )
-   ) : null
-}
-export default Rivet
-
-const DesktopViewRivet = () => {
+export const DesktopViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
@@ -148,7 +123,7 @@ const DesktopViewRivet = () => {
    )
 }
 
-const MobileViewRivet = () => {
+export const MobileViewRivet = () => {
    return (
       <Container maxW={'8xl'}>
          <Stack
