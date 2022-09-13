@@ -49,7 +49,7 @@ const DesktopViewRivet = () => {
             align={'center'}
             spacing={{ base: 4, md: 10 }}
             direction={{ base: 'column', md: 'row' }}
-            mx={['10px', '20px', '30px', '45px']}
+            mx={['15px', '20px', '30px', '45px']}
             mb="100px"
          >
             <Flex
@@ -154,7 +154,7 @@ const MobileViewRivet = () => {
             align={'center'}
             // spacing={{ base: 8, md: 10 }}
             direction={{ base: 'column', md: 'row' }}
-            mx="10px"
+            mx="15px"
             mb="80px"
          >
             <Stack flex={1}>

@@ -12,7 +12,7 @@ function Impact() {
          spacing={10}
          pt="10px"
          pb="80px"
-         px={['20px', '50px', '50px', '50px', '200px']}
+         px={['15px', '50px', '50px', '50px', '200px']}
          justifyItems={['left']}
       >
          <Box>

@@ -43,7 +43,7 @@ const DesktopView = () => {
             align={'center'}
             spacing={{ base: 8, md: 10 }}
             direction={{ base: 'row', md: 'row' }}
-            mx={['10px', '20px', '30px', '45px']}
+            mx={['20px', '30px', '45px']}
             mb="30px"
          >
             <Stack flex={1} spacing={{ base: 10, md: 10 }}>
@@ -98,7 +98,7 @@ const DesktopView = () => {
 
 const MobileView = () => {
    return (
-      <SimpleGrid mx="8px" columns={[1, 2]}>
+      <SimpleGrid mx="20px" columns={[1, 2]}>
          <Box>
             <Heading
                mt="20px"
