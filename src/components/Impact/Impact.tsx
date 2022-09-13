@@ -2,8 +2,8 @@
 //    Waterfall vs agile but applied in innovation
 //    */
 // //learn more about HCD
-
-import { Box, Heading, Text, SimpleGrid, Image } from '@chakra-ui/react'
+// broaden understanding (bird wings spreading)
+import { Box, Text, SimpleGrid, Image } from '@chakra-ui/react'
 
 function Impact() {
    return (
@@ -12,12 +12,11 @@ function Impact() {
          spacing={10}
          pt="10px"
          pb="80px"
-         px={['50px', '50px', '50px', '50px', '70px']}
-         justifyItems={'center'}
+         px={['20px', '50px', '50px', '50px', '200px']}
+         justifyItems={['left']}
       >
          <Box>
             <Image alt="alt" src="" />
-            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Broaden understanding of your target audience
             </Text>
@@ -25,7 +24,6 @@ function Impact() {
 
          <Box>
             <Image alt="alt" src="" />
-            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Improve the human experience of your innovation.
             </Text>
@@ -33,7 +31,6 @@ function Impact() {
 
          <Box>
             <Image alt="alt" src="" />
-            <Heading color={'gray.700'}>Lorem and Ipsum</Heading>
             <Text color={'gray.500'} fontSize="xl">
                Align your values with ethos-conscious client and collaborators.
             </Text>

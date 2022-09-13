@@ -40,7 +40,7 @@ export default function Resources() {
             spacing={10}
             pt="10px"
             pb="30px"
-            px={['50px', '50px', '50px', '50px', '70px']}
+            mx={['15px', '30px', '50px', '50px']}
             justifyItems={'center'}
          >
             <Box>

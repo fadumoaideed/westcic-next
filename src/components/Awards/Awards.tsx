@@ -19,7 +19,7 @@ export default function Awards() {
             align={'center'}
             spacing={{ base: 8, md: 10 }}
             direction={{ base: 'column', md: 'row' }}
-            mx="45px"
+            mx={['10px', '20px', '30px', '45px']}
             mb="30px"
          >
             <Stack flex={1} spacing={{ base: 1, md: 10 }}>

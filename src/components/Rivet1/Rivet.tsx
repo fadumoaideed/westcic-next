@@ -47,9 +47,9 @@ const DesktopViewRivet = () => {
       <Container maxW={'8xl'}>
          <Stack
             align={'center'}
-            spacing={{ base: 8, md: 10 }}
+            spacing={{ base: 4, md: 10 }}
             direction={{ base: 'column', md: 'row' }}
-            mx="45px"
+            mx={['10px', '20px', '30px', '45px']}
             mb="100px"
          >
             <Flex
@@ -152,9 +152,9 @@ const MobileViewRivet = () => {
       <Container maxW={'8xl'}>
          <Stack
             align={'center'}
-            spacing={{ base: 8, md: 10 }}
+            // spacing={{ base: 8, md: 10 }}
             direction={{ base: 'column', md: 'row' }}
-            mx="45px"
+            mx="10px"
             mb="80px"
          >
             <Stack flex={1}>
@@ -182,9 +182,10 @@ const MobileViewRivet = () => {
                   </Text>
                   <br />
                   <Text as={'span'} color={'teal.400'}>
-                     Champion Finalists
+                     Africa
                   </Text>
                </Heading>
+
                {/* //TODO: we should mention how much the grant was of the projects */}
                <Text color={'gray.500'} fontSize="xl" pb="5px">
                   Sustainable introduction of bioenergy technology into off-grid
@@ -200,7 +201,7 @@ const MobileViewRivet = () => {
                      spacing={3}
                      color={'gray.500'}
                      fontSize="xl"
-                     pl={'40px'}
+                     pl={'30px'}
                      pt={'5px'}
                   >
                      <ListItem>

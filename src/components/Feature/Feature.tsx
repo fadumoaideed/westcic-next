@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react'
 import {
    Box,
-   Center,
+   Container,
    Flex,
+   Heading,
    Image,
-   keyframes,
    SimpleGrid,
+   Stack,
    Text
 } from '@chakra-ui/react'
-import { Parallax } from 'react-scroll-parallax'
-
+//TODO: combine impact and hcd section into one so it explain both
+//
 const Feature = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 
    useEffect(() => {
       const updateMobile = () => {
-         setMobile(window.innerWidth < 850 ? true : false)
+         setMobile(window.innerWidth < 750 ? true : false)
       }
 
       updateMobile()
@@ -36,178 +37,148 @@ const Feature = () => {
 export default Feature
 
 const DesktopView = () => {
-   const shine = keyframes`
-   to {
-      background-position: 200% center;
-    }
-   `
    return (
-      <Box
-         height={['800px', '750', '600px', '500px']}
-         position={'relative'}
-         overflow="hidden"
-         mx={['0px', '0px', '0px', '100px']}
-      >
-         <SimpleGrid
-            columns={[1, 1, 3, 3]}
-            top={'100px'}
-            position={'absolute'}
-            spacing="40px"
-            spacingY="20px"
-            mr="50px"
+      <Container maxW={'8xl'}>
+         <Stack
+            align={'center'}
+            spacing={{ base: 8, md: 10 }}
+            direction={{ base: 'row', md: 'row' }}
+            mx={['10px', '20px', '30px', '45px']}
+            mb="30px"
          >
-            <Parallax translateY={[-20, 30]}>
-               <Box>
-                  <Flex>
-                     <Text
-                        fontSize={['lg', 'xl']}
-                        color={'gray.500'}
-                        ml="50px"
-                        pl="5px"
-                     >
-                        Innovations can carry bias that are not
-                        <span>&nbsp;</span>
-                        <Text
-                           as={'span'}
-                           fontSize={['lg', 'xl']}
-                           bg={
-                              'linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)'
-                           }
-                           bgClip={'text'}
-                           zIndex={3}
-                           fontWeight={500}
-                           background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
-                           animation={`${shine} 1s linear infinite`}
-                        >
-                           inclusive
-                        </Text>
-                        , leading to unintended negative consequences.
-                        Businesses miss untapped markets and individuals become
-                        excluded.
-                     </Text>
-                  </Flex>
-               </Box>
-            </Parallax>
-            <Center position={'relative'} height={'300px'}>
+            <Stack flex={1} spacing={{ base: 10, md: 10 }}>
+               <Heading
+                  lineHeight={1.1}
+                  fontWeight={600}
+                  fontSize={['5xl', '6xl']}
+                  pb="20px"
+               >
+                  <Text
+                     as={'span'}
+                     position={'relative'}
+                     _after={{
+                        content: "''",
+                        width: 'full',
+                        height: '30%',
+                        position: 'absolute',
+                        bottom: -1,
+                        left: 0,
+                        bg: 'teal.400',
+                        zIndex: -1
+                     }}
+                  >
+                     Human-centered design as a tool for innovation
+                  </Text>
+               </Heading>
+               <Text color={'gray.500'} fontSize="xl">
+                  Human centered design sits at the intersection of innovation
+                  and the real needs of individuals and communities.
+               </Text>
+            </Stack>
+            <Flex
+               flex={1}
+               justify={'center'}
+               align={'center'}
+               position={'relative'}
+            >
                <Image
-                  position={'absolute'}
-                  maxHeight={'400px'}
+                  maxHeight="400px"
+                  alt={'feature image'}
                   src={
                      'https://res.cloudinary.com/westcic/image/upload/v1659211360/venn-diagram-g1_rrjlpc.png'
                   }
+                  objectFit={'fill'}
+                  align={'center'}
                />
-
-               <Text
-                  // bg={
-                  //    'linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)'
-                  // }
-                  // bgClip={'text'}
-                  zIndex={3}
-                  fontSize={[20, 20, 25, 30]}
-                  fontWeight={500}
-                  // background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
-                  // webkitbackgroundclip="text"
-                  // webkittextfillcolor="transparent"
-                  color="white"
-               >
-                  SUSTAINABLE
-               </Text>
-            </Center>
-
-            <Parallax translateY={[30, -40]}>
-               <Box position={'relative'}>
-                  <Text
-                     color={'gray.500'}
-                     position={'absolute'}
-                     top={'100px'}
-                     fontSize={['lg', 'xl']}
-                     fontWeight={500}
-                     ml={'25px'}
-                     mr={'25px'}
-                  >
-                     Using human centered design as a tool for innovation means
-                     providing solutions to problems rooted in the actual needs
-                     of individuals and communities.
-                  </Text>
-                  {/* </AnimationOnScroll> */}
-               </Box>
-            </Parallax>
-         </SimpleGrid>
-      </Box>
+            </Flex>
+         </Stack>
+      </Container>
    )
 }
 
 const MobileView = () => {
-   const shine = keyframes`
-to {
-   background-position: 200% center;
- }
-`
-
    return (
-      <Box>
-         <SimpleGrid columns={1}>
-            <Box pt="40px">
+      <SimpleGrid mx="8px" columns={[1, 2]}>
+         <Box>
+            <Heading
+               mt="20px"
+               lineHeight={1.1}
+               fontWeight={600}
+               fontSize={['2.6rem', '5xl', '6xl']}
+               pb="25px"
+            >
                <Text
-                  fontSize={['lg', 'xl']}
-                  color={'gray.500'}
-                  ml="50px"
-                  mr="50px"
-                  mb="20px"
+                  as={'span'}
+                  position={'relative'}
+                  _after={{
+                     content: "''",
+                     width: 'full',
+                     height: '30%',
+                     position: 'absolute',
+                     bottom: -1,
+                     left: 0,
+                     bg: 'teal.400',
+                     zIndex: -1
+                  }}
                >
-                  Innovations can carry bias that are not
-                  <span>&nbsp;</span>
-                  <Text
-                     as={'span'}
-                     fontSize={['lg', 'xl']}
-                     bg={
-                        'linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)'
-                     }
-                     bgClip={'text'}
-                     zIndex={3}
-                     fontWeight={500}
-                     background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
-                     animation={`${shine} 1s linear infinite`}
-                  >
-                     inclusive
-                  </Text>
-                  , leading to unintended negative consequences. Businesses miss
-                  untapped markets and individuals become excluded.
+                  Human-centered design as a tool for innovation
                </Text>
-            </Box>
+            </Heading>
+            <Text color={'gray.500'} fontSize="xl">
+               Human centered design sits at the intersection of innovation and
+               the real needs of individuals and communities.
+            </Text>
+         </Box>
 
-            <Center height={'300px'} mx={['50px', '60px', '70px']}>
-               <Image
-                  position={'absolute'}
-                  maxHeight={'300px'}
-                  src={
-                     'https://res.cloudinary.com/westcic/image/upload/v1659211360/venn-diagram-g1_rrjlpc.png'
-                  }
-               />
-               <Text
-                  // bg={
-                  //    'linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)'
-                  // }
-                  // bgClip={'text'}
-                  zIndex={3}
-                  fontSize={30}
-                  fontWeight={500}
-                  // background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
-                  // webkitbackgroundclip="text"
-                  // webkittextfillcolor="transparent"
-                  color="white"
-               >
-                  Sustainable
-               </Text>{' '}
-            </Center>
-            <Box mt={'20px'} mb={'50px'}>
-               <Text fontSize={['lg', 'xl']} color={'gray.500'} mx="50px">
-                  Using human centered design as a tool for innovation means
-                  providing solutions to problems rooted in the actual needs of
-                  individuals and communities.
-               </Text>
-            </Box>
-         </SimpleGrid>
-      </Box>
+         <Flex
+            flex={1}
+            justify={'center'}
+            align={'center'}
+            position={'relative'}
+         >
+            <Image
+               alt={'feature image'}
+               src={
+                  'https://res.cloudinary.com/westcic/image/upload/v1659211360/venn-diagram-g1_rrjlpc.png'
+               }
+               maxHeight="400px"
+               objectFit={'cover'}
+               align={'center'}
+               h={'auto'}
+            />
+         </Flex>
+      </SimpleGrid>
    )
+}
+{
+   /* <Box>
+<Flex>
+   <Text
+      fontSize={['lg', 'xl']}
+      color={'gray.500'}
+      ml="50px"
+      pl="5px"
+   >
+      <Text
+            as={'span'}
+            fontSize={['lg', 'xl']}
+            bg={
+               'linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)'
+            }
+            bgClip={'text'}
+            zIndex={3}
+            fontWeight={500}
+            background="-webkit-linear-gradient(209deg, rgba(63,170,152,0.75) 0%, rgba(75,73,212,0.75) 100%)"
+            animation={`${shine} 1s linear infinite`}
+         >
+            inclusive
+         </Text> 
+                  </Text>
+         </Text> 
+      Using human centered design as a tool for innovation means
+      providing solutions to problems rooted in the actual needs
+      of individuals and communities.
+   </Text>
+</Flex>
+</Box> */
 }
