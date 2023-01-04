@@ -1,10 +1,10 @@
+/* eslint-disable react/no-children-prop */
 import {
    Box,
    Flex,
    Text,
    Heading,
    IconButton,
-   Button,
    Stack,
    Collapse,
    Icon,
@@ -12,8 +12,6 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   Center,
-   SimpleGrid,
    useDisclosure
 } from '@chakra-ui/react'
 import {
@@ -31,7 +29,7 @@ export default function WithSubnavigation() {
    return (
       <Box
          className="navbar"
-         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1642290864/1234cht-bg_m1axiw.png')"
+         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
@@ -73,7 +71,7 @@ export default function WithSubnavigation() {
             <Flex
                flex={{ base: 1 }}
                justify={{ base: 'center', md: 'start' }}
-               pl="50px"
+               pl="50px" //FIXME: remove space less than 350px
                top="-10px"
             >
                <Link href="/">
@@ -87,7 +85,8 @@ export default function WithSubnavigation() {
                direction={'row'}
                spacing={5}
                className="navbar-links"
-               pr={20}
+               mr={10}
+               ml="5px"
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
                   <DesktopNav />
@@ -96,10 +95,10 @@ export default function WithSubnavigation() {
          </Flex>
          <Box
             bg="teal.900"
-            w={'100vw'}
+            w={'100%'}
             direction={'row'}
             position={'absolute'}
-            top="88px"
+            top="120px"
             zIndex={2}
          >
             <Collapse in={isOpen} animateOpacity>
@@ -184,27 +183,29 @@ export default function WithSubnavigation() {
                </Button> */}
             </Flex>
          </Stack>
-         <Flex
-            className="chevron"
-            w={'100%'}
-            display={'flex'}
-            justifyContent="space-around"
-            position={'absolute'}
-            top={['700px', '700px', '700px', '700px', '800px']}
-         >
-            <Link href="#section1">
-               <Icon
-                  w={50}
-                  h={50}
-                  color={'white'}
-                  as={ChevronDownIcon}
-                  _hover={{
-                     transition: 'all 0.6s ease-out',
-                     transform: 'rotate(180deg)'
-                  }}
-               />
-            </Link>
-         </Flex>
+         {/* <Center>
+      
+            <Flex
+               w={'100%'}
+               display={'flex'}
+               justifyContent="space-around"
+               position={'absolute'}
+               top={['700px', '700px', '700px', '700px', '800px']}
+            >
+               <Link href="#section1">
+                  <Icon
+                     w={50}
+                     h={50}
+                     color={'white'}
+                     as={ChevronDownIcon}
+                     _hover={{
+                        transition: 'all 0.6s ease-out',
+                        transform: 'rotate(180deg)'
+                     }}
+                  />
+               </Link>
+            </Flex>
+         </Center> */}
       </Box>
    )
 }

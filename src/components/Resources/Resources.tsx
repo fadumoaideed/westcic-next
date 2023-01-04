@@ -16,7 +16,7 @@ export default function Resources() {
             fontWeight={600}
             fontSize={['5xl', '6xl']}
             align="center"
-            py="40px"
+            pb="25px"
          >
             <Text
                as={'span'}
@@ -40,7 +40,8 @@ export default function Resources() {
             spacing={10}
             pt="10px"
             pb="30px"
-            px={['50px', '50px', '50px', '50px', '70px']}
+            mx={['15px', '30px', '50px', '50px']}
+            justifyItems={'center'}
          >
             <Box>
                <Link href="https://www.youtube.com/watch?v=It6CiMyS2Tc">
@@ -77,7 +78,7 @@ export default function Resources() {
                         }}
                      />
                   </Flex>
-               </Box>{' '}
+               </Box>
             </Link>
 
             <Box>

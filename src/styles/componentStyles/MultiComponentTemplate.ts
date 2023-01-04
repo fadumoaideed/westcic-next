@@ -1,4 +1,4 @@
-import { ComponentStyleConfig, DeepPartial } from '@chakra-ui/react'
+import { ComponentStyleConfig } from '@chakra-ui/react'
 
 export const Form: ComponentStyleConfig = {
    parts: ['form', 'title', 'altLink'],

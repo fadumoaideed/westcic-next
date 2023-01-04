@@ -1,42 +1,37 @@
-import React from 'react'
-import Head from 'next/head'
-import Resources from 'components/Resources/Resources'
-import Section1 from 'components/Section1/Section1'
+// import Head from 'next/head'
 import NavBar from '../components/Navbar-Bg/Navbar-Bg'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
-import Award from 'components/SplitScreen/SplitScreen'
-import {
-   Box,
-   Container,
-   Flex,
-   Image,
-   SimpleGrid,
-   Stack,
-   Text,
-   Heading,
-   useStyleConfig
-} from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
-import { ParallaxBanner } from 'react-scroll-parallax'
-import Rivet from 'components/RIVET/Rivet'
-import Link from 'next/link'
+// import Impact from 'components/Impact/Impact'
+import Award from 'components/Awards/Awards'
+import Resources from 'components/Resources/Resources'
+import Footer from 'components/Footer/Footer'
+import Project from 'components/Rivet1/Rivet'
 
-const prefix = '/westcic-next'
+//TODO: Work needed for MVP
+// - add hyphen between human and centered
+// - add email link (nodemailer form?) with auth
+// - add images and graphics
+// - find replacement for cloundinary
+// - reduce size of navbar in mobile mode and desktop (use Window.innerHeight)
+// - increase size of navbar header in mobile mode
+// - Reduce spacing between clean energy and africa
+// - change font, weight and background colour of navbar dropdown
+// - rename navbar to one page style
 
 export default function Home() {
-   const button = useStyleConfig('Button', { variant: 'small' })
+   // const button = useStyleConfig('Button', { variant: 'small' })
 
    return (
-      <>
-         <Box className="home-container">
-            <NavBar />
-            <Feature />
-            <Rivet />
-            <Award />
-            <Resources />
-
-            {/* <Button _css={button}>Hello</Button> */}
-         </Box>
-      </>
+      <Box className="home-container">
+         <NavBar />
+         <Feature />
+         {/* <Impact /> */}
+         <Project />
+         <Award />
+         <Resources />
+         <Footer />
+         {/* <Button _css={button}>Hello</Button> */}
+      </Box>
    )
 }
