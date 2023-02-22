@@ -3,7 +3,6 @@ import {
    Box,
    Flex,
    Text,
-   Heading,
    IconButton,
    Stack,
    Collapse,
@@ -21,30 +20,25 @@ import {
    ChevronRightIcon
 } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
-import { TextLoop } from 'react-text-loop-next'
 
-export default function WithSubnavigation() {
+export default function Navigation() {
    const { isOpen, onToggle } = useDisclosure()
-
    return (
       <Box
          className="navbar"
-         bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
+         // bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
          backgroundSize={['cover', 'cover', 'cover', '100%']}
          backgroundPosition={['left top', 'left top', 'left top', 'left top']}
          bgRepeat="no-repeat"
-         minH={['800px', '800px', '800px', '800px', '900px']}
          minW={['100%']}
+         bgColor="white" // ! TODO: find white shade
       >
          <Flex
+            className="logo-navlinks"
             color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
             px={{ base: 2 }}
-            // borderBottom={1}
-            // borderStyle={'solid'}
-            // borderColor={'teal.900'}
-            // borderBottomWidth={'0.1px'}
             align={'start'}
             pt={'10'}
          >
@@ -52,6 +46,8 @@ export default function WithSubnavigation() {
                flex={{ base: 1, md: 'auto' }}
                ml={{ base: 10 }}
                display={{ base: 'flex', md: 'none' }}
+               alignSelf="center"
+               className="mobile-dropdown-tab"
             >
                <IconButton
                   onClick={onToggle}
@@ -62,19 +58,20 @@ export default function WithSubnavigation() {
                         <HamburgerIcon w={5} h={5} />
                      )
                   }
-                  variant={'ghost'}
-                  color={'white'}
+                  variant={'outline'}
+                  color={'black'}
                   aria-label={'Toggle Navigation'}
                   _hover={{ bg: 'none', transform: 'scale(1.05)' }}
                />
             </Flex>
-            <Flex
-               flex={{ base: 1 }}
-               justify={{ base: 'center', md: 'start' }}
-               pl="50px" //FIXME: remove space less than 350px
-               top="-10px"
-            >
-               <Link href="/">
+            <Flex className="logo">
+               <Link
+                  href="/"
+                  flex={{ base: 1 }}
+                  justify={{ base: 'center', md: 'start' }}
+                  pl="50px"
+                  top="-10px"
+               >
                   <Logo />
                </Link>
             </Flex>
@@ -85,8 +82,10 @@ export default function WithSubnavigation() {
                direction={'row'}
                spacing={5}
                className="navbar-links"
+               alignSelf={'flex-start'}
                mr={10}
                ml="5px"
+               pt="10px"
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
                   <DesktopNav />
@@ -94,118 +93,19 @@ export default function WithSubnavigation() {
             </Stack>
          </Flex>
          <Box
-            bg="teal.900"
+            className="mobile-navbar-dropdown"
+            bg="white"
             w={'100%'}
             direction={'row'}
             position={'absolute'}
             top="120px"
             zIndex={2}
+            pl="30px"
          >
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />
             </Collapse>
          </Box>
-
-         <Stack className="text-loop-button" mx={['30px', '50px']}>
-            <Box
-               className="text-loop"
-               position={'relative'}
-               mx={'20px'}
-               top={'100px'}
-            >
-               <Heading
-                  color="white"
-                  as="h1"
-                  fontSize={['2.8rem', '4rem', '4.5rem', '7xl', '8xl']}
-                  width={['300px', '400px', '500px', '800px', '1100px']}
-               >
-                  Sustainable innovation
-               </Heading>
-
-               <Heading
-                  color="white"
-                  as="h1"
-                  fontSize={['2.8rem', '4rem', '4.5rem', '7xl', '8xl']}
-                  width={['300px', '400px', '500px', '800px', '1100px']}
-               >
-                  inclusive of<span>&nbsp;</span>
-                  <TextLoop
-                     children={[
-                        'gender',
-                        'ethnicity',
-                        'age',
-                        'disability',
-                        'sexuality',
-                        'religion',
-                        'income'
-                     ]}
-                  />
-               </Heading>
-
-               <Text
-                  fontFamily={'Arial'}
-                  color="white"
-                  as="h1"
-                  mt="10px"
-                  mx="2px"
-                  fontSize={['lg', '1.4rem', '1.5rem', '3xl']}
-                  width={['300px', '550px', '550px', '800px']}
-               >
-                  Engineering with a human-centred design approach
-               </Text>
-            </Box>
-            <Flex
-               className="learn-more"
-               direction={'row'}
-               align={'center'}
-               // mx={['20px', '100px']}
-               position={'relative'}
-               // width='50%'
-               top={'150px'}
-               // pl={["50px","150px"]}
-            >
-               {/* <Button
-                  mx={'50px'}
-                  fontSize={'xl'}
-                  color="white"
-                  variant="outline"
-                  borderRadius={'30'}
-                  transition="all 200ms ease"
-                  _hover={{
-                     boxShadow: 'lg',
-                     bg: 'rgba(0, 0, 0, 0.2)',
-                     transform: 'scale(1.05)'
-                  }}
-                  width="180px"
-                  height="50px"
-               >
-                  Learn more!
-               </Button> */}
-            </Flex>
-         </Stack>
-         {/* <Center>
-      
-            <Flex
-               w={'100%'}
-               display={'flex'}
-               justifyContent="space-around"
-               position={'absolute'}
-               top={['700px', '700px', '700px', '700px', '800px']}
-            >
-               <Link href="#section1">
-                  <Icon
-                     w={50}
-                     h={50}
-                     color={'white'}
-                     as={ChevronDownIcon}
-                     _hover={{
-                        transition: 'all 0.6s ease-out',
-                        transform: 'rotate(180deg)'
-                     }}
-                  />
-               </Link>
-            </Flex>
-         </Center> */}
       </Box>
    )
 }
@@ -220,9 +120,9 @@ const DesktopNav = () => {
                      <Link
                         p={5}
                         href={navItem.href ?? '#'}
-                        fontSize={'lg'}
+                        fontSize={'xl'}
                         fontWeight={'bold'}
-                        color={'white'}
+                        color="teal.800"
                         _hover={{
                            textDecoration: 'underline',
                            textDecorationColor: 'white',
@@ -322,7 +222,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                textDecoration: 'none'
             }}
          >
-            <Text fontWeight={400} color={'white'}>
+            <Text fontWeight={400} color={'black'}>
                {label}
             </Text>
             {children && (
@@ -332,17 +232,18 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                   transform={isOpen ? 'rotate(180deg)' : ''}
                   w={6}
                   h={6}
-                  color="white"
+                  color="black"
                />
             )}
          </Flex>
-
+         {/* SUB NAVIGATION NOT IN USE
          <Collapse
             in={isOpen}
             animateOpacity
             style={{ marginTop: '0!important' }}
          >
             <Stack
+               className="sub-nav"
                mt={2}
                pl={4}
                borderLeft={1}
@@ -356,7 +257,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                      </Link>
                   ))}
             </Stack>
-         </Collapse>
+         </Collapse> */}
       </Stack>
    )
 }
@@ -370,31 +271,27 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
    {
-      label: 'Projects',
-      children: [
-         {
-            label: 'Project 1',
-            subLabel: 'lorem ipsum',
-            href: '#'
-         },
-         {
-            label: 'Project 2',
-            subLabel: 'lorem ipsum',
-            href: '#'
-         }
-      ]
-      // href: 'projects'
+      label: 'Outreach',
+      href: '#outreach'
    },
    {
-      label: 'Services',
-      href: 'services'
+      label: 'Innovation',
+      // children: [
+      //    {
+      //       label: 'Project 1',
+      //       subLabel: 'lorem ipsum',
+      //       href: '#'
+      //    },
+      // ]
+      href: '#innovation'
    },
+
    {
       label: 'About',
-      href: 'about'
+      href: '#about'
    },
    {
       label: 'Contact',
-      href: 'contact'
+      href: '#contact'
    }
 ]
