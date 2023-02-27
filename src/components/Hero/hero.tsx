@@ -1,12 +1,4 @@
-import {
-   Box,
-   Container,
-   Flex,
-   Heading,
-   Spacer,
-   Stack,
-   Text
-} from '@chakra-ui/layout'
+import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react'
 import { TextLoop } from 'react-text-loop-next'
 
@@ -25,18 +17,18 @@ function Hero() {
             flexDirection="column"
             pl={['30px', '40px']}
             // border={'solid'}
-            pt={['30px', '50px']}
+            pt={['30px', '70px']}
          >
             <Heading
-               color={'teal.600'}
-               fontSize={['2.8rem', '3.6rem', '3.8rem', '4.3rem', '7xl']}
+               color={'heroText.100'}
+               fontSize={['2.8rem', '3.0rem', '3.5rem', '4.3rem', '7xl']}
             >
                Sustainable innovation
             </Heading>
 
             <Heading
-               color={'teal.600'}
-               fontSize={['2.8rem', '3.6rem', '3.8rem', '4.3rem', '7xl']}
+               color={'heroText.100'}
+               fontSize={['2.8rem', '3.0rem', '3.8rem', '4.3rem', '7xl']}
             >
                inclusive of<span>&nbsp;</span>
                <TextLoop
@@ -55,10 +47,10 @@ function Hero() {
 
             <Text
                fontFamily={'Arial'}
-               color={'teal.400'}
+               color={'heroText.100'}
                mx="2px"
                mt={['5px', '10px', '15px', '30px']}
-               fontSize={['1.4rem', '1.6rem', '1.5rem', '1.75rem']}
+               fontSize={['1.4rem', '1.5rem', '1.6rem', '1.75rem']}
             >
                Engineering with a human-centred design approach
             </Text>

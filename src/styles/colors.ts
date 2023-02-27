@@ -14,6 +14,9 @@ const extendedColors: DeepPartial<Record<string, Theme['colors']['teal']>> = {
       800: '#234E52',
       900: '#1D4044'
    },
+   heroText: {
+      100: '#402d7d'
+   },
    primaryColorScheme: {
       500: '#0072e6',
       600: '#0059b4'

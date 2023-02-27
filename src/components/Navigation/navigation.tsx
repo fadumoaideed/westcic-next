@@ -11,14 +11,10 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   useDisclosure
+   useDisclosure,
+   Divider
 } from '@chakra-ui/react'
-import {
-   HamburgerIcon,
-   CloseIcon,
-   ChevronDownIcon,
-   ChevronRightIcon
-} from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
 
 export default function Navigation() {
@@ -101,6 +97,8 @@ export default function Navigation() {
             top="120px"
             zIndex={2}
             pl="30px"
+            boxShadow={'lg'}
+            borderBottomRadius="lg"
          >
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />
@@ -207,57 +205,27 @@ const MobileNav = () => {
    )
 }
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-   const { isOpen, onToggle } = useDisclosure()
-
+const MobileNavItem = ({ label, href }: NavItem) => {
    return (
-      <Stack spacing={4} onClick={children && onToggle}>
+      <Stack spacing={4}>
          <Flex
+            className="mobile-dropdown-text-tabs"
             py={2}
             as={Link}
             href={href ?? '#'}
             justify={'space-between'}
             align={'center'}
             _hover={{
-               textDecoration: 'none'
+               textDecoration: 'none',
+               background: '#CBD5E0'
             }}
+            flexWrap="wrap"
          >
-            <Text fontWeight={400} color={'black'}>
+            <Text fontWeight={'semibold'} color={'purple'}>
                {label}
             </Text>
-            {children && (
-               <Icon
-                  as={ChevronDownIcon}
-                  transition={'all .25s ease-in-out'}
-                  transform={isOpen ? 'rotate(180deg)' : ''}
-                  w={6}
-                  h={6}
-                  color="black"
-               />
-            )}
+            <Divider />
          </Flex>
-         {/* SUB NAVIGATION NOT IN USE
-         <Collapse
-            in={isOpen}
-            animateOpacity
-            style={{ marginTop: '0!important' }}
-         >
-            <Stack
-               className="sub-nav"
-               mt={2}
-               pl={4}
-               borderLeft={1}
-               align={'start'}
-               color={'white'} //sub project
-            >
-               {children &&
-                  children.map((child) => (
-                     <Link key={child.label} py={2} href={child.href}>
-                        {child.label}
-                     </Link>
-                  ))}
-            </Stack>
-         </Collapse> */}
       </Stack>
    )
 }
