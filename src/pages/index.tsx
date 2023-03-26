@@ -7,14 +7,14 @@ import { Box } from '@chakra-ui/react'
 // import Resources from 'components/Resources/Resources'
 // import Footer from 'components/Footer/Footer'
 // import Project from 'components/Rivet1/Rivet'
-import CallToActionWithIllustration from '../components/Hero/hero'
+import Hero from '../components/Hero/hero'
 export default function Home() {
    // const button = useStyleConfig('Button', { variant: 'small' })
 
    return (
       <Box className="home-container">
          <Navigation />
-         <CallToActionWithIllustration />
+         <Hero />
          {/* <Feature /> */}
          {/* <Impact /> */}
          {/* <Project />
