@@ -1,8 +1,10 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout'
-import { Image } from '@chakra-ui/react'
+import { Button, Image, useStyleConfig } from '@chakra-ui/react'
 import { TextLoop } from 'react-text-loop-next'
 
 function Hero() {
+   const button = useStyleConfig('Button', { variant: 'small' })
+
    return (
       <Flex
          className="hero-container"
@@ -16,19 +18,18 @@ function Hero() {
             display={'flex'}
             flexDirection="column"
             pl={['30px', '40px']}
-            // border={'solid'}
             pt={['30px', '70px']}
          >
             <Heading
-               color={'heroText.100'}
-               fontSize={['2.8rem', '3.0rem', '3.5rem', '4.3rem', '7xl']}
+               color={'teal.800'}
+               fontSize={['2.8rem', '3.0rem', '3.5rem', '4.3rem', '6.8xl']}
             >
                Sustainable innovation
             </Heading>
 
             <Heading
-               color={'heroText.100'}
-               fontSize={['2.8rem', '3.0rem', '3.8rem', '4.3rem', '7xl']}
+               color={'teal.800'}
+               fontSize={['2.8rem', '3.0rem', '3.8rem', '4.3rem', '6.8xl']}
             >
                inclusive of<span>&nbsp;</span>
                <TextLoop
@@ -47,13 +48,16 @@ function Hero() {
 
             <Text
                fontFamily={'Arial'}
-               color={'heroText.100'}
+               color={'teal.800'}
                mx="2px"
                mt={['5px', '10px', '15px', '30px']}
                fontSize={['1.4rem', '1.5rem', '1.6rem', '1.75rem']}
             >
                Engineering with a human-centred design approach
             </Text>
+            <Button mt="40px" _css={button}>
+               Learn More
+            </Button>
          </Flex>
          <Flex className="hero-illustration" pr={['0px', '25px', '50px']}>
             <Image
