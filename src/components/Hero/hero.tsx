@@ -1,6 +1,7 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button, Image, useStyleConfig } from '@chakra-ui/react'
-import { TextLoop } from 'react-text-loop-next'
+import TextAnimation from 'components/TextAnimation'
+// import { TextLoop } from 'react-text-loop-next'
 
 function Hero() {
    const button = useStyleConfig('Button', { variant: 'small' })
@@ -32,7 +33,7 @@ function Hero() {
                fontSize={['2.8rem', '3.0rem', '3.8rem', '4.3rem', '6.8xl']}
             >
                inclusive of<span>&nbsp;</span>
-               <TextLoop
+               {/* <TextLoop
                   // eslint-disable-next-line react/no-children-prop
                   children={[
                      'gender',
@@ -43,7 +44,8 @@ function Hero() {
                      'religion',
                      'income'
                   ]}
-               />
+               /> */}
+               <TextAnimation />
             </Heading>
 
             <Text
