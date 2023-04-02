@@ -12,9 +12,11 @@ export const Logo = () => {
       //       fill="#2F855A"
       //    />
       // </svg>
+      //white logo
+      // https://res.cloudinary.com/westcic/image/upload/v1655748910/LOGOV6-min_hkevty.png
       <Box height={'auto'} width={'150px'}>
          <img
-            src="https://res.cloudinary.com/westcic/image/upload/v1655748910/LOGOV6-min_hkevty.png"
+            src="https://res.cloudinary.com/westcic/image/upload/v1672937501/logo-teal-800_noqzfy.png"
             alt="test"
          />
       </Box>

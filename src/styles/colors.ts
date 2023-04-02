@@ -14,6 +14,14 @@ const extendedColors: DeepPartial<Record<string, Theme['colors']['teal']>> = {
       800: '#234E52',
       900: '#1D4044'
    },
+   primary: {
+      100: '#fe8794',
+      200: '#b89cd9',
+      300: '#a5dba4',
+      400: '#b4ecec',
+      500: '#fadb94'
+   },
+
    primaryColorScheme: {
       500: '#0072e6',
       600: '#0059b4'

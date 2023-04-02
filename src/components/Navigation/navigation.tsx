@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import {
    Box,
    Flex,
@@ -10,37 +11,39 @@ import {
    Popover,
    PopoverTrigger,
    PopoverContent,
-   useColorModeValue,
-   useDisclosure
+   useDisclosure,
+   Divider
 } from '@chakra-ui/react'
-import {
-   HamburgerIcon,
-   CloseIcon,
-   ChevronDownIcon,
-   ChevronRightIcon
-} from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
 
-export default function WithSubnavigation() {
+export default function Navigation() {
    const { isOpen, onToggle } = useDisclosure()
-
    return (
-      <Box className="navigation">
+      <Box
+         className="navbar"
+         // bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
+         backgroundSize={['cover', 'cover', 'cover', '100%']}
+         backgroundPosition={['left top', 'left top', 'left top', 'left top']}
+         bgRepeat="no-repeat"
+         minW={['100%']}
+         bgColor="white" // ! TODO: find white shade
+      >
          <Flex
-            bg={useColorModeValue('white', 'gray.800')}
-            color={useColorModeValue('gray.600', 'white')}
+            className="logo-navlinks"
+            color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
-            px={{ base: 4 }}
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-            align={'center'}
+            px={{ base: 2 }}
+            align={'start'}
+            pt={'10'}
          >
             <Flex
                flex={{ base: 1, md: 'auto' }}
-               ml={{ base: -1 }}
+               ml={{ base: 10 }}
                display={{ base: 'flex', md: 'none' }}
+               alignSelf="center"
+               className="mobile-dropdown-tab"
             >
                <IconButton
                   onClick={onToggle}
@@ -51,18 +54,22 @@ export default function WithSubnavigation() {
                         <HamburgerIcon w={5} h={5} />
                      )
                   }
-                  variant={'ghost'}
+                  variant={'outline'}
+                  color={'black'}
                   aria-label={'Toggle Navigation'}
+                  _hover={{ bg: 'none', transform: 'scale(1.05)' }}
                />
             </Flex>
-            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-               <Link href="/">
+            <Flex className="logo">
+               <Link
+                  href="/"
+                  flex={{ base: 1 }}
+                  justify={{ base: 'center', md: 'start' }}
+                  pl="50px"
+                  top="-10px"
+               >
                   <Logo />
                </Link>
-
-               {/* <Flex display={{ base: 'none', md: 'inline-flex' }} ml={10}>
-                  <DesktopNav />
-               </Flex> */}
             </Flex>
 
             <Stack
@@ -71,26 +78,37 @@ export default function WithSubnavigation() {
                direction={'row'}
                spacing={5}
                className="navbar-links"
-               pe={20}
+               alignSelf={'flex-start'}
+               mr={10}
+               ml="5px"
+               pt="10px"
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
                   <DesktopNav />
                </Stack>
             </Stack>
          </Flex>
-
-         <Collapse in={isOpen} animateOpacity>
-            <MobileNav />
-         </Collapse>
+         <Box
+            className="mobile-navbar-dropdown"
+            bg="white"
+            w={'100%'}
+            direction={'row'}
+            position={'absolute'}
+            top="120px"
+            zIndex={2}
+            pl="30px"
+            boxShadow={'lg'}
+            borderBottomRadius="lg"
+         >
+            <Collapse in={isOpen} animateOpacity>
+               <MobileNav />
+            </Collapse>
+         </Box>
       </Box>
    )
 }
 
 const DesktopNav = () => {
-   const linkColor = useColorModeValue('gray.600', 'gray.200')
-   const linkHoverColor = useColorModeValue('gray.800', 'white')
-   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
-
    return (
       <Stack direction={'row'} spacing={55}>
          {NAV_ITEMS.map((navItem) => (
@@ -98,18 +116,17 @@ const DesktopNav = () => {
                <Popover trigger={'hover'} placement={'bottom-start'}>
                   <PopoverTrigger>
                      <Link
-                        p={2}
+                        p={5}
                         href={navItem.href ?? '#'}
-                        fontSize={'sm'}
-                        fontWeight={500}
-                        color={linkColor}
+                        fontSize={'xl'}
+                        fontWeight={'medium'}
+                        color="teal.800"
                         _hover={{
                            textDecoration: 'underline',
-                           textDecorationColor: 'teal',
+                           textDecorationColor: 'white',
                            textDecorationStyle: 'solid',
                            textDecorationThickness: '3px',
-                           textUnderlineOffset: '8px',
-                           color: linkHoverColor
+                           textUnderlineOffset: '8px'
                         }}
                      >
                         {navItem.label}
@@ -120,9 +137,9 @@ const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={popoverContentBgColor}
+                        bg={'teal.900'}
                         p={4}
-                        rounded={'xl'}
+                        rounded={'sm'}
                         minW={'sm'}
                      >
                         <Stack>
@@ -140,6 +157,7 @@ const DesktopNav = () => {
 }
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+   // Dropdown list for subpages
    return (
       <Link
          href={href}
@@ -147,13 +165,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
          display={'block'}
          p={2}
          rounded={'md'}
-         _hover={{ bg: useColorModeValue('teal.50', 'gray.900') }}
+         _hover={{ bg: 'transparent' }}
       >
          <Stack direction={'row'} align={'center'}>
             <Box>
                <Text
                   transition={'all .3s ease'}
-                  _groupHover={{ color: 'teal.900' }}
+                  _groupHover={{ textDecoration: 'underline' }} //FIXME: style subnav
                   fontWeight={500}
                   fontSize={'lg'}
                >
@@ -170,7 +188,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                align={'center'}
                flex={1}
             >
-               <Icon color={'teal.800'} w={5} h={5} as={ChevronRightIcon} />
+               <Icon color={'white'} w={5} h={5} as={ChevronRightIcon} />
             </Flex>
          </Stack>
       </Link>
@@ -179,11 +197,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 
 const MobileNav = () => {
    return (
-      <Stack
-         bg={useColorModeValue('white', 'gray.800')}
-         p={4}
-         display={{ md: 'none' }}
-      >
+      <Stack bg={'transparent'} p={4} display={{ md: 'none' }}>
          {NAV_ITEMS.map((navItem) => (
             <MobileNavItem key={navItem.label} {...navItem} />
          ))}
@@ -191,59 +205,27 @@ const MobileNav = () => {
    )
 }
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-   const { isOpen, onToggle } = useDisclosure()
-
+const MobileNavItem = ({ label, href }: NavItem) => {
    return (
-      <Stack spacing={4} onClick={children && onToggle}>
+      <Stack spacing={4}>
          <Flex
+            className="mobile-dropdown-text-tabs"
             py={2}
             as={Link}
             href={href ?? '#'}
             justify={'space-between'}
             align={'center'}
             _hover={{
-               textDecoration: 'none'
+               textDecoration: 'none',
+               background: '#CBD5E0'
             }}
+            flexWrap="wrap"
          >
-            <Text
-               fontWeight={400}
-               color={useColorModeValue('gray.600', 'gray.200')}
-            >
+            <Text fontWeight={'semibold'} color={'purple'}>
                {label}
             </Text>
-            {children && (
-               <Icon
-                  as={ChevronDownIcon}
-                  transition={'all .25s ease-in-out'}
-                  transform={isOpen ? 'rotate(180deg)' : ''}
-                  w={6}
-                  h={6}
-               />
-            )}
+            <Divider />
          </Flex>
-
-         <Collapse
-            in={isOpen}
-            animateOpacity
-            style={{ marginTop: '0!important' }}
-         >
-            <Stack
-               mt={2}
-               pl={4}
-               borderLeft={1}
-               // borderStyle={'solid'} //line hover underneath
-               borderColor={useColorModeValue('gray.200', 'gray.700')}
-               align={'start'}
-            >
-               {children &&
-                  children.map((child) => (
-                     <Link key={child.label} py={2} href={child.href}>
-                        {child.label}
-                     </Link>
-                  ))}
-            </Stack>
-         </Collapse>
       </Stack>
    )
 }
@@ -257,35 +239,27 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
    {
-      label: 'Home',
-      href: '/'
+      label: 'Outreach',
+      href: '#outreach'
    },
    {
-      label: 'Projects',
-      children: [
-         {
-            label: 'Project 1',
-            subLabel: 'lorem ipsum',
-            href: '#'
-         },
-         {
-            label: 'Project 2',
-            subLabel: 'lorem ipsum',
-            href: '#'
-         }
-      ]
-      // href: 'projects'
+      label: 'Innovation',
+      // children: [
+      //    {
+      //       label: 'Project 1',
+      //       subLabel: 'lorem ipsum',
+      //       href: '#'
+      //    },
+      // ]
+      href: '#innovation'
    },
-   {
-      label: 'Services',
-      href: 'services'
-   },
+
    {
       label: 'About',
-      href: 'about'
+      href: '#about'
    },
    {
       label: 'Contact',
-      href: 'contact'
+      href: '#contact'
    }
 ]

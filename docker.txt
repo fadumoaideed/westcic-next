@@ -1,0 +1,9 @@
+docker network create my_network
+docker-compose up --build
+docker-compose down
+docker network rm
+
+
+go inside docker container
+docker ps
+docker exec -it 47ea95e8221a sh 
