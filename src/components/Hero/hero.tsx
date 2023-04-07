@@ -1,9 +1,9 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout'
-import { Button, Image, useStyleConfig } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import TextAnimation from 'components/TextAnimation/TextAnimation'
 
 function Hero() {
-   const button = useStyleConfig('Button', { variant: 'small' })
+   // const button = useStyleConfig('Button', { variant: 'small' })
 
    return (
       <Flex
@@ -52,14 +52,12 @@ function Hero() {
                color={'teal.800'}
                mx="2px"
                mt={['5px', '10px', '15px', '30px']}
-               fontSize={['1.4rem', '1.5rem', '1.6rem', '1.75rem']}
+               fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
             >
                Engineering with a human-centred design approach
             </Text>
-            <Button mt="40px" _css={button}>
-               Learn More
-            </Button>
          </Flex>
+
          <Flex className="hero-illustration" pr={['0px', '25px', '50px']}>
             <Image
                alt={'Hero Image'}
