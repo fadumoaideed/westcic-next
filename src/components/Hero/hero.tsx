@@ -18,7 +18,7 @@ function Hero() {
             className="hero-heading"
             display={'flex'}
             flexDirection="column"
-            px={['30px', '40px']}
+            px={['10px', '40px']}
             pt={['30px', '70px']}
          >
             <Heading
