@@ -20,17 +20,9 @@ import { Logo } from '../Logo/logo'
 export default function Navigation() {
    const { isOpen, onToggle } = useDisclosure()
    return (
-      <Box
-         className="navbar"
-         // bgImage="url('https://res.cloudinary.com/westcic/image/upload/v1657530660/cht-bg_bhurdl.png')"
-         backgroundSize={['cover', 'cover', 'cover', '100%']}
-         backgroundPosition={['left top', 'left top', 'left top', 'left top']}
-         bgRepeat="no-repeat"
-         minW={['100%']}
-         bgColor="white" // ! TODO: find white shade
-      >
+      <Box className="navbar">
          <Flex
-            className="logo-navlinks"
+            className="logo-nav-links"
             color={'white'}
             minH={'60px'}
             py={{ base: 2 }}
@@ -49,15 +41,14 @@ export default function Navigation() {
                   onClick={onToggle}
                   icon={
                      isOpen ? (
-                        <CloseIcon w={3} h={3} />
+                        <CloseIcon w={5} h={5} />
                      ) : (
-                        <HamburgerIcon w={5} h={5} />
+                        <HamburgerIcon w={7} h={7} />
                      )
                   }
-                  variant={'outline'}
+                  variant={'ghost'}
                   color={'black'}
                   aria-label={'Toggle Navigation'}
-                  _hover={{ bg: 'none', transform: 'scale(1.05)' }}
                />
             </Flex>
             <Flex className="logo">
@@ -80,7 +71,7 @@ export default function Navigation() {
                className="navbar-links"
                alignSelf={'flex-start'}
                mr={10}
-               ml="5px"
+               ml="10px"
                pt="10px"
             >
                <Stack display={{ base: 'none', md: 'inline-flex' }}>
@@ -94,11 +85,8 @@ export default function Navigation() {
             w={'100%'}
             direction={'row'}
             position={'absolute'}
-            top="120px"
-            zIndex={2}
             pl="30px"
             boxShadow={'lg'}
-            borderBottomRadius="lg"
          >
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />
@@ -118,8 +106,8 @@ const DesktopNav = () => {
                      <Link
                         p={5}
                         href={navItem.href ?? '#'}
-                        fontSize={'xl'}
-                        fontWeight={'medium'}
+                        fontSize={'lg'}
+                        fontWeight={'semibold'}
                         color="teal.800"
                         _hover={{
                            textDecoration: 'underline',
@@ -133,11 +121,11 @@ const DesktopNav = () => {
                      </Link>
                   </PopoverTrigger>
 
-                  {navItem.children && (
+                  {/* {navItem.children && (
                      <PopoverContent
                         border={0}
                         boxShadow={'xl'}
-                        bg={'teal.900'}
+                        bg={'yellow'}
                         p={4}
                         rounded={'sm'}
                         minW={'sm'}
@@ -148,7 +136,7 @@ const DesktopNav = () => {
                            ))}
                         </Stack>
                      </PopoverContent>
-                  )}
+                  )} */}
                </Popover>
             </Box>
          ))}
@@ -156,44 +144,43 @@ const DesktopNav = () => {
    )
 }
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-   // Dropdown list for subpages
-   return (
-      <Link
-         href={href}
-         role={'group'}
-         display={'block'}
-         p={2}
-         rounded={'md'}
-         _hover={{ bg: 'transparent' }}
-      >
-         <Stack direction={'row'} align={'center'}>
-            <Box>
-               <Text
-                  transition={'all .3s ease'}
-                  _groupHover={{ textDecoration: 'underline' }} //FIXME: style subnav
-                  fontWeight={500}
-                  fontSize={'lg'}
-               >
-                  {label}
-               </Text>
-               <Text fontSize={'sm'}>{subLabel}</Text>
-            </Box>
-            <Flex
-               transition={'all .3s ease'}
-               transform={'translateX(-10px)'}
-               opacity={0}
-               _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-               justify={'flex-end'}
-               align={'center'}
-               flex={1}
-            >
-               <Icon color={'white'} w={5} h={5} as={ChevronRightIcon} />
-            </Flex>
-         </Stack>
-      </Link>
-   )
-}
+// const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+//    // Dropdown list for sub-pages
+//    return (
+//       <Link
+//          href={href}
+//          role={'group'}
+//          display={'block'}
+//          p={2}
+//          rounded={'md'}
+//          _hover={{ bg: 'transparent' }}
+//       >
+//          <Stack direction={'row'} align={'center'}>
+//             <Box>
+//                <Text
+//                   transition={'all .3s ease'}
+//                   fontWeight={500}
+//                   fontSize={'lg'}
+//                >
+//                   {label}
+//                </Text>
+//                <Text fontSize={'sm'}>{subLabel}</Text>
+//             </Box>
+//             <Flex
+//                transition={'all .3s ease'}
+//                transform={'translateX(-10px)'}
+//                opacity={0}
+//                _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+//                justify={'flex-end'}
+//                align={'center'}
+//                flex={1}
+//             >
+//                <Icon color={'white'} w={5} h={5} as={ChevronRightIcon} />
+//             </Flex>
+//          </Stack>
+//       </Link>
+//    )
+// }
 
 const MobileNav = () => {
    return (
@@ -221,10 +208,13 @@ const MobileNavItem = ({ label, href }: NavItem) => {
             }}
             flexWrap="wrap"
          >
-            <Text fontWeight={'semibold'} color={'purple'}>
+            <Text
+               fontSize={['sm', 'md']}
+               fontWeight={'semibold'}
+               color={'teal.800'}
+            >
                {label}
             </Text>
-            <Divider />
          </Flex>
       </Stack>
    )
