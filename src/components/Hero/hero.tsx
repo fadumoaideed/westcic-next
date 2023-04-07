@@ -17,8 +17,8 @@ function Hero() {
             className="hero-heading"
             display={'flex'}
             flexDirection="column"
-            px={['10px', '40px']}
-            pt={['30px', '70px']}
+            pl={['10px', '30px']}
+            pt={['30px', '40px']}
          >
             <Heading
                color={'teal.800'}
@@ -46,11 +46,11 @@ function Hero() {
             </Text>
          </Flex>
 
-         <Flex className="hero-illustration" pr={['0px', '25px', '50px']}>
+         <Flex className="hero-illustration">
             <Image
                alt={'Hero Image'}
                fit={'cover'}
-               w={['auto', '300px', '400px', '600px', '700px']}
+               w={['300px', '400px', '600px', '700px']}
                h={'auto'}
                src={
                   'https://res.cloudinary.com/westcic/image/upload/v1680883001/hero_lshqqs.png'
