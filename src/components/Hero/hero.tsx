@@ -1,7 +1,6 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button, Image, useStyleConfig } from '@chakra-ui/react'
-import TextAnimation from 'components/TextAnimation'
-// import { TextLoop } from 'react-text-loop-next'
+import TextAnimation from 'components/TextAnimation/TextAnimation'
 
 function Hero() {
    const button = useStyleConfig('Button', { variant: 'small' })

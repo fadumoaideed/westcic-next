@@ -22,7 +22,7 @@ export default function TextAnimation(): ReactElement {
             // reset index if current index is greater than array size
             return prevIndex + 1 < loopArr.length ? prevIndex + 1 : 0
          })
-      }, 2000)
+      }, 1999)
 
       return () => clearInterval(interval)
    })
@@ -49,6 +49,7 @@ const W = chakra('span', {
       opacity: 0,
       display: 'inline-block',
       animationName: `${animation}`,
+      // animationTimingFunction: 'cubic-bezier(0.075, 0.82, 0.165, 1)',
       animationDuration: '2s',
       animationIterationCount: 'infinite'
    }
