@@ -18,10 +18,13 @@
       "plugin:@typescript-eslint/recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
       "plugin:@typescript-eslint/eslint-recommended",
       "prettier",
-      "plugin:react/jsx-runtime"
+      "plugin:react/jsx-runtime",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
    ],
    "rules": {
       "no-console": 1, // Means warning
-      "prettier/prettier": 1 // Means error
+      "prettier/prettier": 1, // Means error
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
    }
 }

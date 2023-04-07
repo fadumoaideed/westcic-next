@@ -6,15 +6,12 @@ import {
    IconButton,
    Stack,
    Collapse,
-   Icon,
    Link,
    Popover,
    PopoverTrigger,
-   PopoverContent,
-   useDisclosure,
-   Divider
+   useDisclosure
 } from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { Logo } from '../Logo/logo'
 
 export default function Navigation() {

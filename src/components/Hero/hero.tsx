@@ -31,7 +31,6 @@ function Hero() {
             <Heading
                color={'teal.800'}
                fontSize={['3.7rem', '3.8rem', '4.3rem', '6.8xl']}
-               // minWidth={'400px'}
             >
                inclusive of<span>&nbsp;</span>
             </Heading>
@@ -47,6 +46,7 @@ function Hero() {
                mx="2px"
                mt={['5px', '10px', '15px', '30px']}
                fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
+               w={['auto', '400px']}
             >
                Engineering with a human-centred design approach
             </Text>
