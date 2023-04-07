@@ -11,26 +11,26 @@ function Hero() {
          className="hero-container"
          display="flex"
          flexDirection={['column', 'row']}
-         mx={['50px', '20px']}
+         mx={['10px', '35px', '50px', '20px']}
          justify={['flex-start', 'space-between']}
       >
          <Flex
             className="hero-heading"
             display={'flex'}
             flexDirection="column"
-            pl={['30px', '40px']}
+            px={['30px', '40px']}
             pt={['30px', '70px']}
          >
             <Heading
                color={'teal.800'}
-               fontSize={['2.8rem', '3.0rem', '3.5rem', '4.3rem', '6.8xl']}
+               fontSize={['3.8rem', '4.3rem', '6.8xl']}
             >
-               Sustainable innovation
+               Innovation
             </Heading>
 
             <Heading
                color={'teal.800'}
-               fontSize={['2.8rem', '3.0rem', '3.8rem', '4.3rem', '6.8xl']}
+               fontSize={['3.8rem', '4.3rem', '6.8xl']}
             >
                inclusive of<span>&nbsp;</span>
                {/* <TextLoop

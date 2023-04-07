@@ -3,7 +3,15 @@ import { keyframes } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/layout'
 
-const loopArr = ['background', 'ethnicity', 'gender', 'age']
+const loopArr = [
+   'age',
+   'gender',
+   'disability',
+   'sexuality',
+   'ethnicity',
+   'religion',
+   'income'
+]
 
 export default function TextAnimation(): ReactElement {
    const [index, setIndex] = useState(0)
