@@ -32,18 +32,6 @@ function Hero() {
                fontSize={['3.5rem', '3.8rem', '4.3rem', '6.8xl']}
             >
                inclusive of<span>&nbsp;</span>
-               {/* <TextLoop
-                  // eslint-disable-next-line react/no-children-prop
-                  children={[
-                     'gender',
-                     'ethnicity',
-                     'age',
-                     'disability',
-                     'sexuality',
-                     'religion',
-                     'income'
-                  ]}
-               /> */}
                <TextAnimation />
             </Heading>
 
