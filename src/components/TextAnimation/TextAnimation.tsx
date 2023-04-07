@@ -22,7 +22,7 @@ export default function TextAnimation(): ReactElement {
             // reset index if current index is greater than array size
             return prevIndex + 1 < loopArr.length ? prevIndex + 1 : 0
          })
-      }, 1999)
+      }, 2000)
 
       return () => clearInterval(interval)
    })
