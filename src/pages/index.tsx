@@ -2,7 +2,6 @@
 import Navigation from '../components/Navigation/navigation'
 import { Box } from '@chakra-ui/react'
 import Feature from 'components/Feature/Feature'
-import Impact from 'components/Impact/Impact'
 import Award from 'components/Awards/Awards'
 import Resources from 'components/Resources/Resources'
 import Footer from 'components/Footer/Footer'
@@ -16,7 +15,6 @@ export default function Home() {
          <Navigation />
          <Hero />
          <Feature />
-         <Impact />
          <Project />
          <Award />
          <Resources />
