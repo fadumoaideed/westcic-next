@@ -54,7 +54,7 @@ function Hero() {
                alt={'Hero Image'}
                alignSelf={'center'}
                fit={'fill'}
-               w={['350px', '400px', '600px', '700px']}
+               w={['auto', '400px', '600px', '700px']}
                h={'auto'}
                minH={'450px'}
                minW={'450px'}
