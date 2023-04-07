@@ -48,7 +48,11 @@ function Hero() {
             </Text>
          </Flex>
 
-         <Flex className="hero-illustration" alignSelf={'center'}>
+         <Flex
+            className="hero-illustration"
+            alignSelf={'center'}
+            px={['20px', '0px']}
+         >
             <Image
                alt={'Hero Image'}
                fit={'fill'}
