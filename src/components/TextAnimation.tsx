@@ -23,6 +23,7 @@ export default function TextAnimation(): ReactElement {
             return prevIndex + 1 < loopArr.length ? prevIndex + 1 : 0
          })
       }, 2000)
+
       return () => clearInterval(interval)
    })
 
@@ -39,8 +40,8 @@ const animation = keyframes`
   0% { opacity: 0; transform: translateY(-5px); }
   25% { opacity: 1; transform: translateY(-1px); }
   50% { opacity: 1; transform: translateY(0px); }
-  75% { opacity: 1; transform: translateY(1px); }
-  100% { opacity: 0; transform: translateY(5px); }
+  75% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(1px); }
 `
 
 const W = chakra('span', {
