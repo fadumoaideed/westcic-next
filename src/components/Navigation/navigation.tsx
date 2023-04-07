@@ -208,11 +208,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
             }}
             flexWrap="wrap"
          >
-            <Text
-               fontSize={['0.9rem', 'md']}
-               fontWeight={'semibold'}
-               color={'teal.800'}
-            >
+            <Text fontSize={'md'} fontWeight={'semibold'} color={'teal.800'}>
                {label}
             </Text>
          </Flex>
