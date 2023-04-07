@@ -65,7 +65,7 @@ function Hero() {
                w={['auto', '300px', '400px', '600px', '700px']}
                h={'auto'}
                src={
-                  'https://res.cloudinary.com/westcic/image/upload/v1676844583/Untitled_8.vectornator_tklwqt.png'
+                  'https://res.cloudinary.com/westcic/image/upload/v1680883001/hero_lshqqs.png'
                }
             />
          </Flex>
