@@ -52,7 +52,7 @@ function Hero() {
             <Image
                mx={['10px', '0px']}
                alt={'Hero Image'}
-               alignSelf={'center'}
+               // alignSelf={'center'}
                fit={'fill'}
                // h={['300px', '400px', '600px', '700px']}
                w={'auto'}
