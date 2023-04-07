@@ -23,14 +23,14 @@ function Hero() {
          >
             <Heading
                color={'teal.800'}
-               fontSize={['3.8rem', '4.3rem', '6.8xl']}
+               fontSize={['3.5rem', '3.8rem', '4.3rem', '6.8xl']}
             >
-               Innovation
+               Sustainable innovation
             </Heading>
 
             <Heading
                color={'teal.800'}
-               fontSize={['3.8rem', '4.3rem', '6.8xl']}
+               fontSize={['3.5rem', '3.8rem', '4.3rem', '6.8xl']}
             >
                inclusive of<span>&nbsp;</span>
                {/* <TextLoop
