@@ -31,7 +31,7 @@ function Hero() {
             <Heading
                color={'teal.800'}
                fontSize={['3.5rem', '3.8rem', '4.3rem', '6.8xl']}
-               minWidth={'400px'}
+               // minWidth={'400px'}
             >
                inclusive of<span>&nbsp;</span>
                <TextAnimation />
@@ -50,14 +50,11 @@ function Hero() {
 
          <Flex className="hero-illustration">
             <Image
-               mx={['10px', '0px']}
                alt={'Hero Image'}
                alignSelf={'center'}
-               fit={'fill'}
-               w={['auto', '400px', '600px', '700px']}
+               fit={'cover'}
+               w={['auto', '300px', '400px', '600px', '700px']}
                h={'auto'}
-               minH={'450px'}
-               minW={'450px'}
                src={
                   'https://res.cloudinary.com/westcic/image/upload/v1680883001/hero_lshqqs.png'
                }
