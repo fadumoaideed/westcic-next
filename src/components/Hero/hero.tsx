@@ -51,7 +51,7 @@ function Hero() {
          <Flex
             className="hero-illustration"
             alignSelf={'center'}
-            px={['20px', '0px']}
+            mx={['30px', '0px']}
          >
             <Image
                alt={'Hero Image'}
