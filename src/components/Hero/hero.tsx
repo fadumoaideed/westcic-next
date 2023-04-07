@@ -50,7 +50,7 @@ function Hero() {
 
          <Flex className="hero-illustration">
             <Image
-               // mx={['30px', '0px']}
+               mx={['10px', '0px']}
                alt={'Hero Image'}
                alignSelf={'center'}
                fit={'fill'}
