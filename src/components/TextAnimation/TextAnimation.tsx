@@ -3,7 +3,15 @@ import { keyframes } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/layout'
 
-const loopArr = ['background', 'ethnicity', 'gender', 'age']
+const loopArr = [
+   'age',
+   'gender',
+   'disability',
+   'sexuality',
+   'ethnicity',
+   'religion',
+   'income'
+]
 
 export default function TextAnimation(): ReactElement {
    const [index, setIndex] = useState(0)
@@ -15,6 +23,7 @@ export default function TextAnimation(): ReactElement {
             return prevIndex + 1 < loopArr.length ? prevIndex + 1 : 0
          })
       }, 2000)
+
       return () => clearInterval(interval)
    })
 
@@ -31,8 +40,8 @@ const animation = keyframes`
   0% { opacity: 0; transform: translateY(-5px); }
   25% { opacity: 1; transform: translateY(-1px); }
   50% { opacity: 1; transform: translateY(0px); }
-  75% { opacity: 1; transform: translateY(1px); }
-  100% { opacity: 0; transform: translateY(5px); }
+  75% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(1px); }
 `
 
 const W = chakra('span', {
@@ -40,6 +49,7 @@ const W = chakra('span', {
       opacity: 0,
       display: 'inline-block',
       animationName: `${animation}`,
+      // animationTimingFunction: 'cubic-bezier(0.075, 0.82, 0.165, 1)',
       animationDuration: '2s',
       animationIterationCount: 'infinite'
    }
