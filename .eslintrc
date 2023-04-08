@@ -19,7 +19,7 @@
       "plugin:@typescript-eslint/eslint-recommended",
       "prettier",
       "plugin:react/jsx-runtime",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      "plugin:@next/next/recommended"
    ],
    "rules": {
       "no-console": 1, // Means warning
