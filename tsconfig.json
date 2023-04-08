@@ -17,12 +17,6 @@
       "noUnusedParameters": true /* Report errors on unused parameters. */,
       "incremental": false
    },
-   "include": [
-      "next-env.d.ts",
-      "**/*.ts",
-      "**/*.tsx",
-      "src",
-      "commitlint.config.js"
-   ],
+   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],
    "exclude": ["node_modules"]
 }
