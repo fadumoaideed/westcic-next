@@ -11,7 +11,8 @@ function Hero() {
          display="flex"
          flexDirection={['column', 'row']}
          mx={['10px', '35px', '50px', '20px']}
-         justify={['flex-start', 'space-between']}
+         justify={['flex-start', 'space-around', 'flex-start', 'space-around']}
+         mb={'35px'}
       >
          <Flex
             className="hero-heading"
@@ -20,10 +21,11 @@ function Hero() {
             pl={['10px', '0px', '0px', '30px']}
             pr={['0px', '0px', '20px']}
             pt={['30px', '40px']}
+            w={['auto', '350px', 'auto']}
          >
             <Heading
                color={'teal.800'}
-               fontSize={['3.7rem', '3.8rem', '4.3rem', '6.8xl']}
+               fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
             >
                Sustainable innovation
             </Heading>
@@ -36,7 +38,7 @@ function Hero() {
             </Heading>
             <Heading
                color={'teal.800'}
-               fontSize={['3.7rem', '3.8rem', '4.3rem', '6.8xl']}
+               fontSize={['3.7rem', '3.8rem', '4rem', '6.8xl']}
             >
                <TextAnimation />
             </Heading>
@@ -46,7 +48,7 @@ function Hero() {
                mx="2px"
                mt={['5px', '10px', '15px', '30px']}
                fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
-               w={['auto', '400px']}
+               w={['auto', 'auto', '400px', 'auto']}
             >
                Engineering with a human-centred design approach
             </Text>
@@ -56,8 +58,8 @@ function Hero() {
             <Image
                alt={'Hero Image'}
                alignSelf={'center'}
-               fit={'cover'}
-               w={['auto', '300px', '400px', '600px', '700px']}
+               fit={'fill'}
+               w={['auto', '300px', '400px', '600px', '600px']}
                h={'auto'}
                src={
                   'https://res.cloudinary.com/westcic/image/upload/v1680883001/hero_lshqqs.png'

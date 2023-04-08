@@ -1,7 +1,6 @@
 import { ReactElement, useEffect, useState } from 'react'
 import { keyframes } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/layout'
 
 const loopArr = [
    'age',
@@ -28,11 +27,9 @@ export default function TextAnimation(): ReactElement {
    })
 
    return (
-      <Box>
-         <W>
-            <span className="text-animation-value">{loopArr[index]}</span>
-         </W>
-      </Box>
+      <W>
+         <span className="text-animation-value">{loopArr[index]}</span>
+      </W>
    )
 }
 
