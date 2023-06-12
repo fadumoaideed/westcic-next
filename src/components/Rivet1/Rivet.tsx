@@ -13,11 +13,7 @@ import {
    Link
 } from '@chakra-ui/react'
 import { IoMdSquare } from 'react-icons/io'
-// Why work with WEST to improve your innovation:
-// 	- Broaden understanding of your target audience.
-// 	- Improve the human experience of your innovation.
-// Align your values with ethos-conscious client and collaborators.
-// TODO: explore if this should be a video
+
 const Project = () => {
    const [mobile, setMobile] = useState<boolean>(false)
 

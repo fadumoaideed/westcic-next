@@ -10,6 +10,7 @@ import {
 import { FaInstagram, FaEnvelope, FaLinkedinIn } from 'react-icons/fa'
 import { ReactNode } from 'react'
 import { Logo } from '../Logo/logo'
+import Image from 'next/image'
 
 const SocialButton = ({
    children,
@@ -63,7 +64,12 @@ export default function SmallWithLogoLeft() {
             justify={{ base: 'center', md: 'space-between' }}
             align={{ base: 'center', md: 'center' }}
          >
-            <Logo />
+            <Image
+               src="/images/logo/WESTCIC_Logo_White.png"
+               alt="WEST CIC Logo (Women in Engineering, Science and Technology)"
+               width={150}
+               height={70}
+            />
             <Text align={'center'} color="white">
                WEST C.I.C. All rights reserved. {new Date().getFullYear()} Ⓒ
             </Text>

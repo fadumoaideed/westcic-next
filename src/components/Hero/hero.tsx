@@ -45,7 +45,8 @@ function Hero() {
                fontFamily={'Arial'}
                color={'teal.800'}
                mx="2px"
-               mt={['5px', '10px', '15px', '30px']}
+               mt={['15px', '10px', '15px', '30px']}
+               mb={['30px']}
                fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
                w={['auto', 'auto', '400px', 'auto']}
             >

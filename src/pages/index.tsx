@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 import Award from 'components/Awards/Awards'
 import Resources from 'components/Resources/Resources'
 import Footer from 'components/Footer/Footer'
-import Project from 'components/Rivet1/Rivet'
+import Project from 'components/Rivet1/test'
 import Hero from '../components/Hero/hero'
 export default function Home() {
    // const button = useStyleConfig('Button', { variant: 'small' })
