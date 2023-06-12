@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from '@chakra-ui/layout'
+import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react'
 import TextAnimation from 'components/TextAnimation/TextAnimation'
 
@@ -24,24 +24,23 @@ function Hero() {
             w={['auto', '350px', 'auto']}
          >
             <Heading
-               color={'teal.800'}
+               color={'black'}
                fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
             >
                Sustainable innovation
             </Heading>
-
-            <Heading
-               color={'teal.800'}
-               fontSize={['3.7rem', '3.8rem', '4.3rem', '6.8xl']}
-            >
-               inclusive of<span>&nbsp;</span>
-            </Heading>
-            <Heading
-               color={'teal.800'}
-               fontSize={['3.7rem', '3.8rem', '4rem', '6.8xl']}
-            >
-               <TextAnimation />
-            </Heading>
+            <SimpleGrid row={[1, 2]} spacing={0}>
+               <Heading
+                  color={'black'}
+                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+               >
+                  inclusive of <TextAnimation />
+               </Heading>
+               <Heading
+                  color={'black'}
+                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+               ></Heading>
+            </SimpleGrid>
             <Text
                fontFamily={'Arial'}
                color={'teal.800'}

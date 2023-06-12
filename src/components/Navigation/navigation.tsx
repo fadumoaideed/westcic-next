@@ -95,17 +95,18 @@ export default function Navigation() {
 
 const DesktopNav = () => {
    return (
-      <Stack direction={'row'} spacing={55}>
+      <Stack direction={'row'} spacing={'40px'}>
          {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
                <Popover trigger={'hover'} placement={'bottom-start'}>
                   <PopoverTrigger>
                      <Link
-                        p={5}
+                        p={'5px'}
                         href={navItem.href ?? '#'}
                         fontSize={'lg'}
                         fontWeight={'semibold'}
-                        color="teal.800"
+                        className="nav-color"
+                        color="black"
                         _hover={{
                            textDecoration: 'underline',
                            textDecorationColor: 'white',
