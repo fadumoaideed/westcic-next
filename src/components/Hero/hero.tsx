@@ -50,7 +50,7 @@ function Hero() {
                fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
                w={['auto', 'auto', '400px', 'auto']}
             >
-               Engineering with a human-centred design approach
+               Engineering with a human-centered design approach
             </Text>
          </Flex>
 
