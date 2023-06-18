@@ -3,7 +3,7 @@
    "version": "0.1.0",
    "private": true,
    "scripts": {
-      "dev": "next dev",
+      "dev": "next dev -p 3002",
       "build": "next build",
       "start": "next start",
       "export": "next export",
@@ -16,8 +16,10 @@
       "@chakra-ui/icons": "^1.0.11",
       "@chakra-ui/layout": "^1.4.3",
       "@chakra-ui/react": "^1.5.2",
+      "@emailjs/browser": "^3.11.0",
       "@emotion/react": "^11.1.5",
       "@emotion/styled": "^11.3.0",
+      "@hcaptcha/react-hcaptcha": "^1.8.1",
       "@typescript-eslint/eslint-plugin": "^5.10.0",
       "@typescript-eslint/parser": "^5.10.0",
       "animate.css": "^4.1.1",
@@ -36,6 +38,6 @@
       "@next/eslint-plugin-next": "^13.3.0",
       "@types/node": "^18.0.0",
       "eslint-plugin-react": "^7.30.1",
-      "typescript": "^4.3.2"
+      "typescript": "^4.9.5"
    }
 }

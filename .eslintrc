@@ -22,7 +22,6 @@
       "plugin:@next/next/recommended"
    ],
    "rules": {
-      "no-console": 1, // Means warning
       "prettier/prettier": 1, // Means error
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error"
