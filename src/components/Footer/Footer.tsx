@@ -5,11 +5,11 @@ import {
    Stack,
    Text,
    useColorModeValue,
-   VisuallyHidden
+   VisuallyHidden,
+   Image
 } from '@chakra-ui/react'
 import { FaInstagram, FaEnvelope, FaLinkedinIn } from 'react-icons/fa'
 import { ReactNode } from 'react'
-import Image from 'next/image'
 
 const SocialButton = ({
    children,
