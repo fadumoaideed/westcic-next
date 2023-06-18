@@ -62,7 +62,13 @@ export default function Resources() {
                   </Flex>
                </Link>
             </Box>
-            <Link href="https://res.cloudinary.com/westcic/raw/upload/v1656191742/Dictionary_of_Gender_Bias_Terminology_1_pa0evf.pptx">
+
+            <Link
+               href="downloads/Dictionary_of_Gender_Bias_Terminology.pdf"
+               download="Dictionary_of_Gender_Bias_Terminology"
+               target="_blank"
+               rel="noreferrer"
+            >
                <Box>
                   <Flex overflow="hidden">
                      <Image
