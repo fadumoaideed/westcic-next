@@ -229,25 +229,25 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
    {
-      label: 'Outreach',
-      href: '#outreach'
-   },
-   {
-      label: 'Innovation',
-      // children: [
-      //    {
-      //       label: 'Project 1',
-      //       subLabel: 'lorem ipsum',
-      //       href: '#'
-      //    },
-      // ]
-      href: '#innovation'
-   },
-
-   {
-      label: 'Explore',
-      href: '#explore'
+      label: 'info@westcic.com',
+      href: 'mailto:info@westcic.com'
    }
+   // {
+   //    label: 'Innovation',
+   // children: [
+   //    {
+   //       label: 'Project 1',
+   //       subLabel: 'lorem ipsum',
+   //       href: '#'
+   //    },
+   // ]
+   //    href: '#innovation'
+   // },
+
+   // {
+   //    label: 'Explore',
+   //    href: '#explore'
+   // }
 
    // {
    //    label: 'Contact',
