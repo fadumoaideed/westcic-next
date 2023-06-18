@@ -9,10 +9,10 @@ import {
    Link,
    Popover,
    PopoverTrigger,
-   useDisclosure
+   useDisclosure,
+   Image
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import Image from 'next/image'
 
 export default function Navigation() {
    const { isOpen, onToggle } = useDisclosure()
