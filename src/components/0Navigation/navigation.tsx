@@ -61,6 +61,7 @@ export default function Navigation() {
                      alt="WEST CIC Logo (Women in Engineering, Science and Technology)"
                      width={150}
                      height={70}
+                     loading={'eager'}
                   />
                </Link>
             </Flex>

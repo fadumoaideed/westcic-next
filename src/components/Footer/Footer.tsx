@@ -68,6 +68,7 @@ export default function SmallWithLogoLeft() {
                alt="WEST CIC Logo (Women in Engineering, Science and Technology)"
                width={150}
                height={70}
+               loading={'eager'}
             />
             <Text align={'center'} color="white">
                WEST C.I.C. All rights reserved. {new Date().getFullYear()} Ⓒ
