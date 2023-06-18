@@ -24,26 +24,26 @@ function Hero() {
             w={['auto', '350px', 'auto']}
          >
             <Heading
-               color={'black'}
+               color={'teal.600'}
                fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
             >
                Sustainable innovation
             </Heading>
             <SimpleGrid row={[1, 2]} spacing={0}>
                <Heading
-                  color={'black'}
+                  color={'teal.600'}
                   fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
                >
                   inclusive of <TextAnimation />
                </Heading>
                <Heading
-                  color={'black'}
+                  color={'teal.600'}
                   fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
                ></Heading>
             </SimpleGrid>
             <Text
                fontFamily={'Arial'}
-               color={'teal.800'}
+               color={'teal.600'}
                mx="2px"
                mt={['15px', '10px', '15px', '30px']}
                mb={['30px']}

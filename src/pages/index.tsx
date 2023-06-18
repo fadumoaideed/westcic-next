@@ -1,24 +1,32 @@
-// import Head from 'next/head'
-import Navigation from '../components/Navigation/navigation'
+import Navigation from '../components/0Navigation/navigation'
 import { Box } from '@chakra-ui/react'
-// import Feature from 'components/Feature/Feature'
-import Award from 'components/Awards/Awards'
-import Resources from 'components/Resources/Resources'
+import Hero from '../components/1Hero/hero'
+import Project from 'components/3LatestProject/LatestProject'
+import Award from 'components/4Awards/Awards'
+import Resources from 'components/5Resources/Resources'
 import Footer from 'components/Footer/Footer'
-import Project from 'components/Rivet1/test'
-import Hero from '../components/Hero/hero'
+// import Test from 'components/6Contact/test1'
+import Head from 'next/head'
+
 export default function Home() {
    // const button = useStyleConfig('Button', { variant: 'small' })
 
    return (
-      <Box className="home-container">
-         <Navigation />
-         <Hero />
-         {/* <Feature /> */}
-         <Project />
-         <Award />
-         <Resources />
-         <Footer />
-      </Box>
+      <>
+         <Head>
+            <title>
+               WEST C.I.C. Women in Engineering, Science and Technology
+            </title>
+            <link rel="icon" href="/favicon.ico" />
+         </Head>
+         <Box className="home-container">
+            <Navigation />
+            <Hero />
+            <Project />
+            <Award />
+            <Resources />
+            <Footer />
+         </Box>
+      </>
    )
 }

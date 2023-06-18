@@ -1,29 +1,29 @@
 import {
    Container,
-   Stack,
-   Flex,
-   Box,
    Heading,
    Text,
-   Image,
-   Link,
+   Stack,
    List,
    ListItem,
-   ListIcon
-} from '@chakra-ui/react'
+   Link,
+   ListIcon,
+   Box,
+   Flex
+} from '@chakra-ui/layout'
+import { Image } from '@chakra-ui/react'
 import { IoMdSquare } from 'react-icons/io'
 
-export default function Awards() {
+function LatestProject() {
    return (
-      <Container maxW={'8xl'}>
+      <Container maxW={'8xl'} className="project-container">
          <Stack
             align={'center'}
-            spacing={{ base: '10px', md: 10 }}
-            direction={{ base: 'column', md: 'row' }}
+            spacing={'20px'}
+            direction={['column', 'row']}
             mx={['10px', '20px', '30px', '45px']}
-            mb="30px"
+            my="60px"
          >
-            <Stack flex={1} m={['0px', '40px', '10px']}>
+            <Stack flex={1} spacing={['10px', '15px']}>
                <Heading
                   lineHeight={1.1}
                   fontWeight={600}
@@ -48,49 +48,39 @@ export default function Awards() {
                   </Text>
                </Heading>
                <Text color={'gray.500'} fontSize="xl">
-                  WEST C.I.C. introduced a sustainable and inclusive human
-                  centered design approach, helping bring clean energy to rural
-                  communities in Nigeia. Our aim was to empowering women farmers
-                  without affecting their livelihood with new patented
-                  innnovative technology delievered by project partners
-                  <span>&nbsp;</span>
-                  <Link isExternal href="https://www.pyrogenesys.com">
-                     Pyrogensys Ltd.
-                  </Link>
-                  <span>&nbsp;</span>
-                  Learn more about the project
+                  WEST C.I.C. worked with an international consortium on
+                  projects to bring clean energy to rural communities in Nigeria
+                  (funded by UKRI). Our role was to empower women in cassava
+                  food production using human centred design, by studying the
+                  impact of new patented innovative technology delivered by
+                  project partners
                   <span>&nbsp;</span>
                   <Link
                      isExternal
                      href="https://pyrogenesys.com/portfolio/rivet/"
-                     fontWeight={'semibold'}
                   >
-                     here.
+                     Pyrogensys Ltd.
                   </Link>
                </Text>
                <Text fontSize={'xl'} color={'gray.500'} fontWeight={'semibold'}>
                   Project outcome:
                </Text>
-               <List
-                  m={'5px'}
-                  color={'gray.500'}
-                  fontSize="lg"
-                  pl={'40px'}
-                  pt={'5px'}
-               >
+               <List m={'5px'} color={'gray.500'} fontSize="lg" pl={'40px'}>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
-                     Understand and mapped the dynamics of the community
+                     Understand and mapped the gender and cultural dynamics of
+                     the community
                   </ListItem>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Implemented inclusive innovation through iterative design
-                     processes
+                     processes with mechanical engineers
                   </ListItem>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
-                     Ensure that new innovation introduced does not cause
-                     unintended consequences
+                     Delivered a report highlighting unintended negative
+                     consequences of new innovation in rural communities and
+                     actions to mitigate against them.
                   </ListItem>
                </List>
             </Stack>
@@ -127,3 +117,5 @@ export default function Awards() {
       </Container>
    )
 }
+
+export default LatestProject

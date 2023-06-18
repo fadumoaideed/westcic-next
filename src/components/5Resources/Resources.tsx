@@ -17,6 +17,7 @@ export default function Resources() {
             fontSize={['5xl', '6xl']}
             align="center"
             pb="25px"
+            id="explore"
          >
             <Text
                as={'span'}

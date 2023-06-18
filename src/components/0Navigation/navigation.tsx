@@ -12,7 +12,7 @@ import {
    useDisclosure
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import { Logo } from '../Logo/logo'
+import Image from 'next/image'
 
 export default function Navigation() {
    const { isOpen, onToggle } = useDisclosure()
@@ -56,7 +56,12 @@ export default function Navigation() {
                   pl="50px"
                   top="-10px"
                >
-                  <Logo />
+                  <Image
+                     src={'/images/logo/WESTCIC_Logo_Teal.png'}
+                     alt="WEST CIC Logo (Women in Engineering, Science and Technology)"
+                     width={150}
+                     height={70}
+                  />
                </Link>
             </Flex>
 
@@ -106,10 +111,10 @@ const DesktopNav = () => {
                         fontSize={'lg'}
                         fontWeight={'semibold'}
                         className="nav-color"
-                        color="black"
+                        color="teal.600"
                         _hover={{
                            textDecoration: 'underline',
-                           textDecorationColor: 'white',
+                           textDecorationColor: 'teal.500',
                            textDecorationStyle: 'solid',
                            textDecorationThickness: '3px',
                            textUnderlineOffset: '8px'
@@ -239,11 +244,12 @@ const NAV_ITEMS: Array<NavItem> = [
    },
 
    {
-      label: 'About',
-      href: '#about'
-   },
-   {
-      label: 'Contact',
-      href: '#contact'
+      label: 'Explore',
+      href: '#explore'
    }
+
+   // {
+   //    label: 'Contact',
+   //    href: '#contact'
+   // }
 ]
