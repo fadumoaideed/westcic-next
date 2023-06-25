@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/layout'
+import { Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react'
 import TextAnimation from 'components/TextAnimation/TextAnimation'
 
