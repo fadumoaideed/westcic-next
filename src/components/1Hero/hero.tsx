@@ -87,7 +87,7 @@ function Hero() {
                      flexDirection={'row'}
                      alignItems={'center'}
                      justifyContent={'center'}
-                     rounded={'sm'}
+                     borderRadius={'3px 0px 0px 3px '}
                      fontFamily={'cursive'}
                      bg={'#f9a7b0'}
                      fontSize={['4xl', '5xl']}
@@ -95,8 +95,8 @@ function Hero() {
                      fontWeight={'normal'}
                      h={'90px'}
                      w={'90px'}
-                     p={'3px'}
                      minWidth={'60px'}
+                     minHeight={'100px'}
                   >
                      <Text>6</Text> <Text as={'sup'}>th</Text>
                   </Flex>
