@@ -23,7 +23,7 @@ function Hero() {
             pt={['30px', '40px']}
             w={['auto', '350px', 'auto']}
          >
-            <Flex>
+            <Flex flexDirection={['column', 'row']}>
                <Heading
                   color={'teal.600'}
                   fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
