@@ -116,7 +116,7 @@ function Hero() {
                      </Text>
                      <Text color={'teal.700'}>
                         STEM Sisterhood is an online event that highlights the
-                        importance of networks of women
+                        importance of networks of women in STEM.
                      </Text>
                   </Flex>
                </Flex>
