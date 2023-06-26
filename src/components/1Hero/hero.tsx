@@ -1,4 +1,4 @@
-import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/layout'
+import { Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react'
 import TextAnimation from 'components/TextAnimation/TextAnimation'
 
@@ -23,12 +23,23 @@ function Hero() {
             pt={['30px', '40px']}
             w={['auto', '350px', 'auto']}
          >
-            <Heading
-               color={'teal.600'}
-               fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
-            >
-               Sustainable innovation
-            </Heading>
+            <Flex flexDirection={['column', 'row']}>
+               <Heading
+                  color={'teal.600'}
+                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+               >
+                  Sustainable&nbsp;
+               </Heading>
+               <Heading
+                  color={'teal.600'}
+                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+                  background={'-webkit-linear-gradient(0deg, #2ebf91, #8360c3)'}
+                  backgroundClip={'text'}
+               >
+                  innovation
+               </Heading>
+            </Flex>
+
             <SimpleGrid row={[1, 2]} spacing={0}>
                <Heading
                   color={'teal.600'}
@@ -46,12 +57,70 @@ function Hero() {
                color={'teal.600'}
                mx="2px"
                mt={['15px', '10px', '15px', '30px']}
-               mb={['30px']}
-               fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.75rem']}
+               mb={['50px', '30px']}
+               fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.70rem']}
                w={['auto', 'auto', '400px', 'auto']}
             >
                Engineering with a human-centered design approach
             </Text>
+            <Text
+               mb={'15px'}
+               fontWeight={'bold'}
+               color={'teal.800'}
+               fontSize={'xl'}
+            >
+               Upcoming events
+            </Text>
+            <Link
+               href="https://www.eventbrite.co.uk/e/stem-sisterhood-our-journey-tickets-647250111507?aff=ebdshpsearchautocomplete&keep_tld=1"
+               style={{ textDecoration: 'none' }}
+               maxWidth={'600px'}
+               mb={['50px']}
+            >
+               <Flex
+                  display="flex"
+                  flexDirection={['row']}
+                  boxShadow={'md'}
+                  mb={'0px'}
+               >
+                  <Flex
+                     display={'flex'}
+                     flexDirection={'row'}
+                     alignItems={'center'}
+                     justifyContent={'center'}
+                     borderRadius={'3px 0px 0px 3px '}
+                     fontFamily={'cursive'}
+                     bg={'#f9a7b0'}
+                     fontSize={['4xl', '5xl']}
+                     color={'white'}
+                     fontWeight={'normal'}
+                     h={'90px'}
+                     w={'90px'}
+                     minWidth={'60px'}
+                     minHeight={'100px'}
+                  >
+                     <Text>6</Text> <Text as={'sup'}>th</Text>
+                  </Flex>
+                  <Flex
+                     flexDirection={'column'}
+                     alignItems={'flex-start'}
+                     pl={'10px'}
+                  >
+                     <Text
+                        color={'teal.800'}
+                        pl={'2px'}
+                        fontSize={'xl'}
+                        fontWeight={'semibold'}
+                     >
+                        July 2023
+                     </Text>
+                     <Text color={'teal.700'}>
+                        STEM Sisterhood is an online event that highlights the
+                        importance of networks of women in STEM.
+                     </Text>
+                  </Flex>
+               </Flex>
+            </Link>
          </Flex>
 
          <Flex className="hero-illustration">
