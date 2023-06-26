@@ -57,7 +57,7 @@ function Hero() {
                color={'teal.600'}
                mx="2px"
                mt={['15px', '10px', '15px', '30px']}
-               mb={['30px']}
+               mb={['50px', '30px']}
                fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.70rem']}
                w={['auto', 'auto', '400px', 'auto']}
             >
@@ -75,6 +75,7 @@ function Hero() {
                href="https://www.eventbrite.co.uk/e/stem-sisterhood-our-journey-tickets-647250111507?aff=ebdshpsearchautocomplete&keep_tld=1"
                style={{ textDecoration: 'none' }}
                maxWidth={'600px'}
+               mb={['50px']}
             >
                <Flex
                   display="flex"
