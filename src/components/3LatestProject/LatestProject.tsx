@@ -47,13 +47,17 @@ function LatestProject() {
                      projects
                   </Text>
                </Heading>
-               <Text color={'gray.500'} fontSize="xl" lineHeight={'25px'}>
+               <Text
+                  color={'gray.500'}
+                  fontSize={['md', 'lg']}
+                  lineHeight={'25px'}
+               >
                   WEST C.I.C. worked with an international consortium on
                   projects to bring clean energy to rural communities in Nigeria
                   (funded by UKRI). Our role was to empower women in cassava
                   food production using human centred design, by studying the
                   impact of new patented innovative technology delivered by
-                  project partners Pyrogensys Ltd. Learn more about the project{' '}
+                  project partners PyroGenesys Ltd. Learn more about the project{' '}
                   <Link
                      isExternal
                      href="https://pyrogenesys.com/portfolio/rivet/"
@@ -67,7 +71,7 @@ function LatestProject() {
                <Text fontSize={'xl'} color={'gray.500'} fontWeight={'semibold'}>
                   Project outcome:
                </Text>
-               <List m={'5px'} color={'gray.500'} fontSize="lg" pl={'40px'}>
+               <List m={'3px'} color={'gray.500'} fontSize="md" pl={'30px'}>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Used surveys and group activities in three rural
