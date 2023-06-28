@@ -26,31 +26,21 @@ function Hero() {
             <Flex flexDirection={['column', 'row']}>
                <Heading
                   color={'teal.600'}
-                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
-               >
-                  Sustainable&nbsp;
-               </Heading>
-               <Heading
-                  color={'teal.600'}
-                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+                  fontSize={['3.2rem', 'auto', 'auto', '6.8xl']}
                   background={'-webkit-linear-gradient(0deg, #2ebf91, #8360c3)'}
                   backgroundClip={'text'}
                >
-                  innovation
+                  Sustainable innovation
                </Heading>
             </Flex>
 
             <SimpleGrid row={[1, 2]} spacing={0}>
                <Heading
                   color={'teal.600'}
-                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
+                  fontSize={['3.2rem', 'auto', 'auto', '6.8xl']}
                >
                   inclusive of <TextAnimation />
                </Heading>
-               <Heading
-                  color={'teal.600'}
-                  fontSize={['3.7rem', 'auto', 'auto', '6.8xl']}
-               ></Heading>
             </SimpleGrid>
             <Text
                fontFamily={'Arial'}
@@ -58,7 +48,7 @@ function Hero() {
                mx="2px"
                mt={['15px', '10px', '15px', '30px']}
                mb={['50px', '30px']}
-               fontSize={['1.2rem', '1.4rem', '1.5rem', '1.6rem', '1.70rem']}
+               fontSize={['1.1rem', '1.4rem', '1.5rem', '1.6rem', '1.70rem']}
                w={['auto', 'auto', '400px', 'auto']}
             >
                Engineering with a human-centered design approach
@@ -77,44 +67,46 @@ function Hero() {
                maxWidth={'600px'}
                mb={['50px']}
             >
-               <Flex
-                  display="flex"
-                  flexDirection={['row']}
-                  boxShadow={'md'}
-                  mb={'0px'}
-               >
+               <Flex display="flex" flexDirection={'row'} boxShadow={'md'}>
                   <Flex
                      display={'flex'}
-                     flexDirection={'row'}
-                     alignItems={'center'}
-                     justifyContent={'center'}
-                     borderRadius={'3px 0px 0px 3px '}
-                     fontFamily={'cursive'}
+                     flexDirection={'column'}
+                     borderRadius={'3px 0px 0px 3px'}
                      bg={'#f9a7b0'}
-                     fontSize={['4xl', '5xl']}
                      color={'white'}
-                     fontWeight={'normal'}
-                     h={'90px'}
-                     w={'90px'}
-                     minWidth={'60px'}
+                     fontWeight={'bold'}
+                     h={'100px'}
+                     w={'100px'}
+                     minWidth={'100px'}
                      minHeight={'100px'}
                   >
-                     <Text>6</Text> <Text as={'sup'}>th</Text>
+                     <Flex
+                        flexDirection={'row'}
+                        alignItems={'center'}
+                        justifyContent={'center'}
+                        fontFamily={'cursive'}
+                     >
+                        <Text fontSize={['4xl', '5xl']}>13</Text>
+                        <Text as={'sup'} fontSize={['xl']}>
+                           th
+                        </Text>
+                     </Flex>
+                     <Text
+                        alignSelf={'center'}
+                        justifyItems={'center'}
+                        fontSize={'md'}
+                     >
+                        July 2023
+                     </Text>
                   </Flex>
                   <Flex
                      flexDirection={'column'}
                      alignItems={'flex-start'}
                      pl={'10px'}
+                     alignSelf={'center'}
+                     justifyContent={'center'}
                   >
-                     <Text
-                        color={'teal.800'}
-                        pl={'2px'}
-                        fontSize={'xl'}
-                        fontWeight={'semibold'}
-                     >
-                        July 2023
-                     </Text>
-                     <Text color={'teal.700'}>
+                     <Text color={'teal.700'} fontSize={['sm', 'md', 'xl']}>
                         STEM Sisterhood is an online event that highlights the
                         importance of networks of women in STEM.
                      </Text>

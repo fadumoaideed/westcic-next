@@ -46,7 +46,7 @@ export default function Awards() {
                      Champion Finalists
                   </Text>
                </Heading>
-               <Text color={'gray.500'} fontSize="xl" pl={'5px'}>
+               <Text color={'gray.500'} fontSize={['md', 'lg']} pl={'5px'}>
                   WEST C.I.C. were shortlisted as finalists for the Engineering
                   Innovation Chamption in the business sector for improving
                   gender equality and social inclusion in Nigeria in
