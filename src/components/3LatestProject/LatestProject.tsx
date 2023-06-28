@@ -62,12 +62,9 @@ function LatestProject() {
                      isExternal
                      href="https://pyrogenesys.com/portfolio/rivet/"
                      fontWeight={'semibold'}
-                     fontWeight={'semibold'}
                   >
-                     {' '}
                      here. here.
                   </Link>
-                  <span>&nbsp;</span>
                   <span>&nbsp;</span>
                </Text>
                <Text fontSize={'xl'} color={'gray.500'} fontWeight={'semibold'}>
