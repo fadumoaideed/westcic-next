@@ -62,10 +62,12 @@ function LatestProject() {
                      isExternal
                      href="https://pyrogenesys.com/portfolio/rivet/"
                      fontWeight={'semibold'}
+                     fontWeight={'semibold'}
                   >
                      {' '}
-                     here.
+                     here. here.
                   </Link>
+                  <span>&nbsp;</span>
                   <span>&nbsp;</span>
                </Text>
                <Text fontSize={'xl'} color={'gray.500'} fontWeight={'semibold'}>
@@ -76,18 +78,25 @@ function LatestProject() {
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Used surveys and group activities in three rural
                      communities to understand the gender dynamics and
-                     livelihoods of women in the community.
+                     livelihoods of women in the community. Used surveys and
+                     group activities in three rural communities to understand
+                     the gender dynamics and livelihoods of women in the
+                     community.
                   </ListItem>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Implemented inclusive innovation through iterative design
-                     processes with mechanical engineers.
+                     processes with mechanical engineers. processes with
+                     mechanical engineers.
                   </ListItem>
                   <ListItem>
                      <ListIcon as={IoMdSquare} color="teal.500" />
                      Delivered a report highlighting potential unintended
                      negative consequences due to the introduction of this
-                     innovation and actions to mitigate against them.
+                     innovation and actions to mitigate against them. Delivered
+                     a report highlighting potential unintended negative
+                     consequences due to the introduction of this innovation and
+                     actions to mitigate against them.
                   </ListItem>
                </List>
             </Stack>
