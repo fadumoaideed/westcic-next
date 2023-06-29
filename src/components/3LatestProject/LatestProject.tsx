@@ -63,7 +63,7 @@ function LatestProject() {
                      href="https://pyrogenesys.com/portfolio/rivet/"
                      fontWeight={'semibold'}
                   >
-                     here. here.
+                     here.
                   </Link>
                   <span>&nbsp;</span>
                </Text>
