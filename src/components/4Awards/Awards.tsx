@@ -5,8 +5,7 @@ import {
    Box,
    Heading,
    Text,
-   Image,
-   Link
+   Image
 } from '@chakra-ui/react'
 
 export default function Awards() {
@@ -39,26 +38,20 @@ export default function Awards() {
                         zIndex: -1
                      }}
                   >
-                     Engineering Innovation
+                     Innovation Awards/2023
                   </Text>
                   <br />
                   <Text as={'span'} color={'teal.400'}>
-                     Champion Finalists
+                     Winners
                   </Text>
                </Heading>
                <Text color={'gray.500'} fontSize={['md', 'lg']} pl={'5px'}>
-                  WEST C.I.C. were shortlisted as finalists for the Engineering
-                  Innovation Chamption in the business sector for improving
-                  gender equality and social inclusion in Nigeria in
-                  collaboration with project partners
-                  <span>&nbsp;</span>
-                  <Link
-                     href="https://pyrogenesys.com/"
-                     isExternal
-                     textDecoration={'underline'}
-                  >
-                     PyroGenesys Ltd.
-                  </Link>
+                  WEST C.I.C. were the winners of the Director&apos;s Award in
+                  2023 and shortlisted as finalists for the Engineering
+                  Innovation Chamption in the business sector in 2021 & 2022.
+                  This is in recognition of their ongoing work in outreach and
+                  innovation and a strong commitment to improve diversity in
+                  STEM.
                </Text>
             </Stack>
             <Flex
@@ -76,7 +69,7 @@ export default function Awards() {
                >
                   <Image
                      alt={'feature image'}
-                     src={'/images/Innovation_Awards.png'}
+                     src={'/images/InnovationAward23WESTCIC.png'}
                      objectFit={'cover'}
                      align={'center'}
                      w={'100%'}
