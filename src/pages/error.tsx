@@ -1,9 +1,17 @@
-import { Box, Heading, Text, Button } from '@chakra-ui/react'
+import { Heading, Button, Flex } from '@chakra-ui/react'
 import Link from 'next/link'
 
 export default function NotFound() {
    return (
-      <Box textAlign="center" py={10} px={6}>
+      <Flex
+         textAlign="center"
+         py={10}
+         px={6}
+         direction="column"
+         alignItems="center"
+         justifyContent={'center'}
+         h="100vh"
+      >
          <Heading
             display="inline-block"
             as="h2"
@@ -11,21 +19,21 @@ export default function NotFound() {
             bgGradient="linear(to-r, teal.400, teal.600)"
             backgroundClip="text"
          >
-            Under Construction
-         </Heading>
-         <Text fontSize="18px" mt={3} mb={2}>
             Page Not Found
-         </Text>
+         </Heading>
+
          <Link href={'/'}>
             <Button
                colorScheme="teal"
                bgGradient="linear(to-r, teal.400, teal.500, teal.600)"
                color="white"
                variant="solid"
+               w="150px"
+               mt="10px"
             >
                Go to Home
             </Button>
          </Link>
-      </Box>
+      </Flex>
    )
 }

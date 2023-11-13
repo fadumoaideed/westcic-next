@@ -52,7 +52,7 @@ export default function Navigation() {
                <Link
                   href="/"
                   flex={{ base: 1 }}
-                  justify={{ base: 'center', md: 'start' }}
+                  justifyContent={{ base: 'center', md: 'start' }}
                   pl="50px"
                   top="-10px"
                >
@@ -86,7 +86,8 @@ export default function Navigation() {
             className="mobile-navbar-dropdown"
             bg="white"
             w={'100%'}
-            direction={'row'}
+            display="flex"
+            flexDirection={'row'}
             position={'absolute'}
             pl="30px"
             boxShadow={'lg'}
@@ -228,6 +229,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
+   // {
+   //    label: 'Contact us',
+   //    href: 'contact-us'
+   // },
    {
       label: 'info@westcic.com',
       href: 'mailto:info@westcic.com'
@@ -247,10 +252,5 @@ const NAV_ITEMS: Array<NavItem> = [
    // {
    //    label: 'Explore',
    //    href: '#explore'
-   // }
-
-   // {
-   //    label: 'Contact',
-   //    href: '#contact'
    // }
 ]

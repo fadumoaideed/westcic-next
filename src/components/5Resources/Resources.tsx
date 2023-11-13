@@ -11,31 +11,32 @@ import {
 export default function Resources() {
    return (
       <>
-         <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={['5xl', '6xl']}
-            align="center"
-            pb="25px"
-            id="explore"
-         >
-            <Text
-               as={'span'}
-               position={'relative'}
-               _after={{
-                  content: "''",
-                  width: 'full',
-                  height: '30%',
-                  position: 'absolute',
-                  bottom: 1,
-                  left: 0,
-                  bg: 'teal.400',
-                  zIndex: -1
-               }}
+         <Flex display="flex" flexDir={'row'} justifyContent="center">
+            <Heading
+               lineHeight={1.1}
+               fontWeight={600}
+               fontSize={['5xl', '6xl']}
+               pb="25px"
+               id="explore"
             >
-               Explore More
-            </Text>
-         </Heading>
+               <Text
+                  as={'span'}
+                  position={'relative'}
+                  _after={{
+                     content: "''",
+                     width: 'full',
+                     height: '30%',
+                     position: 'absolute',
+                     bottom: 1,
+                     left: 0,
+                     bg: 'teal.400',
+                     zIndex: -1
+                  }}
+               >
+                  Explore More
+               </Text>
+            </Heading>
+         </Flex>
          <SimpleGrid
             columns={[1, 1, 2, 3]}
             spacing={10}
@@ -46,17 +47,18 @@ export default function Resources() {
          >
             <Box>
                <Link href="https://www.youtube.com/watch?v=It6CiMyS2Tc">
-                  <Flex>
+                  <Flex overflow="hidden">
                      <Image
-                        alt={'feature image'}
+                        alt={'Tedx talk'}
                         src={
                            'https://res.cloudinary.com/westcic/image/upload/c_scale,h_350/v1651936496/tedx-talk_c6ttph.png'
                         }
+                        backgroundPosition={['center']}
                         objectFit={'cover'}
                         _hover={{
                            transform: 'scale(1.1)',
                            transition: '0.5s ease-out',
-                           bg: 'rgba(0,0,0, 0.9)'
+                           backgroundColor: 'rgba(0,0,0, 0.9)'
                         }}
                      />
                   </Flex>
